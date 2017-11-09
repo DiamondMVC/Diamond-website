@@ -18,4 +18,4 @@ When building Diamond it may not work properly without these dependencies.
 
 Preview:
 
-[![Preview](https://i.imgur.com/kfN94ht.png)](https://i.imgur.com/kfN94ht.png)
+[![Preview](https://i.imgur.com/c54U1D1.png)](https://i.imgur.com/c54U1D1.png)
