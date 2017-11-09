@@ -1,9 +1,11 @@
 /**
-* Copyright Diamond MVC © 2017
+* Copyright © 2017 Diamond MVC
 */
 module controllers.homecontroller;
 
 import diamond.controllers;
+
+import models;
 
 /// The home controller.
 final class HomeController(TView) : Controller!TView
@@ -24,5 +26,14 @@ final class HomeController(TView) : Controller!TView
   @HttpDefault Status home()
   {
     return Status.success;
+  }
+
+  @HttpAction(HttpPost, "/<>/{string:language}") Status setLanguage()
+  {
+    auto language = get!string("language", "en_us");
+
+    view.client.language = language;
+
+    return json(new JsonResponse(true));
   }
 }

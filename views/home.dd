@@ -1,5 +1,5 @@
 @*
-  Copyright Diamond MVC © 2017
+  Copyright © 2017 Diamond MVC
 *
 @[
   layout:
@@ -12,5 +12,3 @@
     HomeController
 ]
 @:addPlaceHolder("title", i18n.getMessage(client, "HOME_TITLE"));
-
-<p>@=i18n.getMessage(client, "HELLO_WORLD");</p>

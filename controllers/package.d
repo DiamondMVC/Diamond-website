@@ -1,5 +1,5 @@
 /**
-* Copyright Diamond MVC © 2017
+* Copyright © 2017 Diamond MVC
 */
 module controllers;
 

@@ -1,5 +1,5 @@
 /**
-* Copyright Diamond MVC © 2017
+* Copyright © 2017 Diamond MVC
 */
 module websettings;
 
@@ -22,6 +22,7 @@ class DiamondWebSettings : WebSettings
     import diamond.data.i18n;
 
     loadLanguageFile("en_us", "localization/en_us.lang");
+    loadLanguageFile("da", "localization/da.lang");
 
     setDefaultLanguage("en_us");
   }

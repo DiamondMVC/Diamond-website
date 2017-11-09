@@ -4,6 +4,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
+  background-color: #154360;
 }
 
 html {
@@ -20,4 +21,157 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+}
+
+.d-clear {
+  clear: both;
+}
+
+.d-mask {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9001;
+}
+
+.d-header {
+  background-image: url(/public/diamond/images/cover_bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 528px;
+}
+
+.d-header a {
+  color: #fff;
+}
+
+.d-header a:visited {
+  color: #fff;
+}
+
+.d-header a:hover {
+  color: #ccc;
+}
+
+.d-header-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 79, 114, 0.6);
+}
+
+.d-header-bar {
+  width: 100%;
+  height: 46px;
+  background-color: rgba(21, 67, 96, 0.8);
+  padding-top: 10px;
+  color: #fff;
+}
+
+.d-logo {
+  width: 20%;
+  height: 100%;
+  float: left;
+  margin-top: -9px;
+  padding-left: 6px;
+  font-size: 2em;
+  opacity: 0.6;
+}
+
+.d-logo img {
+  width: 32px;
+}
+
+.d-logo-small {
+
+}
+
+.d-menu {
+  width: 70%;
+  height: 100%;
+  float: right;
+  text-align: right;
+}
+
+.d-menu-item {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.d-menu-item i {
+  font-size: 26px;
+  margin-top: -5px;
+}
+
+.d-menu-item-selected {
+  border-bottom: 4px solid #1f618d;
+  opacity: 0.8;
+}
+
+.d-header-menu-small {
+
+}
+
+.flag {
+  background:url('/public/images/flags.png');
+}
+
+.d-flags {
+  height: 32px;
+  width: 100%;
+  text-align: right;
+  opacity: 0.7;
+}
+
+.d-flag {
+  margin-right: 6px;
+}
+
+.d-header-focus {
+  width: 60%;
+  height: 180px;
+  color: #fff;
+  text-align: center;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-focus-title {
+  font-size: 2.5em;
+}
+
+.d-focus-title a {
+  color: #aed6f1;
+}
+
+.d-focus-title a:visited {
+  color: #aed6f1;
+}
+
+.d-focus-title a:hover {
+  color: #d6eaf8;
+}
+
+.d-focus-catchphrase {
+  font-size: 1.5em;
+}
+
+.d-focus-button {
+  background-color: #aed6f1;
+  width: 40%;
+  height: 60px;
+  border: 1px solid #1b4f72;
+}
+
+.d-viewport {
+
+}
+
+.d-footer {
+  text-align: center;
+  color: #fff;
 }

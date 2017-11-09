@@ -1,0 +1,18 @@
+COPYRIGHT = Copyright © 2017 Diamond MVC
+
+HOME_MENU=Forside
+DOWNLOAD_MENU=Download
+DOCS_MENU=Dokumentation
+TUTORIALS_MENU=Tutorials
+COMMUNITY_MENU=F&aelig;llesskab
+CONTRIBUTING_MENU=Bidrag
+SUPPORT_MENU=St&oslash;t Os
+
+HOME_TITLE=Forside
+
+FOCUS_TITLE:
+Et full-stack nativ MVC / Template Framework skrevet i
+<a href="https://dlang.org/">D</a>, baseret p&aring; <a href="http://vibed.org/">vibe.d</a>
+;
+
+FOCUS_CATCHPHRASE=Innovation, ydeevne og elegance er Diamond's n&oslash;gle elementer.
