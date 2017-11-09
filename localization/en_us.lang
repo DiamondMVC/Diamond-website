@@ -1,3 +1,18 @@
+COPYRIGHT = Copyright © 2017 Diamond MVC
+
+HOME_MENU=Home
+DOWNLOAD_MENU=Download
+DOCS_MENU=Documentation
+TUTORIALS_MENU=Tutorials
+COMMUNITY_MENU=Community
+CONTRIBUTING_MENU=Contribute
+SUPPORT_MENU=Support Us
+
 HOME_TITLE=Home
 
-HELLO_WORLD=Hello World!
+FOCUS_TITLE:
+A full-stack native MVC / Template Framework written in
+<a href="https://dlang.org/">D</a>, based on <a href="http://vibed.org/">vibe.d</a>
+;
+
+FOCUS_CATCHPHRASE=Innovation, performance and elegance are Diamond's key elements.

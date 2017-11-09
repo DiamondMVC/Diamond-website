@@ -1,9 +1,9 @@
 /**
-* Copyright Diamond MVC © 2017
+* Copyright © 2017 Diamond MVC
 */
 module models;
 
 public
 {
-  // TODO: Import models here ...
+  import models.jsonresponse;
 }
