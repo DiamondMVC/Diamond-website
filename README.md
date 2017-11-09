@@ -15,3 +15,7 @@ The website has dependencies to the following:
 | [Flag-sprites](https://www.flag-sprites.com/) | GoSquared shiny large 32x32 |
 
 When building Diamond it may not work properly without these dependencies.
+
+Preview:
+
+[![Preview](https://i.imgur.com/kfN94ht.png)](https://i.imgur.com/kfN94ht.png)
