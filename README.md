@@ -12,5 +12,6 @@ The website has dependencies to the following:
 | Bootstrap | 3.3.7 |
 | PaymentFont | 1.2.5 |
 | Font Awesome | 4.7.0 |
+| [Flag-sprites](https://www.flag-sprites.com/) | GoSquared shiny large 32x32 |
 
 When building Diamond it may not work properly without these dependencies.
