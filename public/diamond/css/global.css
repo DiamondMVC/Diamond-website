@@ -1,0 +1,23 @@
+/*
+* Copyright Diamond MVC © 2017
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+html {
+  height: 100%
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
