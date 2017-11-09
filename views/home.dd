@@ -1,0 +1,16 @@
+@*
+  Copyright Diamond MVC © 2017
+*
+@[
+  layout:
+    layout
+---
+  route:
+    home
+---
+  controller:
+    HomeController
+]
+@:addPlaceHolder("title", i18n.getMessage(client, "HOME_TITLE"));
+
+<p>@=i18n.getMessage(client, "HELLO_WORLD");</p>

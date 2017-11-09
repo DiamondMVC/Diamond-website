@@ -1,0 +1,46 @@
+@*
+  Copyright Diamond MVC © 2017
+*
+@<doctype>
+<html>
+<head>
+  <!-- Primary Language/Frameworks: D, vibe.d & Diamond MVC -->
+  <!-- https://dlang.org/ -->
+  <!-- http://vibed.org/ -->
+  <!-- https://github.com/DiamondMVC/Diamond/ -->
+  <!-- Copyright Diamond MVC © 2017 -->
+
+  <title>Diamond MVC - @<title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link href="@../public/css/bootstrap.min.css" rel="stylesheet">
+  <link href="@../public/diamond/css/global.css" rel="stylesheet">
+
+  @{
+    import std.file : exists, thisExePath;
+    import std.path : dirName, absolutePath;
+
+    auto cssPath = absolutePath(dirName(thisExePath) ~ "/public/diamond/css/" ~ super.name ~ ".css");
+  }
+
+  @:if (exists(cssPath)) {
+    <link href="@../public/diamond/css/@=super.name;.css" rel="stylesheet">
+  }
+
+  <script src="@../public/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="@../public/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="@../public/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="@../public/paymentfont/css/paymentfont.min.css">
+</head>
+<body>
+  @<view>
+
+  <span style="text-align: center;">
+    Copyright Diamond MVC © 2017
+  </span>
+</body>
+</html>
