@@ -30,8 +30,6 @@ $(document).ready(function() {
           contentType: req.dataType === 'json' ? 'application/json; charset=utf-8' : req.contentType,
           url: window.location.protocol + '//' + window.location.host + (req.params ? (req.url + '?' + $.params(req.params)) : req.url),
           success: function(result,status,xhr) {
-            //var data = req.dataType === 'json' ? JSON.parse(result) : result;
-
             if (req.success) {
               req.success.call(req.scope || this, result, status, xhr);
             }

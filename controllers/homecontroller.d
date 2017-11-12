@@ -36,4 +36,25 @@ final class HomeController(TView) : Controller!TView
 
     return json(new JsonResponse(true));
   }
+
+  @HttpAction(HttpGet, "/<>/{string:feature}") Status getFeature()
+  {
+    auto feature = get!string("feature");
+
+    import diamond.core.webconfig;
+
+    foreach (headerKey,headerValue; webConfig.defaultHeaders.general)
+    {
+      view.client.rawResponse.headers[headerKey] = headerValue;
+    }
+
+    if (!feature)
+    {
+      view.client.responseStream.write("");
+      return Status.end;
+    }
+
+    view.client.responseStream.write(view.retrieve("home_features", feature));
+    return Status.end;
+  }
 }

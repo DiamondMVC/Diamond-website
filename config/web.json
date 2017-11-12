@@ -6,10 +6,7 @@
   "accessLogToConsole": false,
   "addresses": [{
     "ipAddresses": ["::1", "127.0.0.1"],
-    "port": 8181
-  }, {
-    "ipAddresses": ["::1", "127.0.0.1"],
-    "port": 8080
+    "port": 80
   }],
   "defaultHeaders": {
     "general": {

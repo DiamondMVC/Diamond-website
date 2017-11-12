@@ -5,7 +5,7 @@ module websettings;
 
 import diamond.core.websettings;
 
-class DiamondWebSettings : WebSettings
+private class DiamondWebSettings : WebSettings
 {
   import vibe.d : HTTPServerRequest, HTTPServerResponse, HTTPServerErrorInfo;
   import diamond.http;

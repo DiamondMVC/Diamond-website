@@ -1,4 +1,4 @@
-COPYRIGHT = Copyright © 2017 Diamond MVC
+COPYRIGHT=Copyright © 2017 Diamond MVC
 
 HOME_MENU=Forside
 DOWNLOAD_MENU=Download
@@ -16,3 +16,934 @@ Et full-stack nativ MVC / Template Framework skrevet i
 ;
 
 FOCUS_CATCHPHRASE=Innovation, ydeevne og elegance er Diamond's n&oslash;gle elementer.
+
+GET_DIAMOND=Hent Diamond 2.5.2
+SUPPORT_US=St&oslash;t Os
+
+GET_STARTED=Begynd Med Diamond
+GET_STARTED_DOWNLOAD=Hent
+GET_STARTED_LEARN=L&aelig;r
+GET_STARTED_DEPLOY=Deploy
+GET_STARTED_CONTRIBUTE=Bidrag
+
+REASONS_TO_USE_DIAMOND=10 Grunde Til At Bruge Diamond
+
+REASONS_TO_USE_DIAMOND_0=H&oslash;j performance, lavt CPU-brug
+REASONS_TO_USE_DIAMOND_1=Innovativt
+REASONS_TO_USE_DIAMOND_2=Nativ uden kompleksitet
+REASONS_TO_USE_DIAMOND_3=Bruger-venlig
+REASONS_TO_USE_DIAMOND_4=Fokuser p&aring; at udvikle, i stedet for at komme i gang
+REASONS_TO_USE_DIAMOND_5=Nem l&aelig;ringskurv
+REASONS_TO_USE_DIAMOND_6=Udtryksfulde templates uden irritation
+REASONS_TO_USE_DIAMOND_7=Baseret p&aring; moderne koncepter
+REASONS_TO_USE_DIAMOND_8=Skrevet i D
+REASONS_TO_USE_DIAMOND_9=Bruger vibe.d som sin backend
+
+FEATURE_OVERVIEW=Funktions Oversigt
+
+FEATURES_GENERAL_FEATURES=Generelle
+FEATURES_DATA_STORAGE=Data &amp; Opbevaring
+FEATURES_VIEWS_FRONTEND=Views &amp; Frontend
+FEATURES_CONTROLLERS=Controllers
+FEATURES_MORE=Mere
+
+FEATURES_LOW_MEMORY=<a href="#feature-display" onclick="Diamond.Core.getFeature('low-memory');">Lavt Hukommelse & CPU Forbrug</a>
+FEATURES_ORM=<a href="#feature-display" onclick="Diamond.Core.getFeature('orm');">ORM</a>
+FEATURES_CTFE_PARSING=<a href="#feature-display" onclick="Diamond.Core.getFeature('ctfe-parsing');">Compile-time Parsing</a>
+FEATURES_AUTO_MAPPING=<a href="#feature-display" onclick="Diamond.Core.getFeature('auto-mapping');">Auto-mapping</a>
+FEATURES_AUTHENTICATION=<a href="#feature-display" onclick="Diamond.Core.getFeature('authentication');">Authentication</a>
+
+FEATURES_MVC_HMVC=<a href="#feature-display" onclick="Diamond.Core.getFeature('mvc-hmvc');">MVC & HMVC</a>
+FEATURES_MYSQL_ORM=<a href="#feature-display" onclick="Diamond.Core.getFeature('mysql-orm');">MySql ORM</a>
+FEATURES_PARTIAL_VIEWS=<a href="#feature-display" onclick="Diamond.Core.getFeature('partial-views');">Partial Views</a>
+FEATURES_VIEW_INTEGRATION=<a href="#feature-display" onclick="Diamond.Core.getFeature('view-integration');">View-integration</a>
+FEATURES_CSRF_PROTECTION=<a href="#feature-display" onclick="Diamond.Core.getFeature('csrf-protection');">CSRF Beskyttelse</a>
+
+FEATURES_RESTFUL=<a href="#feature-display" onclick="Diamond.Core.getFeature('restful');">RESTful</a>
+FEATURES_CACHING=<a href="#feature-display" onclick="Diamond.Core.getFeature('caching');">Caching</a>
+FEATURES_LAYOUTS=<a href="#feature-display" onclick="Diamond.Core.getFeature('layouts');">Layouts</a>
+FEATURES_MANDATORY_ACTIONS=<a href="#feature-display" onclick="Diamond.Core.getFeature('mandatory-actions');">Obligatoriske Funktioner</a>
+FEATURES_CRYPTOGRAPHY=<a href="#feature-display" onclick="Diamond.Core.getFeature('cryptography');">Kryptografi</a>
+
+FEATURES_ADVANCED_ROUTING=<a href="#feature-display" onclick="Diamond.Core.getFeature('advanced-routing');">Advanceret Routing</a>
+FEATURES_MONGO=<a href="#feature-display" onclick="Diamond.Core.getFeature('mongo');">Mongo</a>
+FEATURES_FAST_PERFORMANT_RENDERING=<a href="#feature-display" onclick="Diamond.Core.getFeature('fast-performant-rendering');">Hurtigt & Højtydende Rendering</a>
+FEATURES_VERSION_CONTROL=<a href="#feature-display" onclick="Diamond.Core.getFeature('version-control');">Versions-kontrol</a>
+FEATURES_JSON_BSON=<a href="#feature-display" onclick="Diamond.Core.getFeature('json-bson');">JSON/BSON</a>
+
+FEATURES_ACL=<a href="#feature-display" onclick="Diamond.Core.getFeature('acl');">ACL</a>
+FEATURES_REDIS=<a href="#feature-display" onclick="Diamond.Core.getFeature('redis');">Redis</a>
+FEATURES_VIEWS_DYNAMIC=<a href="#feature-display" onclick="Diamond.Core.getFeature('dynamic');">Dynamisk</a>
+FEATURES_ASYNC=<a href="#feature-display" onclick="Diamond.Core.getFeature('async');">Asynkront</a>
+
+FEATURES_CROSS_PLATFORM=<a href="#feature-display" onclick="Diamond.Core.getFeature('cross-platform');">Cross-platform</a>
+FEATURES_REQUEST_CONTEXT=<a href="#feature-display" onclick="Diamond.Core.getFeature('request-context');">Request-context</a>
+FEATURES_D_CODE_EXECUTION=<a href="#feature-display" onclick="Diamond.Core.getFeature('d-code-execution');">Alt D Kode Kan Blive Kørt</a>
+FEATURES_FIBERS_TASKS=<a href="#feature-display" onclick="Diamond.Core.getFeature('fibers-tasks');">Fibers/Tasks</a>
+
+FEATURES_WEBSITE_WEBAPI=<a href="#feature-display" onclick="Diamond.Core.getFeature('website-webapi');">Website/Webapi Support</a>
+FEATURES_COOKIES=<a href="#feature-display" onclick="Diamond.Core.getFeature('cookies');">Cookies</a>
+FEATURES_SECTIONS=<a href="#feature-display" onclick="Diamond.Core.getFeature('sections');">Sektioner</a>
+FEATURES_SHARDING=<a href="#feature-display" onclick="Diamond.Core.getFeature('sharding');">Sharding</a>
+
+FEATURES_I18N=<a href="#feature-display" onclick="Diamond.Core.getFeature('i18n');">i18n</a>
+FEATURES_SESSIONS=<a href="#feature-display" onclick="Diamond.Core.getFeature('sessions');">Sessions</a>
+FEATURES_FLASH_MESSAGES=<a href="#feature-display" onclick="Diamond.Core.getFeature('flash-messages');">Flash-beskeder</a>
+FEATURES_NETWORK_SECURITY=<a href="#feature-display" onclick="Diamond.Core.getFeature('network-security');">Netwærks Sikkerhed & Begrænsninger</a>
+
+FEATURES_WEBSOCKETS=<a href="#feature-display" onclick="Diamond.Core.getFeature('websockets');">Websockets</a>
+FEATURES_TRANSACTIONS=<a href="#feature-display" onclick="Diamond.Core.getFeature('transactions');">Transaktioner</a>
+FEATURES_UNITTESTING=<a href="#feature-display" onclick="Diamond.Core.getFeature('unittesting');">Unittesting</a>
+
+FEATURES_LOGGING=<a href="#feature-display" onclick="Diamond.Core.getFeature('logging');">Logging</a>
+
+
+FEATURES_LOW_MEMORY_TITLE=Lavt Hukommelse & CPU Forbrug
+
+FEATURES_ORM_TITLE=ORM
+FEATURES_CTFE_PARSING_TITLE=Compile-time Parsing
+FEATURES_AUTO_MAPPING_TITLE=Auto-mapping
+FEATURES_AUTHENTICATION_TITLE=Authentication
+
+FEATURES_MVC_HMVC_TITLE=MVC & HMVC
+FEATURES_MYSQL_ORM_TITLE=MySql ORM
+FEATURES_PARTIAL_VIEWS_TITLE=Partial Views
+FEATURES_VIEW_INTEGRATION_TITLE=View-integration
+FEATURES_CSRF_PROTECTION_TITLE=CSRF Beskyttelse
+
+FEATURES_RESTFUL_TITLE=RESTful
+FEATURES_CACHING_TITLE=Caching
+FEATURES_LAYOUTS_TITLE=Layouts
+FEATURES_MANDATORY_ACTIONS_TITLE=Obligatoriske Funktioner
+FEATURES_CRYPTOGRAPHY_TITLE=Kryptografi
+
+FEATURES_ADVANCED_ROUTING_TITLE=Advanceret Routing
+FEATURES_MONGO_TITLE=Mongo
+FEATURES_FAST_PERFORMANT_RENDERING_TITLE=Hurtig & H&oslash;jtydende Rendering
+FEATURES_VERSION_CONTROL_TITLE=Versions-kontrol
+FEATURES_JSON_BSON_TITLE=JSON/BSON
+
+FEATURES_ACL_TITLE=ACL (Access-control-list)
+FEATURES_REDIS_TITLE=Redis
+FEATURES_VIEWS_DYNAMIC_TITLE=Dynamisk
+FEATURES_ASYNC_TITLE=Asynkront
+
+FEATURES_CROSS_PLATFORM_TITLE=Cross-platform
+FEATURES_REQUEST_CONTEXT_TITLE=Request-context
+FEATURES_D_CODE_EXECUTION_TITLE=Alt D Kan Blive K&oslash;rt
+FEATURES_FIBERS_TASKS_TITLE=Fibers/Tasks
+
+FEATURES_WEBSITE_WEBAPI_TITLE=Website/Webapi Support
+FEATURES_COOKIES_TITLE=Cookies
+FEATURES_SECTIONS_TITLE=Sektioner
+FEATURES_SHARDING_TITLE=Sharding
+
+FEATURES_I18N_TITLE=i18n
+FEATURES_SESSIONS_TITLE=Sessions
+FEATURES_FLASH_MESSAGES_TITLE=Flash-beskeder
+FEATURES_NETWORK_SECURITY_TITLE=Netv&aelig;rks Sikkerhed & Begr&aelig;nsninger
+
+FEATURES_WEBSOCKETS_TITLE=Websockets
+FEATURES_TRANSACTIONS_TITLE=Transaktioner
+FEATURES_UNITTESTING_TITLE=Unittesting
+
+FEATURES_LOGGING_TITLE=Logging
+
+FEATURES_LOW_MEMORY_CONTENT:
+Diamond bruger vibe.d som backend for at h&aring;ndterer requests, som på nuv&aelig;rende tidspunkt kan h&aring;ndterer flere requests end nogle andre frameworks.
+<br><br>
+P&aring; samme tid er Diamond skrevet i D og bruger D's compile-time faciliteter og
+derved har s&aring; lidt overhead i run-time som muligt.
+<br><br>
+Hukommelsesforbruget er lav, fordi Diamond ikke holder på meget mere data i hukommelsen end der er efterspurgt,
+bortset fra minimal session/cookie/request data.
+<br><br>
+CPU forbruget er holdt til et minimum,
+på grund af hvordan vibe.d bruger sin asynkrone fiber model.
+;
+
+FEATURES_MVC_HMVC_CONTENT:
+Diamond har en fuld integreret Model-view-controller implementation,
+hvilket er baseret på ASP.NET's design.
+<br><br>
+Implementering af views, controllerer, modeller er lige ud af landevejen i Diamond og
+lavet til at føles så naturligt som muligt.
+<br>
+<img src="/public/diamond/images/mvc.jpg">
+;
+
+FEATURES_RESTFUL_CONTENT:
+Diamond kan være RESTful hvis der er behov for det.
+<br>
+REST integrationen kan være magtfuld og sikker kombineret med brug af ACL.
+
+<pre>
+@HttpAction(HttpGet, "/product/{uint:productId}/") Status getProduct()
+{
+    auto productId = get!uint("productId");
+    auto product = getProductFromDatabase(productId);
+
+    return json(product);
+}
+</pre>
+
+<pre>
+@HttpAction(HttpPut, "/product/{uint:productId}/") Status insertOrUpdateProduct()
+{
+    auto productId = get!uint("productId"); // If the id is 0 then we'll insert, else we'll update.
+
+    insertProductToDatabase(productId, view.client.json); // Normally you'll want to deserialize the json
+
+    return jsonString(q{{
+        "success": true
+    }});
+}
+</pre>
+
+<pre>
+@HttpAction(HttpDelete, "/product/{uint:productId}/") Status deleteProduct()
+{
+    auto productId = get!uint("productId");
+
+    deleteProductFromDatabase(productId);
+
+    return jsonString(q{{
+        "success": true
+    }});
+}
+</pre>
+;
+
+FEATURES_ADVANCED_ROUTING_CONTENT:
+Diamond tillader advanceret routing med controller funktioner, hvilket kan være type-sikkert.
+
+<pre>
+@HttpAction(HttpGet, "/<>/{uint:userId}/groups/{string:groupName}/") getUserGroup()
+{
+    auto userId = get!uint("userId");
+    auto groupName = get!string("groupName");
+
+    auto userGroup = getUserGroupFromDatabase(userId, groupName);
+
+    return json(userGroup);
+}
+</pre>
+;
+
+FEATURES_ACL_CONTENT:
+Diamond har en fuldt indbygget ACL implementation.
+<br>
+Det tillader brugerdefineret roller og tilladelse af resourcer.
+<br>ACL kan blive kombineret med build-in authenticationen.
+
+<pre>
+auto administrators = addRole("administrators");
+
+auto owner = addRole("owner", administrators);
+auto superUser = addRole("super-user", administrators);
+</pre>
+
+<pre>
+auto guest = addRole("guest")
+  .addPermission("/", true, false, false, false) // Guests can view home page
+  .addPermission("/user", true, true, false, false) // Guests can view user pages, as well register (POST)
+  .addPermission("/login", true, true, false, false) // Guests can view login page, as well login (POST)
+  .addPermission("/logout", false, false, false, false); // Guests cannot logout, because they're not logged in
+
+auto user = addRole("user")
+  .addPermission("/", true, false, false, false) // Users can view home page
+  .addPermission("/user", true, false, true, false) // Users can view user pages, as well update user information (PUT)
+  .addPermission("/login", false, false, false, false) // Users cannot view login page or login
+  .addPermission("/logout", false, true, false, false); // Users can logout (POST)
+</pre>
+;
+
+FEATURES_CROSS_PLATFORM_CONTENT:
+Diamond supporter alle platforme, som både vibe.d & D supporter, hvilket inkluder Windows, Linux, macOS/OSX og flere.
+<br><br>
+<img src="https://img.shields.io/badge/os-windows%20%7C%20linux%20%7C%20macos-ff69b4.svg" alt="OS">
+;
+
+FEATURES_WEBSITE_WEBAPI_CONTENT=Diamond har supportering for både website og/eller webapis.
+
+FEATURES_I18N_CONTENT:
+i18n (Internationalization) kan blive brugt til at lokaliser Diamond applikationer i forskellige sprog og kulturer.
+<pre>
+import diamond.data.i18n; // Or just diamond.data
+
+auto message = getMessage(client, "someMessage"); // Gets message from client ...
+auto specificMessage = getMessage("en_us", "someMessage"); // Gets message from a specific language ...
+</pre>
+
+<pre>
+&lt;p&gt;@=i18n.getMessage(client, "someMessage");&lt;/p&gt;
+&lt;p&gt;@=i18n.getMessage("en_us", "someMessage");&lt;/p&gt;
+</pre>
+
+<pre>
+@* Will show the flag depending on the client's language. *
+&lt;img src="@../public/images/flags/@=client.language;.png"&gt;
+</pre>
+;
+
+FEATURES_WEBSOCKETS_CONTENT:
+Diamond har indbygget supportering for websockets med en nemt-at-bruge API.
+<br><br>
+Det virker ved at implementer en websocket service som kan tage sig af websocketsne.
+<br><br>
+Hver websocket kommer også med en context der kan bruges til at holde på data, sammenlignende med request-contexter.
+
+<pre>
+import diamond.http.websockets;
+import diamond.core.io;
+
+private final class TestWebSocketService : WebSocketService
+{
+  final:
+  this()
+  {
+    super("/ws");
+  }
+
+  override void onConnect(WebSocket socket)
+  {
+    socket.add("id", "mySocket");
+
+    print("'%s' connected ...", socket.get!string("id"));
+  }
+
+  override void onMessage(WebSocket socket)
+  {
+    print("'%s' received a message ...", socket.get!string("id"));
+
+    auto message = socket.readText();
+
+    string message2;
+    if (!socket.readTextNext(message2)) return;
+
+    uint uintValue;
+    if (!socket.readNext!uint(uintValue)) return;
+
+    bool boolValue;
+    if (!socket.readNext!bool(boolValue)) return;
+
+    print("values: ['%s', '%s', %d, %s]", message, message2, uintValue, boolValue);
+
+    socket.send("Hello World!");
+    socket.send(12345);
+  }
+
+  override void onClose(WebSocket socket)
+  {
+    print("'%s' has closed ...", socket.get!string("id"));
+  }
+}
+</pre>
+
+<pre>
+addWebSocketService(new TestWebSocketService);
+</pre>
+
+<pre>
+var socket = new WebSocket("ws://127.0.0.1/ws");
+
+socket.onopen = function (event) {
+  console.info("Open ...");
+
+  for (var i = 0; i < 3; i++) {
+    console.info("Begin send ...");
+    socket.send("Hello Message1!");
+    socket.send("Hello Message2!");
+    socket.send(12345);
+    socket.send(true);
+  }
+};
+
+socket.onmessage = function (event) {
+  console.info("Received:");
+  console.info(event.data);
+};
+
+socket.onclose = function(event) {
+  console.info("Closed ...");
+};
+</pre>
+;
+
+FEATURES_ORM_CONTENT:
+Diamond har en indbygget ORM som kan bruges til at mappe brugerdefineret data eks. andre database-engines.
+;
+
+FEATURES_MYSQL_ORM_CONTENT:
+Per standard har Diamond en indbygget ORM for Mysql. Den er meget kraftfuld siden den er baseret på det native mysql bibliotek.
+
+<pre>
+module models.mymodel;
+
+import diamond.database;
+
+class MyModel : MySql.MySqlModel!"mymodel_table"
+{
+  public:
+  @DbId ulong id;
+  string name;
+
+  this() { super(); }
+}
+</pre>
+
+<pre>
+import diamond.database;
+import models;
+
+static const sql = "SELECT * FROM `@table` WHERE `id` = @id";
+
+auto params = getParams();
+params["id"] = cast(ulong)1;
+
+auto model = MySql.readSingle!MyModel(sql, params);
+</pre>
+;
+
+FEATURES_CACHING_CONTENT:
+Diamond implementer en masse caching teknikker bagved. Den tillader også brugerdefineret caching af eks. expensive views.
+<br>
+<img src="/public/diamond/images/cache.jpg">
+;
+
+FEATURES_MONGO_CONTENT:
+Diamond har en fuld integration til Mongo igennem vibe.d
+<br>
+Kilde: <a href="http://vibed.org/docs#mongo">http://vibed.org/docs#mongo</a>
+<pre>
+import vibe.d;
+
+MongoClient client;
+
+void test()
+{
+	auto coll = client.getCollection("test.collection");
+	foreach (doc; coll.find(["name": "Peter"]))
+		logInfo("Found entry: %s", doc.toJson());
+}
+
+shared static this()
+{
+	client = connectMongoDB("127.0.0.1");
+}
+</pre>
+;
+
+FEATURES_REDIS_CONTENT:
+Diamond har en fuld integration til Redis igennem vibe.d
+<br>
+Se: <a href="http://vibed.org/docs#redis">http://vibed.org/docs#redis</a>
+;
+
+FEATURES_REQUEST_CONTEXT_CONTENT:
+Diamond supporter request contexts hvilket tillader for hver request at have data bragt med dem rundt i applikationen..
+<pre>
+client.addContext("someString", "Hello World!");
+
+...
+
+auto someString = client.getContext!string("someString", "someString wasn't found!");
+</pre>
+;
+
+FEATURES_COOKIES_CONTENT:
+Diamond har en meget bruger-venlig cookie API bygget direkte ind i requestet's http client.
+<pre>
+client.cookies.create("myCookie", "Hello Cookie!", 60);
+
+...
+
+auto myCookie = client.cookies.get("myCookie");
+</pre>
+;
+
+FEATURES_SESSIONS_CONTENT:
+Diamond supporter sessions, hvilket kan dele data og cached views imellem flere requests fra den samme bruger/browser.
+<pre>
+client.session.setValue("mySesionValue", "Hello Session!");
+
+...
+
+auto mySessionValue = client.session.getValue("mySessionValue");
+</pre>
+;
+
+FEATURES_TRANSACTIONS_CONTENT:
+Transaktioner tillader for transaktionelt hukommelses styring, så vel transaktionelt database integration.
+<br><br>
+Det er nyttigt for at udfører sikker data transaktioner hvor der ikke er råd til forkert/ikke-færdgt data.
+<pre style="max-height: 400px;">
+auto bob = new Snapshot!BankAccount(BankAccount("Bob", 200));
+auto sally = new Snapshot!BankAccount(BankAccount("Sally", 0));
+
+auto transaction = new Transaction!BankTransfer;
+transaction.commit = (transfer)
+{
+    bob = BankAccount(bob.name, bob.money - transfer.money);
+    sally = BankAccount(sally.name, sally.money + transfer.money);
+
+    UpdateBankAccount(bob);
+    UpdateBankAccount(sally);
+};
+transaction.success = (transfer)
+{
+    import diamond.core.io;
+
+    print("Successfully transferred $%d from %s to %s", transfer.money, transfer.from, transfer.to);
+    print("Bob's money: %d", bob.money);
+    print("Sally's money: %d", sally.money);
+};
+transaction.failure = (transfer, error, retries)
+{
+    bob.prev(); // Goes back to the previous state of Bob's bank account
+    sally.prev(); // Goes back to the previous state of Sally's bank account
+
+    return false; // We don't want to retry ...
+};
+
+auto transfer = new Snapshot!BankTransfer(BankTransfer("Bob", "Sally", 100));
+transaction(transfer);
+</pre>
+;
+
+FEATURES_CTFE_PARSING_CONTENT:
+Views er parsed i compile-time og bliver compiled til D klasser der køres i run-time.
+<br>
+Det gør dem meget kraftfulde, fordi at de ikke skal parses for hver request, hvilket kun giver dem minimal handling.
+;
+
+FEATURES_PARTIAL_VIEWS_CONTENT:
+Partial views kan nemt implementeres ved at lave normale views og kalde render funktionerne fra et view til at renderer andre views.
+<pre>
+@* In a view *
+
+@:render("myPartialView");
+
+...
+
+@:render("myPartialView", "someSection");
+
+...
+
+@render!"myPartialView"(new MyPartialViewModel("something something"));
+</pre>
+;
+
+FEATURES_LAYOUTS_CONTENT:
+Views kan bruge layout views, hvilket tillader for advanceret layout teknikker og view mixins.
+<br><br>
+<b>layout.dd</b>
+<pre>
+@&lt;doctype>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;@&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  @&lt;view&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<br>
+<b>home.dd</b>
+<pre>
+@[
+  layout:
+    layout
+---
+  route:
+    home
+---
+  placeHolders:
+    [
+      "title": "Home"
+    ]
+]
+
+The time is: &lt;b&gt;@=Clock.currTime();&lt;/b&gt;
+</pre>
+;
+
+FEATURES_FAST_PERFORMANT_RENDERING_CONTENT=Views er renderet hurtig, fordi det meste af rendering sker i compile-time.
+
+FEATURES_VIEWS_DYNAMIC_CONTENT:
+Alle views er dynamiske og derfor kan de render dynamisk data.
+<pre>
+&lt;ul&gt;
+@:foreach (item; model.items) {
+    &lt;li&gt;
+        &lt;b&gt;@=item.name;&lt;/b&gt;
+    &lt;/li&gt;
+}
+&lt;/ul&gt;
+</pre>
+;
+
+FEATURES_D_CODE_EXECUTION_CONTENT:
+Views tillader for alt slags D kode at blive kørt, uden nogle begrænsninger.
+<br>
+Det inkluder klasse generering, templates, funktioner og expressions direkte i et view.
+<br><br>
+Det er nyttigt for at generer kraftfulde og hurtigt dynamisk data.
+<br><br>
+Siden D er nativ compiled, ligeledes vil det kode der køres for viewet være og derved er køresels tiden for koden meget hurtig (På par med C/C++.)
+<pre>
+@:void b(T)(T item) {
+    &lt;strong&gt;@=item;&lt;/strong&gt;
+}
+@:b("Bold this");
+</pre>
+;
+
+FEATURES_SECTIONS_CONTENT:
+Diamond tillader views at blive splittet up i forskellige sektioner, hvilket tillader at views kun bliver partial renderet.
+<br><br>
+Det er en unik funktionality i Diamond, som ikke mange andre frameworks har og især ikke med så et rent og innovativ implementation.
+<br><br>
+Det er en stor hjælp til eks. responsive designs, dynamisk ajax data osv.
+<br><br>
+Faktisk er det sådan at dette content er renderet med sektioner.
+<br><br>
+<b>view1:</b>
+<pre>
+@!phone:
+&lt;div class="phone"&gt;
+    &lt;p&gt;Hello Phone!&lt;/p&gt;
+&lt;/div&gt;
+
+@!desktop:
+&lt;div class="desktop"&gt;
+    &lt;p&gt;Hello Desktop!&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<br>
+<b>view2:</b>
+<pre>
+@:render("view1", "phone"); // Will render view1 with the phone section
+@:render("view1", "desktop"); // Will render view1 with the desktop section
+</pre>
+;
+
+FEATURES_FLASH_MESSAGES_CONTENT:
+Flash-beskeder er nyttige til at oprette notifikations beskeder på en hjemmeside.
+<pre>
+@:flashMessage("message1", "This message stays forever.", FlashMessageType.always);
+@:flashMessage("message2", "This message dissappers after 10 seconds.", FlashMessageType.always, 10000);
+@:flashMessage("message3", "This message is gone after your next refresh.", FlashMessageType.showOnce);
+@:flashMessage("message4", "This message is gone after your next refresh and shows for 20 seconds.", FlashMessageType.showOnce, 20000);
+</pre>
+;
+
+FEATURES_AUTO_MAPPING_CONTENT:
+Controller funktioner er auto-mappet ud fra deres funktion defination som er defineret med specielle attributer.
+<pre>
+/// Route: /controller_or_view_route/GetSomething
+@HttpAction(HttpGet) Status getSomething()
+{
+    auto someModel = getSomeModel();
+
+    return json(someModel);
+}
+</pre>
+;
+
+FEATURES_VIEW_INTEGRATION_CONTENT:
+Controllerer har adgang direkte til det view der kalder dem. De kan også blive delt imellem flere views.
+<pre>
+@HttpDefault defaultAction()
+{
+    view.model = getViewModel();
+
+    return Status.success;
+}
+</pre>
+;
+
+FEATURES_MANDATORY_ACTIONS_CONTENT:
+Controller tillader obligatoriske funktioner, hvilket er funktioner der altid køres og skal køres igennem successfuldt for hver request der laves til en controller.
+<pre>
+/// Called for all requests done to the controller.
+@HttpMandatory Status isValidRequest()
+{
+    auto isValid = validateRequest(view.client);
+
+    if (!isValid)
+    {
+        view.client.error(HttpStatus.badRequest);
+    }
+
+    return Status.success;
+}
+</pre>
+;
+
+FEATURES_VERSION_CONTROL_CONTENT:
+Når man bygger web-applikationer og bygger en ny version hvil man muligvis versioner projektet, så man tillader både det gamle og den nye api at blive brugt.
+<br><br>
+Det er nyttigt når man prøver at migrere en applkation fra en gammel api til en ny api, når den nye api ikke har implementeret alle de gamle features.
+<br><br>
+<b>Old home controller:</b>
+<pre>
+@HttpVersion("v2", NewHomeController.stringof) final class OldHomeController(TView) : Controller!TView
+{
+  public:
+  final:
+  /**
+  * Creates a new instance of the old home controller.
+  * Params:
+  *   view =  The view assocaited with the controller.
+  */
+  this(TView view)
+  {
+    super(view);
+  }
+
+  /// Route: / | /home
+  @HttpDefault Status home()
+  {
+    return Status.success;
+  }
+
+  /// Route: /home/getValue
+  @HttpAction(HttpGet) Status getValue()
+  {
+      return jsonString(`{
+          "success": true,
+          "message": "Old"
+      }`);
+  }
+}
+</pre>
+<br>
+<b>New home controller:</b>
+<pre>
+final class NewHomeController(TView) : Controller!TView
+{
+  public:
+  final:
+  /**
+  * Creates a new instance of the new controller.
+  * Params:
+  *   view =  The view assocaited with the controller.
+  */
+  this(TView view)
+  {
+    super(view);
+  }
+
+  /// Route: /home/v2
+  @HttpDefault Status home()
+  {
+    return Status.success;
+  }
+
+  /// Route: /home/v2/getValue
+  @HttpAction(HttpGet) Status getValue()
+  {
+      return jsonString(`{
+          "success": true,
+          "message": "New"
+      }`);
+  }
+}
+</pre>
+;
+
+FEATURES_AUTHENTICATION_CONTENT:
+Diamond har en fuld integreret authentication API som kan blive kombineret med ACL, til at opbygge en stærk og sikker authentication implementation.
+<br><br>
+<b>Login:</b>
+<pre>
+long loginTimeInMinutes = 99999;
+auto userRole = getRole("user");
+
+client.login(loginTimeinMinutes, userRole);
+</pre>
+<br>
+<b>Logout:</b>
+<pre>
+client.logout();
+</pre>
+<br>
+<b>Checking Role:</b>
+<pre>
+if (client.role.name == "user")
+{
+    // Logged in as a user ...
+}
+else
+{
+    // Not logged in as a user ...
+}
+</pre>
+;
+
+FEATURES_CSRF_PROTECTION_CONTENT:
+CSRF Beskyttle er bygget ind i Diamond og kan nemt integreres i forms, såvel valideres i en applikations backend.
+<br><br>
+<b>View:</b>
+<pre>
+@:clearCSRFToken();
+
+&lt;form&gt;
+@:appendCSRFTokenField("formToken");
+
+@* other fields here *
+&lt;/form&gt;
+</pre>
+<br>
+<b>Controller:</b>
+<pre>
+auto bankTransferModel = view.client.getModelFromJson!BankTransferModel;
+
+import diamond.security;
+
+if (!isValidCSRFToken(view.client, bankTransferModel.formToken, true))
+{
+    view.client.error(HttpStatus.badRequest);
+}
+</pre>
+;
+
+FEATURES_CRYPTOGRAPHY_CONTENT:
+Kryptografi er supporteret igennem ibe.d's afhængighed til Botan.
+<br><br>
+Se: <a href="https://code.dlang.org/packages/botan/">https://code.dlang.org/packages/botan/</a>
+;
+
+FEATURES_JSON_BSON_CONTENT:
+JSON & BSON er supporteret igennem vibe.d's integration, men noget high-level json support er lavet til at integrerer med det.
+<pre>
+auto model = client.getModelFromJson!MyModel;
+</pre>
+
+<pre>
+@HttpAction(HttpGet) Status getModel()
+{
+     return json(getMyModel());
+}
+</pre>
+
+<pre>
+@HttpAction(HttpGet) Status getRawJsonString()
+{
+    return jsonString(q{{
+        "message": "Hello World!",
+        "success": true
+    }});
+}
+</pre>
+;
+
+FEATURES_ASYNC_CONTENT:
+Diamond requests er handlet asynkront igennem vibe.d,
+hvilket gør at de bliver handlet hurtigt og kraftfuldt.
+<br><br>
+Funktioner osv. kan også blive kørt asynkront igennem vibe.d's API.
+<br>
+<img src="http://vibed.org/images/feature_event.png">
+<br>
+Kilde: <a href="http://vibed.org/features">http://vibed.org/features</a>
+;
+
+FEATURES_FIBERS_TASKS_CONTENT:
+Fibers og tasks er supporteret igennem vibe.d, hvilket tillader meget kraftfulde og højtydene multi-threading.
+<br>
+<img src="http://vibed.org/images/feature_fibers.png">
+<br>
+Kilde: <a href="http://vibed.org/features">http://vibed.org/features</a>
+;
+
+FEATURES_SHARDING_CONTENT:
+Diamond supporter flere forskellige database-systemer såsom MySql, Mongo og Redis. Integrationerne til dem kan gøres nemt uden komplikationer.
+;
+
+FEATURES_NETWORK_SECURITY_CONTENT:
+Netwærkssikkerhed og -begrænsninger kan nemt gøres per controller funktion/route eller globalt for hele applikationen.
+<br><br>
+Dette tillader at begrænse specifike områder i applikationen til eks. et lokalt netwærk; meget nyttig for intern administrations websites, som er hosted på samme server, som en offentlig website.
+;
+
+FEATURES_UNITTESTING_CONTENT:
+Unittesting er et must for enterprise udvikling og skal implementeres for en applikation, for at kunne være sikker på at alt virker som det skal.
+<br><br>
+Unittesting i Diamond tillader at du kan oprette specielle requests som kan ramme specifikke områder i din applikation.
+<pre>
+module unittests.test;
+
+import diamond.unittesting;
+
+static if (isTesting)
+{
+  class JsonResponse
+  {
+    string message;
+    bool success;
+  }
+
+  @HttpTest("My first unittest") test()
+  {
+    testRequest("/home/test/100", HttpMethod.GET, (scope result)
+    {
+      assert(result.statusCode == HttpStatus.ok);
+
+      auto foo = result.getModelFromJson!JsonResponse;
+
+      assert(foo.success);
+    });
+
+    testRequest("/home/test/500", HttpMethod.GET, (scope result)
+    {
+      assert(result.statusCode == HttpStatus.ok);
+
+      auto foo = result.getModelFromJson!JsonResponse;
+
+      assert(!foo.success);
+    });
+  }
+}
+</pre>
+;
+
+FEATURES_LOGGING_CONTENT:
+Logging er nyttigt for at kunne logge informationer omkring requests, responses, fejl osv. Det er et vigtigt redskab for debugging enterprise applikationer.
+<br><br>
+<pre>
+log(LogType.error, (result)
+{
+    logToMSSQLDatabase(result); // Custom implementation to log to a MSSQL database.
+});
+</pre>
+
+<pre>
+logToFile(LogType.error, "errors.log");
+
+...
+
+logToFile(LogType.error, "errors.log",
+(result)
+{
+    import diamond.core.io;
+    print(result.toString()); // Prints the log out to the console as well ...
+});
+</pre>
+
+<pre>
+logToDatabase(LogType.error, "logs");
+
+...
+
+logToDatabase(LogType.error, "logs",
+(result)
+{
+     import diamond.core.io;
+
+     print("Logged '%s' to the database.", result.logToken);
+});
+</pre>
+;
