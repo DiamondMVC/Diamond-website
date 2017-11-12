@@ -10,7 +10,7 @@ The website has dependencies to the following:
 | :---| :---: |
 | jQuery | 3.2.1 |
 | Bootstrap | 3.3.7 |
-| PaymentFont | 1.2.5 |
+| Payment Font | 1.2.5 |
 | Font Awesome | 4.7.0 |
 | [Flag-sprites](https://www.flag-sprites.com/) | GoSquared shiny large 32x32 |
 
@@ -18,4 +18,6 @@ When building Diamond it may not work properly without these dependencies.
 
 Preview:
 
-[![Preview](https://i.imgur.com/c54U1D1.png)](https://i.imgur.com/c54U1D1.png)
+[![Preview - Desktop](https://i.imgur.com/OlWAtix.png)](https://i.imgur.com/OlWAtix.png)
+
+[![Preview - Phone/Tablet](https://i.imgur.com/j275MkT.png)](https://i.imgur.com/j275MkT.png)
