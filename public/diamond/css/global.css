@@ -39,7 +39,6 @@ a:hover {
 }
 
 .d-header {
-  background-image: url(/public/diamond/images/cover_bg.jpg);
   background-size: cover;
   width: 100%;
   height: 528px;
@@ -57,6 +56,23 @@ a:hover {
   color: #ccc;
 }
 
+.d-header-small {
+  width: 100%;
+  background-size: cover;
+}
+
+.d-header-small a {
+  color: #fff;
+}
+
+.d-header-small a:visited {
+  color: #fff;
+}
+
+.d-header-small a:hover {
+  color: #ccc;
+}
+
 .d-header-cover {
   width: 100%;
   height: 100%;
@@ -69,6 +85,14 @@ a:hover {
   background-color: rgba(21, 67, 96, 0.8);
   padding-top: 10px;
   color: #fff;
+}
+
+.d-header-bar-small {
+  width: 100%;
+  background-color: rgba(21, 67, 96, 0.8);
+  padding-top: 10px;
+  color: #fff;
+  text-align: center;
 }
 
 .d-logo {
@@ -86,7 +110,20 @@ a:hover {
 }
 
 .d-logo-small {
+  width: 80%;
+  height: 100%;
+  margin-top: -9px;
+  font-size: 2em;
+  opacity: 0.6;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
 
+.d-logo-small img {
+  width: 32px;
+  height: 32px;
 }
 
 .d-menu {
@@ -126,6 +163,13 @@ a:hover {
   opacity: 0.7;
 }
 
+.d-flags-small {
+  height: 32px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+}
+
 .d-flag {
   margin-right: 6px;
 }
@@ -136,6 +180,16 @@ a:hover {
   color: #fff;
   text-align: center;
   margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-header-focus-small {
+  width: 80%;
+  min-height: 180px;
+  color: #fff;
+  text-align: center;
+  margin: 60px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -161,10 +215,55 @@ a:hover {
 }
 
 .d-focus-button {
-  background-color: #aed6f1;
+  background-color: #1f618d;
   width: 40%;
   height: 60px;
   border: 1px solid #1b4f72;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.d-focus-button-small {
+  background-color: #1f618d;
+  width: 60%;
+  height: 60px;
+  border: 1px solid #1b4f72;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.d-focus-button:hover {
+  background-color: #2471a3;
+}
+
+.d-focus-button a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+  padding-top: 1em;
+}
+
+.d-focus-button a:visited {
+  color: #fff;
+}
+
+.d-focus-button a:hover {
+  color: #fff;
+}
+
+.d-focus-button:hover a:visited {
+  color: #fff;
+}
+
+.d-focus-button:hover a:hover {
+  color: #fff;
 }
 
 .d-viewport {
@@ -174,4 +273,22 @@ a:hover {
 .d-footer {
   text-align: center;
   color: #fff;
+}
+
+pre {
+  width: 100%;
+  overflow: scroll;
+  max-height: 255px;
+  min-height: 52px;
+  text-align: left;
+  background-color: #85c  1e9;
+  color: #1f618d;
+}
+
+.d-syntax-keyword {
+  color: blue;
+}
+
+.d-syntax-string {
+  color: red;
 }
