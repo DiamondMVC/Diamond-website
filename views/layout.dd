@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   @* ------------------------------ Js ------------------------------ *
-  @:static const jsVersion = "0.0.1";
+  @:static const jsVersion = "0.0.2";
 
   @:auto jsPath = rootPath ~ "/public/public/js";
   @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="/public/font-awesome/css/font-awesome.min.css">
 
   @* ------------------------------ CSS ------------------------------ *
-  @:static const cssVersion = "0.0.1";
+  @:static const cssVersion = "0.0.2";
 
   <link rel="stylesheet" href="/public/css/shared.css?v=@=cssVersion;">
 
@@ -73,7 +73,6 @@
         <div class="d-menu">
           <div class="d-menu-desktop n-visible-md n-visible-lg">
             <div class="d-left-menu" n-resp="md,lg" n-resp-bind="logo">
-              <a href="/"><img src="/public/media/logosmall.png" alt="Diamond MVC" class="d-logo"></a>
               <a href="/"><span class="d-title">Diamond MVC</span></a>
             </div>
             <div class="d-right-menu" n-resp="md,lg" n-resp-bind="menu">
@@ -97,22 +96,15 @@
                 ];
               }
 
-              <span class="d-menu-item">|&nbsp;</span>
-
-              @:foreach (i; 0 .. 4) {
-                @:auto menuItem = menuItems[i];
-                <a class="d-menu-item" href="@=menuItem.url;">@=i18n.getMessage(client, menuItem.name);</a>
-                <span class="d-menu-item">&nbsp;|&nbsp;&nbsp;</span>
-              }
-
-              <br>
-              <span class="d-menu-item">|&nbsp;</span>
-
-              @:foreach (i; 4 .. menuItems.length) {
-                @:auto menuItem = menuItems[i];
-                <a class="d-menu-item" href="@=menuItem.url;">@=i18n.getMessage(client, menuItem.name);</a>
-                <span class="d-menu-item">&nbsp;|&nbsp;&nbsp;</span>
-              }
+              <ul>
+                @:foreach (menuItem; menuItems) {
+                  <li>
+                    <a class="d-menu-item" href="@=menuItem.url;">
+                      @=i18n.getMessage(client, menuItem.name);
+                    </a>
+                  </li>
+                }
+              </ul>
             </div>
             <div class="d-clear"></div>
           </div>
@@ -127,7 +119,7 @@
 
         @:if (super.name == "home") {
           <div class="d-head-focus">
-            <div class="d-head-focus-content n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="headFocus">
+            <div class="d-head-focus-content d-head-focus-content-large n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="headFocus">
               <span class="d-focus-text">
                 @<%HOME_FOCUS_TEXT%>
               </span>
@@ -165,57 +157,54 @@
       <div class="d-footer-content">
         <div class="d-footer-content-large n-visible-md n-visible-lg">
 
-          <div class="d-footer-left-box">
+          <div class="d-footer-content-box">
+            <div class="d-footer-left" n-resp="md,lg" n-resp-bind="footerGeneral">
+              <ul>
+                <li>
+                  <b>@<%FOOTER_GENERAL_TITLE%></b>
+                </li>
+                <li>
+                  <a href="/download">@<%FOOTER_DOWNLOAD%></a>
+                </li>
+                <li>
+                  <a href="/docs">@<%FOOTER_DOCS%></a>
+                </li>
+                <li>
+                  <a href="/api">@<%FOOTER_API%></a>
+                </li>
+                <li>
+                  <a href="/tutorials">@<%FOOTER_TUTORIALS%></a>
+                </li>
+                <li>
+                  <a href="/help">@<%FOOTER_HELP%></a>
+                </li>
+                <li>
+                  <a href="/faq">@<%FOOTER_FAQ%></a>
+                </li>
+                <li>
+                  <a href="https://github.com/DiamondMVC/Diamond/blob/master/LICENSE">@<%FOOTER_LICENSE%></a>
+                </li>
+              </ul>
+            </div>
 
-            <div class="d-footer-left-left-box">
-              <div class="d-footer-left" n-resp="md,lg" n-resp-bind="footerGeneral">
-                <ul>
-                  <li>
-                    <b>@<%FOOTER_GENERAL_TITLE%></b>
-                  </li>
-                  <li>
-                    <a href="/download">@<%FOOTER_DOWNLOAD%></a>
-                  </li>
-                  <li>
-                    <a href="/docs">@<%FOOTER_DOCS%></a>
-                  </li>
-                  <li>
-                    <a href="/api">@<%FOOTER_API%></a>
-                  </li>
-                  <li>
-                    <a href="/tutorials">@<%FOOTER_TUTORIALS%></a>
-                  </li>
-                  <li>
-                    <a href="/help">@<%FOOTER_HELP%></a>
-                  </li>
-                  <li>
-                    <a href="/faq">@<%FOOTER_FAQ%></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DiamondMVC/Diamond/blob/master/LICENSE">@<%FOOTER_LICENSE%></a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="d-footer-middle" n-resp="md,lg" n-resp-bind="footerCommunity">
-                <ul>
-                  <li>
-                    <b>@<%FOOTER_COMMUNITY_TITLE%></b>
-                  </li>
-                  <li>
-                    <a href="https://www.facebook.com/OfficialDiamondMVC/">@<%FOOTER_FACEBOOK%></a>
-                  </li>
-                  <li>
-                    <a href="https://discord.gg/UTysCSH">@<%FOOTER_DISCORD%></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DiamondMVC/Diamond">@<%FOOTER_GITHUB%></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DiamondMVC/Diamond/issues">@<%FOOTER_ISSUE_TRACKER%></a>
-                  </li>
-                </ul>
-              </div>
+            <div class="d-footer-middle" n-resp="md,lg" n-resp-bind="footerCommunity">
+              <ul>
+                <li>
+                  <b>@<%FOOTER_COMMUNITY_TITLE%></b>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/OfficialDiamondMVC/">@<%FOOTER_FACEBOOK%></a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/UTysCSH">@<%FOOTER_DISCORD%></a>
+                </li>
+                <li>
+                  <a href="https://github.com/DiamondMVC/Diamond">@<%FOOTER_GITHUB%></a>
+                </li>
+                <li>
+                  <a href="https://github.com/DiamondMVC/Diamond/issues">@<%FOOTER_ISSUE_TRACKER%></a>
+                </li>
+              </ul>
             </div>
 
             <div class="d-footer-right" n-resp="md,lg" n-resp-bind="footerAbout">
@@ -253,12 +242,6 @@
             <div class="d-clear"></div>
           </div>
 
-          <div class="d-footer-right-box">
-            <div class="d-footer-description-white-space"></div>
-            <span>@<%DIAMOND_FOOTER_DESCRIPTION%></span>
-          </div>
-
-          <div class="d-clear"></div>
         </div>
 
         <div class="d-footer-content-small n-visible-xs n-visible-sm">

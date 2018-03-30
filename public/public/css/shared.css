@@ -88,23 +88,23 @@ body {
 }
 
 .d-head-focus a {
-	color: #5dade2;
-	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
 
 .d-head-focus a:link {
-	color: #5dade2;
-	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
 
 .d-head-focus a:visited {
-	color: #5dade2;
-	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
 }
 
 .d-head-focus a:hover {
-	color: #fff;
-	text-decoration: none;
+	color: #5dade2;
+	text-decoration: underline;
 }
 
 .d-head-focus-content {
@@ -158,44 +158,72 @@ body {
   display: block;
   color: #fff;
   padding-top: 1em;
+  text-decoration: none;
 }
 
 .d-focus-button a:link {
   color: #fff;
+  text-decoration: none;
 }
 
 .d-focus-button a:visited {
   color: #fff;
+  text-decoration: none;
 }
 
 .d-focus-button a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 .d-focus-button:hover a:visited {
   color: #fff;
+  text-decoration: none;
 }
 
 .d-focus-button:hover a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 .d-left-menu {
-	width: 260px;
+	width: 164px;
 	height: 72px;
 	float: left;
+  padding-top: 16px;
+  padding-left: 16px;
 }
 
 .d-right-menu {
-	float: right;
-	width: 328px;
-	height: 72px;
-	padding-top: 10px;
-	text-align: center;
+  /*float: right;
+  width: 328px;
+  height: 72px;
+  padding-top: 10px;
+  text-align: center;*/
+
+  float: right;
+	padding-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 580px;
+  margin: 0;
+}
+
+.d-right-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .d-menu-item {
-	font-size: 14px;
+  font-size: 16px;
+}
+
+.d-right-menu li {
+	display: inline-block;
+	padding: 8px;
+	margin: 0;
 }
 
 .d-title {
@@ -328,15 +356,15 @@ body {
 }
 
 .d-footer-left {
-	width: 50%;
+	width: 33%;
 	height: 100%;
 	float: left;
 }
 
 .d-footer-middle {
-	width: 50%;
+	width: 33%;
 	height: 100%;
-	float: right;
+	float: left;
 }
 
 .d-footer-right {
@@ -348,4 +376,13 @@ body {
 .d-footer-copyirght {
 	text-align: center;
 	font-size: 12px;
+}
+
+.d-footer-content-box {
+  width: 80%;
+  max-width: 1600px;
+  min-height: 108px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

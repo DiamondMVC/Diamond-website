@@ -52,11 +52,28 @@
 
 .d-key-features {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
+/*
 .d-key-features ul {
 	list-style-type: none;
 	padding: 4px;
 	margin: 4px;
+}*/
+
+.d-key-features ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  	list-style-type: none;
+  	padding: 4px;
+  	margin: 4px;
+}
+
+.d-key-features li {
+    width: 33%;
+    padding: 16px;
+    box-sizing: border-box;
 }
