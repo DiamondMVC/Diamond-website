@@ -1,0 +1,92 @@
+@[
+  layout:
+    layout
+---
+  route:
+    tutorials
+---
+  placeholders:
+  [
+    "title": "Tutorials"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry">
+    <div class="d-content-entry d-content-entry-left n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="tutorialsMenu">
+      @{
+        struct TutorialEntry
+        {
+          string url;
+          string title;
+        }
+
+        static const tutorialEntries = [
+          TutorialEntry("/tutorials/websites", "TUTORIALS_TITLE_WEBSITE"),
+          TutorialEntry("/tutorials/web-apis", "TUTORIALS_TITLE_WEBAPI"),
+          TutorialEntry("/tutorials/standalone", "TUTORIALS_TITLE_STANDALONE"),
+          TutorialEntry("/tutorials/advanced-layouts", "TUTORIALS_TITLE_ADVANCED_LAYOUTS"),
+          TutorialEntry("/tutorials/forms", "TUTORIALS_TITLE_FORMS"),
+          TutorialEntry("/tutorials/deployment", "TUTORIALS_TITLE_DEPLOYMENT")
+        ];
+      }
+
+      <ul>
+        @:foreach (tutorialEntry; tutorialEntries) {
+          <li>
+            @:if (!tutorialEntry.title || !tutorialEntry.title.length) {
+              &nbsp;
+            }
+            @:else {
+              <a href="@=tutorialEntry.url;">
+                @=i18n.getMessage(client, tutorialEntry.title);
+              </a>
+            }
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="d-content-entry d-content-entry-right n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="tutorialsContent">
+      @{
+        import std.file : readText, exists, thisExePath;
+        import std.path : dirName, absolutePath;
+
+        auto rootPath = absolutePath(dirName(thisExePath));
+
+        auto tutorialsFile = (client.route.action && client.route.action.length ? client.route.action : "index").replace("-", "_") ~ ".md";
+        auto tutorialsPath = rootPath ~ "/tutorials/" ~ tutorialsFile;
+
+        string content;
+
+        if (exists(tutorialsPath))
+        {
+          import simplemarkdownparser;
+          content = parseMarkdown(readText(tutorialsPath));
+        }
+      }
+
+      @:if (!content || !content.strip().length) {
+        <h3>Coming Soon!</h3>
+      }
+      @:else {
+        <div style="width: 100%; height: 32px; font-size: 16px; padding-top: 12px; text-decoration: none; text-align: right; margin-bottom: -64px;">
+          <a style="text-decoration: none;" href="https://github.com/DiamondMVC/Diamond-website/edit/master/tutorials/@=tutorialsFile;">Improve This Page&nbsp;&nbsp;</a>
+        </div>
+        <br>
+
+        @=content;
+      }
+    </div>
+
+    <div class="n-visible-xs n-visible-sm">
+      <div class="d-tutorials-menu" n-resp="xs,sm" n-resp-bind="tutorialsMenu">
+      </div>
+      <br><br>
+      <div class="d-tutorials-content" n-resp="xs,sm" n-resp-bind="tutorialsContent">
+      </div>
+    </div>
+
+    <div class="d-clear"></div>
+  </div>
+</div>

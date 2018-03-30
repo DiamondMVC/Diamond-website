@@ -1,0 +1,141 @@
+@[
+  layout:
+    layout
+---
+  route:
+    home
+---
+  placeholders:
+  [
+    "title": "Home"
+  ]
+]
+
+<div class="d-home-focus">
+
+  <div style="text-align: center">
+     <h3>@<%GET_STARTED%></h3>
+   </div>
+
+   <div class="n-visible-md n-visible-lg">
+     <div class="d-learn-button" n-resp="md,lg" n-resp-bind="getStartedDownload">
+       <a href="/download"><i class="fa fa-download"></i> @<%GET_STARTED_DOWNLOAD%></a>
+     </div>
+
+     <span style="font-size: 2em;">&#8594;</span>
+
+     <div class="d-learn-button" n-resp="md,lg" n-resp-bind="getStartedLearn">
+       <a href="/docs"><i class="fa fa-book"></i> @<%GET_STARTED_LEARN%></a>
+     </div>
+
+     <span style="font-size: 2em;">&#8594;</span>
+
+     <div class="d-learn-button" n-resp="md,lg" n-resp-bind="getStartedDeployment">
+       <a href="/tutorials/deployment"><i class="fa fa-cloud-upload"></i> @<%GET_STARTED_DEPLOY%></a>
+     </div>
+
+     <span style="font-size: 2em;">&#8594;</span>
+
+     <div class="d-learn-button" n-resp="md,lg" n-resp-bind="getStartedContribute">
+       <a href="/contribute"><i class="fa fa-code-fork"></i> @<%GET_STARTED_CONTRIBUTE%></a>
+     </div>
+   </div>
+
+   <div class="n-visible-xs n-visible-sm">
+     <div class="d-learn-button d-learn-button-small" n-resp="xs,sm" n-resp-bind="getStartedDownload">
+     </div>
+
+     <br>
+     <span style="font-size: 2em;">&#8595;</span>
+     <br>
+
+     <div class="d-learn-button d-learn-button-small" n-resp="xs,sm" n-resp-bind="getStartedLearn">
+     </div>
+
+     <br>
+     <span style="font-size: 2em;">&#8595;</span>
+     <br>
+
+     <div class="d-learn-button d-learn-button-small" n-resp="xs,sm" n-resp-bind="getStartedDeployment">
+     </div>
+
+     <br>
+     <span style="font-size: 2em;">&#8595;</span>
+     <br>
+
+     <div class="d-learn-button d-learn-button-small" n-resp="xs,sm" n-resp-bind="getStartedContribute">
+     </div>
+   </div>
+
+</div>
+
+<div class="d-content-box">
+  <div class="d-content-entry d-key-description">
+    @<%DIAMOND_KEY_DESCRIPTION%>
+    <br><br><br>
+    <h3>@<%DIAMOND_COMMUNITY_TITLE%></h3>
+    <br>
+    <a href="https://github.com/DiamondMVC/Diamond">@<%DIAMOND_COMMUNITY_LINK_GITHUB%></a><br>
+    <br>
+    <a href="https://discord.gg/UTysCSH">@<%DIAMOND_COMMUNITY_LINK_DISCORD%></a><br>
+    <br>
+    <a href="https://dlang.org/blog/2017/11/20/project-highlight-diamond-mvc-framework/">@<%DIAMOND_COMMUNITY_LINK_DBLOG%></a>
+  </div>
+
+  <div class="d-content-entry d-key-features">
+    <h2>@<%DIAMOND_KEY_FEATURES_TITLE%></h2>
+    <br>
+
+    @{
+      struct KeyFeature
+      {
+        string icon;
+        string name;
+      }
+
+      static const keyFeatures = [
+        KeyFeature("fa-flask", "KEYF_FEATURE_RICH"),
+        KeyFeature("fa-heartbeat", "KEYF_HIGH_PERFORMANCE"),
+        KeyFeature("fa-globe", "KEYF_WEBSITE_WEBAPI"),
+        KeyFeature("fa-cubes", "KEYF_CROSS_PLATFORM"),
+        KeyFeature("fa-exchange", "KEYF_REQUEST_RESPONSE"),
+        KeyFeature("fa-university", "KEYF_PHOBOS_VIBED"),
+        KeyFeature("fa-hourglass", "KEYF_CTFE"),
+        KeyFeature("fa-group", "KEYF_ACL_ROLES_AUTH"),
+        KeyFeature("fa-shield", "KEYF_SECURITY"),
+        KeyFeature("fa-share-alt", "KEYF_COOKIES_SESSION"),
+        KeyFeature("fa-legal", "KEYF_COOKIE_CONSENT"),
+        KeyFeature("fa-object-group", "KEYF_TRANSACTIONS"),
+        KeyFeature("fa-language", "KEYF_I18N"),
+        KeyFeature("fa-file-o", "KEYF_LOGGING"),
+        KeyFeature("fa-flash", "KEYF_VERSION_CONTROL"),
+        KeyFeature("fa-magic", "KEYF_ROUTE_REWRITING"),
+        KeyFeature("fa-database", "KEYF_DATABASE"),
+        KeyFeature("fa-plug", "KEYF_WEBSOCKETS"),
+        KeyFeature("fa-envelope-o", "KEYF_EMAIL"),
+        KeyFeature("fa-code", "KEYF_VIEW_SYNTAX"),
+        KeyFeature("fa-files-o", "KEYF_PARTIAL_VIEWS"),
+        KeyFeature("fa-save", "KEYF_CACHING"),
+        KeyFeature("fa-comment-o", "KEYF_FLASH_MESSAGES"),
+        KeyFeature("fa-mobile-phone", "KEYF_SECTIONS"),
+        KeyFeature("fa-sitemap", "KEYF_MVC_HMVC"),
+        KeyFeature("fa-link", "KEYF_RESTFUL"),
+        KeyFeature("fa-history", "KEYF_BACKUP"),
+        KeyFeature("fa-tags", "KEYF_VIRTUAL_HTML_ELEMENTS"),
+        KeyFeature("fa-download", "KEYF_UPLOAD_DOWNLOAD"),
+        KeyFeature("fa-pencil-square-o", "KEYF_CUSTOMIZABLE_EXTENSIONS"),
+        KeyFeature("fa-clone", "KEYF_AJAX_JSON"),
+        KeyFeature("fa-calendar-check-o", "KEYF_UNITTESTING")
+      ];
+    }
+
+    <ul>
+      @:foreach (keyFeature; keyFeatures) {
+        <li>
+          <i class="fa @=keyFeature.icon;"></i> @=i18n.getMessage(client, keyFeature.name);
+        </li>
+      }
+    </ul>
+
+  </div>
+</div>

@@ -1,0 +1,59 @@
+@[
+    route:
+      sitemap.xml
+]
+@:client.rawResponse.headers["Content-Type"] = "application/xml; charset=UTF-8";
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  @{
+    static const links = [
+      "/", "/home",
+      "/download",
+      "/docs",
+
+      "/docs/intermediate",
+      "/docs/models",
+      "/docs/views",
+      "/docs/controllers",
+      "/docs/files",
+      "/docs/frontend",
+      "/docs/backend",
+      "/docs/data",
+      "/docs/security",
+      "/docs/web-advanced",
+      "/docs/logging",
+      "/docs/error-handling",
+      "/docs/unittesting",
+      "/docs/i18n",
+      "/docs/mail",
+      "/docs/extensions",
+
+      "/tutorials",
+
+      "/tutorials/websites",
+      "/tutorials/web-apis",
+      "/tutorials/standalone",
+      "/tutorials/advanced-layouts",
+      "/tutorials/forms",
+      "/tutorials/deployment",
+
+      "/api",
+      "/help",
+      "/contribute",
+      "/donate",
+      "/faq",
+      "/contact",
+      "/blog",
+      "/about",
+      "/team",
+      "/roadmap"
+    ];
+  }
+
+  @:foreach (link; links) {
+    <url>
+      <loc>http://www.diamondmvc.org@=link;</loc>
+    </url>
+  }
+</urlset>

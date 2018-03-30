@@ -1,0 +1,18 @@
+@[
+  layout:
+    layout
+---
+  route:
+    blog
+---
+  placeholders:
+  [
+    "title": "Blog"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-requirements">
+    <h3>Coming Soon!</h3>
+  </div>
+</div>

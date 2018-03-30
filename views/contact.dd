@@ -1,0 +1,22 @@
+@[
+  layout:
+    layout
+---
+  route:
+    contact
+---
+  placeholders:
+  [
+    "title": "Contact"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-contact">
+    The primary way of contacting is through our discord channel, which you can find <a href="https://discord.gg/UTysCSH">here</a>.<br>
+    <br>
+    You can also contact us through our Facebook page <a href="https://www.facebook.com/OfficialDiamondMVC/">here</a>.<br>
+    <br>
+    If you prefer mails, then you can send an email to <a href="mailto:baussprojects@gmail.com">baussprojects@gmail.com</a>
+  </div>
+</div>

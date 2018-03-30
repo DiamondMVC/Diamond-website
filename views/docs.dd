@@ -1,0 +1,183 @@
+@[
+  layout:
+    layout
+---
+  route:
+    docs
+---
+  placeholders:
+  [
+    "title": "Docs"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry">
+    <div class="d-content-entry d-content-entry-left n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="docsMenu">
+      @{
+        struct DocEntry
+        {
+          string url;
+          string title;
+        }
+
+        static const docEntries = [
+          DocEntry("/api", "API"),
+          DocEntry("", ""),
+
+          DocEntry("", "Intermediate"),
+          DocEntry("/docs/intermediate/", "Basics"),
+          DocEntry("/docs/intermediate/#project-setup", "Project Setup"),
+          DocEntry("", ""),
+
+          DocEntry("", "Models"),
+          DocEntry("/docs/models/", "Overview"),
+          DocEntry("", ""),
+
+          DocEntry("", "Views"),
+          DocEntry("/docs/views/", "Overview"),
+          DocEntry("/docs/views/#syntax", "Syntax"),
+          DocEntry("/docs/views/#layouts", "Layouts"),
+          DocEntry("/docs/views/#models", "Models"),
+          DocEntry("/docs/views/#partial-views", "Partial Views"),
+          DocEntry("/docs/views/#sections", "Sections"),
+          DocEntry("", ""),
+
+          DocEntry("", "Controllers"),
+          DocEntry("/docs/controllers/", "Setup"),
+          DocEntry("/docs/controllers/#mapping", "Mapping"),
+          DocEntry("/docs/controllers/#actions", "Actions"),
+          DocEntry("/docs/controllers/#view-integration", "View Integration"),
+          DocEntry("/docs/controllers/#version-control", "Version-control"),
+          DocEntry("", ""),
+
+          DocEntry("", "Files"),
+          DocEntry("/docs/files/", "Static Files"),
+          DocEntry("/docs/files/#upload", "Upload"),
+          DocEntry("/docs/files/#download", "Download"),
+          DocEntry("", ""),
+
+          DocEntry("", "Frontend"),
+          DocEntry("/docs/frontend/", "Virtual HTML Elements"),
+          DocEntry("", ""),
+
+          DocEntry("", "Backend"),
+          DocEntry("/docs/backend/", "Web-api"),
+          DocEntry("/docs/backend/#rest", "REST"),
+          DocEntry("", ""),
+
+          DocEntry("", "Data"),
+          DocEntry("/docs/data/", "Cookies"),
+          DocEntry("/docs/data/#sessions", "Sessions"),
+          DocEntry("/docs/data/#database", "Database"),
+          DocEntry("/docs/data/#transactions", "Transactions"),
+          DocEntry("", ""),
+
+          DocEntry("", "Security"),
+          DocEntry("/docs/security/", "ACL"),
+          DocEntry("/docs/security/#authentication", "Authentication"),
+          DocEntry("/docs/security/#csrf-protection", "CSRF Protection"),
+          DocEntry("/docs/security/#validation", "Validation"),
+          DocEntry("/docs/security/#network", "Network"),
+          DocEntry("/docs/security/#backups", "Backups"),
+          DocEntry("", ""),
+
+          DocEntry("", "Web Advabced"),
+          DocEntry("/docs/web-advanced/", "HTTP Client"),
+          DocEntry("/docs/web-advanced/#redirections", "Redirections"),
+          DocEntry("/docs/web-advanced/#routing", "Routing"),
+          DocEntry("/docs/web-advanced/#websockets", "Websockets"),
+          DocEntry("", ""),
+
+          DocEntry("", "Logging"),
+          DocEntry("/docs/logging/", "File Logging"),
+          DocEntry("/docs/logging/#database-logging", "Database Logging"),
+          DocEntry("/docs/logging/#custom-logging", "Custom Logging"),
+          DocEntry("", ""),
+
+          DocEntry("", "Extra"),
+          DocEntry("/docs/error-handling", "Error Handling"),
+          DocEntry("/docs/unittesting", "Unittesting"),
+          DocEntry("/docs/i18n", "i18n"),
+          DocEntry("/docs/mail", "Mail"),
+          DocEntry("", ""),
+
+          DocEntry("", "Extensions"),
+          DocEntry("/docs/extensions/", "Application Start"),
+          DocEntry("/docs/extensions/#custom-grammar", "Custom Grammar"),
+          DocEntry("/docs/extensions/#part-parser", "Part Parser"),
+          DocEntry("/docs/extensions/#views", "Views"),
+          DocEntry("/docs/extensions/#view-constructor", "View Constructor"),
+          DocEntry("/docs/extensions/#controller", "Controller"),
+          DocEntry("/docs/extensions/#http-settings", "HTTP Settings"),
+          DocEntry("/docs/extensions/#http-request", "HTTP Request"),
+          DocEntry("/docs/extensions/#error-handling", "Error Handling"),
+          DocEntry("/docs/extensions/#static-files", "Static Files")
+        ];
+      }
+
+      <ul>
+        @:foreach (docEntry; docEntries) {
+          <li>
+            @:if (!docEntry.title || !docEntry.title.length) {
+              &nbsp;
+            }
+            @:else if ((!docEntry.url || !docEntry.url.length) && docEntry.title && docEntry.title.length) {
+              <h3>
+                @=docEntry.title;
+              </h3>
+              <hr>
+            }
+            @:else {
+              <a href="@=docEntry.url;">
+                @=docEntry.title;
+              </a>
+            }
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="d-content-entry d-content-entry-right n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="docsContent">
+      @{
+        import std.file : readText, exists, thisExePath;
+        import std.path : dirName, absolutePath;
+
+        auto rootPath = absolutePath(dirName(thisExePath));
+
+        auto docsFile = (client.route.action && client.route.action.length ? client.route.action : "intermediate").replace("-", "_") ~ ".md";
+        auto docsPath = rootPath ~ "/docs/" ~ docsFile;
+
+        string content;
+
+        if (exists(docsPath))
+        {
+          import simplemarkdownparser;
+          content = parseMarkdown(readText(docsPath));
+        }
+      }
+
+      @:if (!content || !content.strip().length) {
+        <h3>Coming Soon!</h3>
+      }
+      @:else {
+        <div style="width: 100%; height: 32px; font-size: 16px; padding-top: 12px; text-decoration: none; text-align: right; margin-bottom: -64px;">
+          <a style="text-decoration: none;" href="https://github.com/DiamondMVC/Diamond-website/edit/master/docs/@=docsFile;">Improve This Page&nbsp;&nbsp;</a>
+        </div>
+        <br>
+
+        @=content;
+      }
+    </div>
+
+    <div class="n-visible-xs n-visible-sm">
+      <div class="d-docs-menu" n-resp="xs,sm" n-resp-bind="docsMenu">
+      </div>
+      <br><br>
+      <div class="d-docs-content" n-resp="xs,sm" n-resp-bind="docsContent">
+      </div>
+    </div>
+
+    <div class="d-clear"></div>
+  </div>
+</div>

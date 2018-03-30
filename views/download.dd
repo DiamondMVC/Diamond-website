@@ -1,0 +1,95 @@
+@[
+  layout:
+    layout
+---
+  route:
+    download
+---
+  placeholders:
+  [
+    "title": "Download"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-requirements">
+    <h2>@<%DOWNLOAD_REQUIREMENTS%></h2>
+    <br>
+
+    <table>
+      <tr>
+        <th>
+          @<%DOWNLOAD_REQUIREMENT%>
+        </th>
+        <th>
+          @<%DOWNLOAD_VALUE%>
+        </th>
+      </tr>
+      <tr>
+        <td>@<%DOWNLOAD_COMPILER%></td>
+        <td>
+          <a href="https://dlang.org/download.html">@<%DOWNLOAD_D_COMPILER%></a>
+        </td>
+      </tr>
+      <tr>
+        <td>@<%DOWNLOAD_BUILD_TOOLS%></td>
+        <td>
+          <a href="https://code.dlang.org/download">@<%DOWNLOAD_DUB%></a>
+        </td>
+      </tr>
+      <tr>
+        <td>@<%DOWNLOAD_OPERATING_SYSTEM%></td>
+        <td>
+          <i class="fa fa-windows"></i> @<%DOWNLOAD_WIN%><br>
+          <i class="fa fa-linux"></i> @<%DOWNLOAD_LINUX%><br>
+          <i class="fa fa-apple"></i> @<%DOWNLOAD_MACOS%><br>
+        </td>
+      </tr>
+      <tr>
+        <td>@<%DOWNLOAD_FILE_SYS%></td>
+        <td>
+          @<%DOWNLOAD_FILE_SYS_SPACE%>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+  </div>
+
+  <div class="d-content-entry d-project">
+    <h2>@<%DOWNLOAD_PROJECT%></h2>
+    <br>
+    <p>
+      @<%DOWNLOAD_PROJECT_DESCRIPTION%>
+    </p>
+    <br>
+
+    <a href="/public/files/diamond-empty-project.zip">Download</a>
+    <br><br>
+
+    @<%DOWNLOAD_PROJECT_END_DESCRIPTION%>
+  </div>
+
+  <div class="d-content-entry d-install">
+    <h2>@<%DOWNLOAD_INSTALLATION_TITLE%></h2>
+    <br>
+    <p>
+      @<%DOWNLOAD_INSTALL_DESCRIPTION%>
+    </p>
+    <br>
+    <ol>
+      <li>@<%DOWNLOAD_INSTALL_STEP_1%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_2%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_3%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_4%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_5%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_6%></li>
+      <li>@<%DOWNLOAD_INSTALL_STEP_7%></li>
+    </ol>
+  </div>
+
+  <div class="d-content-entry d-alternative-downloads">
+    <b>Source-code (Stable):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/v2.8.4.zip">Download</a><br><br>
+    <b>Source-code (Development):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/master.zip">Download</a><br><br>
+  </div>
+</div>

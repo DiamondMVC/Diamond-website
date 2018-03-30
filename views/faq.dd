@@ -1,0 +1,28 @@
+@[
+  layout:
+    layout
+---
+  route:
+    faq
+---
+  placeholders:
+  [
+    "title": "FAQ"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-faq">
+    <ul>
+      @:foreach (i; 0 .. 47) {
+        <li>
+          <h3>@=i18n.getMessage(client, "FAQ_Q_" ~ to!string(i));</h3>
+          <br>
+          <p>
+            @=i18n.getMessage(client, "FAQ_A_" ~ to!string(i));
+          </p>
+        </li>
+      }
+    </ul>
+  </div>
+</div>
