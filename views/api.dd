@@ -1,0 +1,14 @@
+@[
+  layout:
+    layout
+---
+  route:
+    api
+---
+  placeholders:
+  [
+    "title": "API"
+  ]
+]
+
+<iframe src="http://diamond.dpldocs.info/diamond.html" style="border: 0; width: 100%; height: 800px">Your browser doesn't support iFrames.</iframe>

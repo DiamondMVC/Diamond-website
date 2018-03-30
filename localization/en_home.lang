@@ -1,0 +1,95 @@
+HOME_FOCUS_TEXT:
+  Powerful full-stack web-framework, written in The <a href="http://dlang.org">D</a> Programming Language using <a href="http://vibed.org">vibe.d</a>
+;
+
+HOME_FOCUS_TEXT_BOTTOM=Innovation, performance and elegance are Diamond's key features
+
+GET_DIAMOND=Get Diamond 2.8.4
+SUPPORT_US=Support Us
+
+DIAMOND_FOOTER_DESCRIPTION=Diamond is a powerful full-stack web-framework&nbsp;&nbsp;
+
+GET_STARTED=Get Started With Diamond
+GET_STARTED_DOWNLOAD=Download
+GET_STARTED_LEARN=Learn
+GET_STARTED_DEPLOY=Deploy
+GET_STARTED_CONTRIBUTE=Contribute
+
+DIAMOND_KEY_DESCRIPTION:
+  <b>Diamond</b> is a full-stack cross-platform <b>MVC / Template Framework</b> written in <b>The D Programming Language</b>.
+
+  <br><br>
+
+  It’s inspired by <b>ASP.NET</b> and uses <b>vibe.d</b> for its backend, making <b>Diamond</b> a very powerful framework.
+;
+
+DIAMOND_COMMUNITY_TITLE=The Diamond MVC Community
+DIAMOND_COMMUNITY_LINK_GITHUB=Github
+DIAMOND_COMMUNITY_LINK_DISCORD=Discord
+DIAMOND_COMMUNITY_LINK_DBLOG=Official D Programming Language Blog Post
+
+DIAMOND_KEY_FEATURES_TITLE=Key Features Of Diamond MVC
+
+KEYF_FEATURE_RICH=Feature-rich, but light-weight
+
+KEYF_HIGH_PERFORMANCE=High-performance
+
+KEYF_WEBSITE_WEBAPI=Website & Web-api support
+
+KEYF_CROSS_PLATFORM=Cross-platform (Windows, Linux, macOS) (No platform specific functionality)
+
+KEYF_REQUEST_RESPONSE=Complete control over requests / responses
+
+KEYF_PHOBOS_VIBED=Phobos & vibe.d support
+
+KEYF_CTFE=Compile-time compatibility
+
+KEYF_ACL_ROLES_AUTH=ACL, Roles & Authentication
+
+KEYF_SECURITY=Security (CSRF Protection, Validation, Cryptography, SSL, Network etc.)
+
+KEYF_COOKIES_SESSION=Cookies / Session
+
+KEYF_COOKIE_CONSENT=Cookie Consent built-in (Easy integration with EU's cookie law.)
+
+KEYF_TRANSACTIONS=Transactions
+
+KEYF_I18N=Localization & Internationalization
+
+KEYF_LOGGING=Logging
+
+KEYF_VERSION_CONTROL=Version-control
+
+KEYF_ROUTE_REWRITING=Route rewriting
+
+KEYF_DATABASE=Database Integration (Mysql, Mongo, Redis) & Object Relational Mapping (ORM)
+
+KEYF_WEBSOCKETS=Websockets
+
+KEYF_EMAIL=Email Functionality (Smtp Client)
+
+KEYF_VIEW_SYNTAX=ASP.NET inspired view syntax
+
+KEYF_PARTIAL_VIEWS=Partial views & complex view layouts
+
+KEYF_CACHING=Caching
+
+KEYF_FLASH_MESSAGES=Flash-messages
+
+KEYF_SECTIONS=Sections (Very useful for responsive designs)
+
+KEYF_MVC_HMVC=MVC & HMVC
+
+KEYF_RESTFUL=RESTful
+
+KEYF_BACKUP=Backup functionality & services
+
+KEYF_VIRTUAL_HTML_ELEMENTS=Virtual HTML Elements
+
+KEYF_UPLOAD_DOWNLOAD=File upload/download management
+
+KEYF_CUSTOMIZABLE_EXTENSIONS=Customizable & Extensions
+
+KEYF_AJAX_JSON=Great AJAX & JSON Support
+
+KEYF_UNITTESTING=Unittesting

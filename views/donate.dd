@@ -1,0 +1,34 @@
+@[
+  layout:
+    layout
+---
+  route:
+    donate
+---
+  placeholders:
+  [
+    "title": "Donate"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-donate">
+    If you like Diamond, feel free to donate to the project.<br>
+    Your donation will help hosting the Diamond website, as well further development of the project.
+    <br><br>
+
+    <a style="text-decoration: none" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=MA9HZKWA7EH6A&amp;lc=US&amp;item_name=Diamond%20MVC&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" rel="nofollow">
+      <img src="https://img.shields.io/badge/Support%20Diamond-Donate-brightgreen.svg" style="max-width:100%;">
+    </a>
+
+    <br><br>
+
+    If you're using Diamond commercial then we can accept special donations that can help have certain functionality implemented, or boost priorities for implementations.<br>
+    <br>
+    You may also requrest custom modules for you, which will of course be private to just you.<br>
+    <br>
+    Please note that we'll always prioritize critical issues in the core of Diamond over any other functionality, as Diamond is free and will always remain so.<br>
+    <br>
+    If you'd like to do a special donation for like a feature request etc. consider joining our discord <a href="https://discord.gg/UTysCSH">here</a>.
+  </div>
+</div>

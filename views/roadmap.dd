@@ -1,0 +1,32 @@
+@[
+  layout:
+    layout
+---
+  route:
+    roadmap
+---
+  placeholders:
+  [
+    "title": "Roadmap"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-roadmap">
+    <h3>2.8.5</h3>
+    <ul>
+      <li>Wrapper around vibe.d tasks/fibers etc. to provide integration with Diamond features</li>
+      <li>Network socket wrapper that can be used to exchange data between Diamond projects.</li>
+    </ul>
+    <br><br>
+    <h3>2.9.0</h3>
+    <ul>
+      <li>End of "placeHolders" deprecation-phase, meaning it'll be removed.</li>
+      <li>SEO Functionality</li>
+    </ul>
+    <h3>2.9.1</h3>
+    <ul>
+      <li>SOAP / Webservice support.</li>
+    </ul>
+  </div>
+</div>

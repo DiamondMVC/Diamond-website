@@ -1,0 +1,269 @@
+FAQ_Q_0=What is Diamond?
+FAQ_A_0=Diamond is a full-stack web-framework written The D Programming Langauge, using vibe.d
+
+FAQ_Q_1=How does Diamond work?
+FAQ_A_1:
+  Diamond can be used in 3 different ways whom all function different.<br>
+  <br>
+  For websites Diamond works by first (during compile-time) parse all views into D classes that can be invoked at run-time for maximum performance.<br>
+  This has the downside that each change in a view requires a new compilation, but it's necessary for the performance. This process can be automated however.<br>
+  <br>
+  For web-apis Diamond works by parsing each controller action mapped by routes into a look-up map for quick access.<br>
+  <br>
+  For both websites and web-apis Diamond will run a vibe.d server, but if necessary you can choose from where and when the server is started.<br>
+  <br>
+  Being stand-alone is the last way Diamond work, which basically just gives you access to Diamond as a library, but most web (Everything depending on vibe.d) has been excluded.<br>
+  <br>
+  The primary usage for Diamond stand-alone is the template and view-engine.
+;
+
+FAQ_Q_2=How can I help?
+FAQ_A_2:
+  All help towards the development of Diamond is appreciated. It's a project that is worked on in spare-time and there is no specific dedicated time to it.<br>
+  <br>
+  This also means that sometimes development can be slowed down as it isn't a funded project.<br>
+  <br>
+  You can help by either working on Diamond fixing bugs, implementing features or improving upon it or you can donate to the project, which will help paying for the website and as well the possibility to allocate time for development on Diamond.<br>
+  <br>
+  If you're a business owner and you use Diamond or are interested in using Diamond, you can also donate to show you value the project.<br>
+  <br>
+  Your donation will also have us prioritize you and your company's need in terms of functionality, features and bug fixes.<br>
+  <br>
+  Please visit <a href="/donate">here</a> for more information.
+;
+
+FAQ_Q_3=Why another web-framework?
+FAQ_A_3:
+  There are virtually no web frameworks written in D that are reliable or can be used properly with enterprise work.<br>
+  <br>
+  There is vibe.d, but it requires the user to know D and to write a good application in vibe.d you need quite good knowledge of D and vibe.d's API.<br>
+  <br>
+  Diamond exists to work around the issue of having to be a D guru and learning vibe.d's huge API, by providing a user-friendly API and the possibility to work without using D or at the very least minimum D.<br>
+  <br>
+  Diamond's main goal is to be used enterprise and thus it serves as a high-level layer on top of vibe.d, providing the same functionality, but sometimes wrapped in more user-intuitive ways.
+;
+
+FAQ_Q_4=Why D?
+FAQ_A_4:
+  D is a very powerful programming language and comes with all modern concepts, but also provides the power of native compilation.<br>
+  <br>
+  It's very easy to write cross-platform code in D without it being a pain.<br>
+  <br>
+  On top of that metaprogramming and templates in D are so useful for generating generic, dynamic and fast code.<br>
+  <br>
+  Diamond uses a lot of metaprogramming, templates and a lot of functionality is executed during compile-time, such as view rendering.
+;
+
+FAQ_Q_5=Why vibe.d?
+FAQ_A_5:
+  vibe.d is a very powerful web-framework and the most used web-framework in D.<br>
+  <br>
+  It provides the power necessary to have a solid framework such as Diamond.
+;
+
+FAQ_Q_6=Why the name Diamond?
+FAQ_A_6=The name Diamond comes from that its main goal is to be beautiful and elegant, just like a shining Diamond.
+
+FAQ_Q_7=How stable is Diamond?
+FAQ_A_7=While Diamond is always under development, then it current is stable and can be used in production.
+
+FAQ_Q_8=How does Diamond scale?
+FAQ_A_8=Because Diamond is built on-top of vibe.d then it scales very well and can be used for both small and big projects.
+
+FAQ_Q_9=Who's behind Diamond?
+FAQ_A_9:
+  Diamond was developed by Jacob Jensen, the development started in 2016.<br>
+  <br>
+  However Diamond would not be possible without a lot of people from the D community.<br>
+  <br>
+  This includes, but is not limited to everyone behind vibe.d, mysql-native and the D programming language.
+;
+
+FAQ_Q_10=Which sites uses Diamond?
+FAQ_A_10=Currently there are no big consumers of Diamond, but Diamond's own website is developed entirely with Diamond.
+
+FAQ_Q_11=Is Diamond a CMS or can it be used for CMS?
+FAQ_A_11:
+  Diamond is not a CMS framework, but it can be extended to be used by one.<br>
+  <br>
+  Diamond provides a lot of functionality that CMS frameworks also provides and extending them could make Diamond function like a CMS.<br>
+  <br>
+  There is currently a CMS framework in development, which is based on Diamond. It's maintained by the official Diamond team.<br>
+  <br>
+  You can find it <a href="https://github.com/DiamondMVC/Webd">here</a>.
+;
+
+FAQ_Q_12=How can I download Diamond?
+FAQ_A_12=You can download Diamond from <a href="/download">here</a>.
+
+FAQ_Q_13=How do I install Diamond?
+FAQ_A_13=Please follow the instructions <a href="/download#install">here</a>.
+
+FAQ_Q_14=Where do I find Diamond's documentation?
+FAQ_A_14=You can find the documentation <a href="/docs">here</a>.
+
+FAQ_Q_15=Can I get Diamond's documentation for offline usage?
+FAQ_A_15=You can get an offline version of the docs <a href="/files/docs-offline.zip">here</a>.
+
+FAQ_Q_16=Where do I get started with Diamond?
+FAQ_A_16=Please see the documentation <a href="/docs">here</a>.
+
+FAQ_Q_17=How does Diamond perform?
+FAQ_A_17=Diamond is based on vibe.d which is known for its high performance. Diamond utilizes that and thus performs very well.
+
+FAQ_Q_18=Does Diamond support Phobos?
+FAQ_A_18:
+  Yes. All functionality of Phobos is theoretically available and can be used in Diamond.<br>
+  <br>
+  Some functionality is available implicit in views such as certain functions from std.conv, std.algorithm, std.array, std.string etc.
+;
+
+FAQ_Q_19=Can you use all of vibe.d's features with Diamond?
+FAQ_A_19:
+  Yes, most features will work in Diamond without having to explicit do anything extra.<br>
+  <br>
+  Diamond is a ligh-weight, but heavily functional layer on-top of a normal vibe.d application.
+;
+
+FAQ_Q_20=Should I use the stable version of Diamond or the development version?
+FAQ_A_20:
+  If you're interested in developing a project that should be used in production, then you should go with the stable version.<br>
+  <br>
+  However if you're interested in contributing to Diamond, then you should go with the development version.
+;
+
+FAQ_Q_21=How do I handle errors in Diamond?
+FAQ_A_21=There are plenty of error-handling mechanisms in Diamond. Please see <a href="/docs/error-handling">this</a> for more information.
+
+FAQ_Q_22=Are views dynamic?
+FAQ_A_22:
+  Views are dynamic, but statically compiled and thus if you change a view you need to recompile the whole project.<br>
+  <br>
+  This means that the dynamic data of views can be rendered blazingly fast.
+;
+
+FAQ_Q_23=What code can views contain?
+FAQ_A_23=All D code is allowed in views, thanks to D supporting almost everything within function bodies.
+
+FAQ_Q_24=Why did you choose to use a similar syntax to ASP.NET razor and not something else?
+FAQ_A_24:
+I (The core developer of Diamond) came from a background working with ASP.NET, so it was what I was familiar with.<br>
+<br>
+I wasn't a big fan of the syntax Diet templates in vibe.d uses and thus Diamond actually started as just an alternative template engine.
+;
+
+FAQ_Q_25=How secure is Diamond?
+FAQ_A_25:
+  Diamond is built with security in mind and thus there shouldn't be any major security risks in using Diamond.<br>
+  <br>
+  In fact there are a lot of security functionality built-in which you can use or extend to secure your applications even more.
+;
+
+FAQ_Q_26=I have found a security problem, what should I do?
+FAQ_A_26:
+  Depending on what it is then you should file an issue <a href="https://github.com/DiamondMVC/Diamond/issues">here</a>.<br>
+  <br>
+  If the security problem exists within one of Diamond's dependencies such as vibe.d, mysql-native, D runtime or Phobos, please report it to them and not us.<br>
+  <br>
+  Only report security issues in Diamond that are strictly related to Diamond.
+;
+
+FAQ_Q_27=Do I have to use your project structure?
+FAQ_A_27:
+  No, but we recommend it as some functionality does depend on it.<br>
+  <br>
+  You're not forced to however, but it could mean specific limits.
+;
+
+FAQ_Q_28=Does Diamond support NoSQL databases?
+FAQ_A_28=Yes. Diamond has support for both Mongo and Redis.
+
+FAQ_Q_29=Does Diamond support MySql or MariaDb?
+FAQ_A_29:
+  Yes. Diamond supports MySql and MariaDb through its dependency to mysql-native.<br>
+  <br>
+  By default there is an ORM built into Diamond that wraps around MySql/MariaDb also.<br>
+  <br>
+  The ORM can be extended to use any type of data and not just MySql/MariaDb however.
+;
+
+FAQ_Q_30=Does Diamond support MSSQL?
+FAQ_A_30=No. There is no official support for MSSQL, but it's possible to extend Diamond and use it.
+
+FAQ_Q_31=Can I use static files with Diamond?
+FAQ_A_31=Yes, static files are supported by Diamond and you specify multiple paths that Diamond should search for static files in.
+
+FAQ_Q_32=Can Diamond manage users, roles and permissions?
+FAQ_A_32:
+  Diamond has basic support for user roles and permissions, which can be used like ACL.<br>
+  <br>
+  You can extend the functionality however you want.
+;
+
+FAQ_Q_33=Can Diamond handle authentication?
+FAQ_A_33=Diamond has authentication built-in and it can be combined with the built-in ACL functionality.
+
+FAQ_Q_34=How can I contribute to Diamond?
+FAQ_A_34=Please see <a href="/contribute">here</a>.
+
+FAQ_Q_35=I submitted a bug fix, why has it not received a response or been merged?
+FAQ_A_35=Diamond is a volunteer project and thus it isn't worked on 24/7, which means that there isn't always time to check pull-requests etc.
+
+FAQ_Q_36=Which editor/IDE should I use with Diamond?
+FAQ_A_36=It's recommended to use VS Code, because using the D programming language extensions provides project templates for Diamond.
+
+FAQ_Q_37=Which operating system should I use with Diamond?
+FAQ_A_37:
+  Diamond is cross-platform and supports multiple operating systems such as Windows, Linux & macOS.<br>
+  <br>
+  It's possible that it works on other platforms too.
+;
+
+FAQ_Q_38=Do I need to know D in order to use Diamond?
+FAQ_A_38:
+  It's recommended to at least know basic D, but it isn't strictly necessary.<br>
+  <br>
+  If you're familiar with other C-like languages and/or ASP.NET Razor, then you should be able to come by, regardless of your D expertise.
+;
+
+FAQ_Q_39=Can I learn D if I don't know C or C++?
+FAQ_A_39=Yes. D is a very easy language to learn and can even be suitable for first-time programmers.
+
+FAQ_Q_40=How do I learn to program in D?
+FAQ_A_40=Please see the official website for The D Programming Langauge <a href="https://dlang.org/">here</a>.
+
+FAQ_Q_41=Where should I deploy my Diamond project to?
+FAQ_A_41:
+  Diamond can be deployed to any type of server that's able to run the hosted application.<br>
+  <br>
+  This means that Diamond can run on both Windows Servers, Linux Servers etc.
+;
+
+FAQ_Q_42=How do I deploy a Diamond project?
+FAQ_A_42=Please see <a href="/tutorials/deployment">this</a> for a guide to deploying Diamond to various platforms.
+
+FAQ_Q_43=Can I use Diamond with an existing vibe.d code-base?
+FAQ_A_43:
+  Yes, but it minor rewriting in the vibe.d code-base might have to take place.<br>
+  <br>
+  Remember, Diamond is a layer on top of vibe.d and thus both plays well together.
+;
+
+FAQ_Q_44=Does Diamond have a blog?
+FAQ_A_44=Yes and you can find it <a href="/blog">here</a>.
+
+FAQ_Q_45=What is the latest stable version of Diamond?
+FAQ_A_45=The current stable version of Diamond is 2.8.4
+
+FAQ_Q_46=What is the current development version of Diamond?
+FAQ_A_46:
+  The development version of Diamond does not have a specific version.<br>
+  <br>
+  Diamond's version depends on which features has been merged into the master branch during release.<br>
+  <br>
+  Diamond uses segmantic versioning, but depends heavily on what kind of changes are made.<br>
+  <br>
+  Thus the version cannot be determined until release, because some features may force the version to be bumped up by a minor etc.<br>
+  <br>
+  Diamond is not going to have its major version bumped up any time soon. That wouldn't be unless Diamond had a change of infrastructure.
+;

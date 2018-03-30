@@ -1,0 +1,20 @@
+@[
+  layout:
+    layout
+---
+  route:
+    help
+---
+  placeholders:
+  [
+    "title": "Help"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-help">
+    If you have questions or need help feel free to create an issue <a href="https://github.com/DiamondMVC/Diamond/issues">here</a>.
+    <br><br>
+    You may also join our discord <a href="https://discord.gg/UTysCSH">here</a>.
+  </div>
+</div>

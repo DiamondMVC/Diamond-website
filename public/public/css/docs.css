@@ -1,0 +1,165 @@
+.d-content-entry {
+  background-color: #eee;
+  width: 90%;
+}
+
+.d-content-entry-right {
+  background-color: #fff;
+  width: 70%;
+  min-height: 108px;
+  padding-left: 8px;
+  padding-top: 8px;
+  margin: 16px auto 16px auto;
+  float: right;
+}
+
+.d-content-entry-left {
+  background-color: #fff;
+  width: 26%;
+  min-height: 108px;
+  padding-left: 8px;
+  padding-top: 8px;
+  margin: 16px auto 16px auto;
+  float: left;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.d-content-entry-left ul {
+	list-style-type: none;
+	padding: 4px;
+	margin: 4px;
+}
+
+.d-content-entry-left a {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-content-entry-left a:link {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-content-entry-left a:visited {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-content-entry-left a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.d-docs-menu {
+  min-height: 108px;
+  padding-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.d-docs-content {
+  width: 100%;
+  min-height: 108px;
+  background-color: #fff;
+}
+
+.d-docs-menu ul {
+	list-style-type: none;
+	padding: 4px;
+	margin: 4px;
+}
+
+.d-docs-menu a {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-docs-menu a:link {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-docs-menu a:visited {
+	color: #444;
+	text-decoration: none;
+}
+
+.d-docs-menu a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.d-content-entry-right ul {
+	padding: 8px;
+	margin: 8px;
+}
+
+.d-content-entry-right ol {
+	padding: 8px;
+	margin: 8px;
+}
+
+.d-content-entry-right pre {
+	width: 80%;
+  max-height: 600px;
+  overflow: auto;
+  background-color: #1a5276;
+  color: #d4e6f1;
+  border: 1px solid #2471a3;
+  padding-left: 6px;
+  padding-top: 6px;
+}
+
+.d-content-entry-right a {
+	color: #444;
+}
+
+.d-content-entry-right a:link {
+	color: #444;
+}
+
+.d-content-entry-right a:visited {
+	color: #444;
+}
+
+.d-content-entry-right a:hover {
+	color: #aaa;
+}
+
+.d-docs-content ul {
+	padding: 8px;
+	margin: 8px;
+}
+
+.d-docs-content ol {
+	padding: 8px;
+	margin: 8px;
+}
+
+.d-docs-content pre {
+	width: 80%;
+  max-height: 600px;
+  overflow: auto;
+  background-color: #1a5276;
+  color: #d4e6f1;
+  border: 1px solid #2471a3;
+}
+
+.d-docs-content a {
+	color: #444;
+}
+
+.d-docs-content a:link {
+	color: #444;
+}
+
+.d-docs-content a:visited {
+	color: #444;
+}
+
+.d-docs-content a:hover {
+	color: #aaa;
+}

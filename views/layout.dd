@@ -1,0 +1,289 @@
+@{
+  import std.file : dirEntries, SpanMode, exists, thisExePath;
+  import std.path : baseName, dirName, absolutePath;
+  import std.algorithm : endsWith;
+
+  auto rootPath = absolutePath(dirName(thisExePath));
+}
+
+@<doctype>
+<html lang="@=client.language;" xml:lang="@=client.language;" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- Primary Language/Frameworks: D, vibe.d, Diamond MVC and nyanjs -->
+  <!-- https://dlang.org/ -->
+  <!-- http://vibed.org/ -->
+  <!-- https://github.com/DiamondMVC/ -->
+  <!-- https://github.com/bausshf/nyanjs -->
+
+  <title>Diamond - @<title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Diamond MVC is a powerful full-stack web-framework written in The D Programming Language using vibe.d. It's perfect fit for high-performance enterprise web-solutions.">
+
+  @* ------------------------------ Open Sans ------------------------------ *
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  @* ------------------------------ Js ------------------------------ *
+  @:static const jsVersion = "0.0.1";
+
+  @:auto jsPath = rootPath ~ "/public/public/js";
+  @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
+    <script src="/public/js/@=baseName(file.name);?v=@=jsVersion;"></script>
+  }
+
+  @* ------------------------------ Nyanjs ------------------------------ *
+
+  <script src="/nyanjs/nyanjs.js?v=@=jsVersion;"></script>
+  <link href="/nyanjs/nyanjs.css" rel="stylesheet">
+
+  @* ------------------------------ Font-awesome ------------------------------ *
+
+  <link rel="stylesheet" href="/public/font-awesome/css/font-awesome.min.css">
+
+  @* ------------------------------ CSS ------------------------------ *
+  @:static const cssVersion = "0.0.1";
+
+  <link rel="stylesheet" href="/public/css/shared.css?v=@=cssVersion;">
+
+  @:auto cssPath = rootPath ~ "/public/public/css/" ~ super.name ~ ".css";
+
+  @:if (exists(cssPath)) {
+    <link href="/public/css/@=super.name;.css?v=@=cssVersion;" rel="stylesheet">
+  }
+
+  @* ------------------------------ Fav icon ------------------------------ *
+
+  @:auto faviconPath = rootPath ~ "/public/public/media/favicon.png";
+
+  @:if (exists(faviconPath)) {
+    <link rel="shortcut icon" type="image/png" href="/public/media/favicon.png"/>
+  }
+
+  @* ------------------------------ Disable Translate ------------------------------ *
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="content-language" content="@=client.language;"/>
+  <meta name="google" content="notranslate">
+</head>
+<body>
+
+  <div class="d-wrapper">
+      <div class="d-head">
+        <div class="d-menu">
+          <div class="d-menu-desktop n-visible-md n-visible-lg">
+            <div class="d-left-menu" n-resp="md,lg" n-resp-bind="logo">
+              <a href="/"><img src="/public/media/logosmall.png" alt="Diamond MVC" class="d-logo"></a>
+              <a href="/"><span class="d-title">Diamond MVC</span></a>
+            </div>
+            <div class="d-right-menu" n-resp="md,lg" n-resp-bind="menu">
+              <br class="n-visible-xs n-visible-sm">
+              <br class="n-visible-xs n-visible-sm">
+              @{
+                struct MenuItem
+                {
+                  string name;
+                  string url;
+                }
+
+                static const menuItems = [
+                  MenuItem("MENU_HOME", "/"),
+                  MenuItem("MENU_DOWNLOAD", "/download"),
+                  MenuItem("MENU_DOCS", "/docs"),
+                  MenuItem("MENU_TUTORIALS", "/tutorials"),
+                  MenuItem("MENU_HELP", "/help"),
+                  MenuItem("MENU_CONTRIBUTE", "/contribute"),
+                  MenuItem("MENU_DONATE", "/donate")
+                ];
+              }
+
+              <span class="d-menu-item">|&nbsp;</span>
+
+              @:foreach (i; 0 .. 4) {
+                @:auto menuItem = menuItems[i];
+                <a class="d-menu-item" href="@=menuItem.url;">@=i18n.getMessage(client, menuItem.name);</a>
+                <span class="d-menu-item">&nbsp;|&nbsp;&nbsp;</span>
+              }
+
+              <br>
+              <span class="d-menu-item">|&nbsp;</span>
+
+              @:foreach (i; 4 .. menuItems.length) {
+                @:auto menuItem = menuItems[i];
+                <a class="d-menu-item" href="@=menuItem.url;">@=i18n.getMessage(client, menuItem.name);</a>
+                <span class="d-menu-item">&nbsp;|&nbsp;&nbsp;</span>
+              }
+            </div>
+            <div class="d-clear"></div>
+          </div>
+          <div class="d-head-phone n-visible-xs n-visible-sm">
+            <div class="d-head-logo-phone" n-resp="xs,sm" n-resp-bind="logo">
+            </div>
+            <div class="d-head-menu-phone" n-resp="xs,sm" n-resp-bind="menu">
+            </div>
+            <br>
+          </div>
+        </div>
+
+        @:if (super.name == "home") {
+          <div class="d-head-focus">
+            <div class="d-head-focus-content n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="headFocus">
+              <span class="d-focus-text">
+                @<%HOME_FOCUS_TEXT%>
+              </span>
+              <br><br>
+              <span class="d-focus-text-bottom">
+                @<%HOME_FOCUS_TEXT_BOTTOM%>
+              </span>
+
+              <br><br>
+
+              <div class="d-focus-button n-visible-md n-visible-lg" style="float: left;" n-resp="md,lg" n-resp-bind="focusGetDiamond">
+                <a href="/download"><i class="fa fa-download"></i> @<%GET_DIAMOND%></a>
+              </div>
+              <div class="d-focus-button n-visible-md n-visible-lg" style="float: right;" n-resp="md,lg" n-resp-bind="focusSupport">
+                <a href="/donate"><i class="fa fa-money"></i> @<%SUPPORT_US%></a>
+              </div>
+
+              <div class="d-focus-button d-focus-button-small n-visible-xs n-visible-sm" n-resp="xs,sm" n-resp-bind="focusGetDiamond">
+              </div>
+              <br>
+              <div class="d-focus-button d-focus-button-small n-visible-xs n-visible-sm" n-resp="xs,sm" n-resp-bind="focusSupport">
+              </div>
+
+              <div class="d-clear"></div>
+            </div>
+            <div class="d-head-focus-content d-head-focus-content-small n-visible-xs n-visible-sm" n-resp="xs,sm" n-resp-bind="headFocus">
+            </div>
+          </div>
+        }
+      </div>
+    <div class="d-content">
+      @<view>
+    </div>
+    <div class="d-footer">
+      <div class="d-footer-content">
+        <div class="d-footer-content-large n-visible-md n-visible-lg">
+
+          <div class="d-footer-left-box">
+
+            <div class="d-footer-left-left-box">
+              <div class="d-footer-left" n-resp="md,lg" n-resp-bind="footerGeneral">
+                <ul>
+                  <li>
+                    <b>@<%FOOTER_GENERAL_TITLE%></b>
+                  </li>
+                  <li>
+                    <a href="/download">@<%FOOTER_DOWNLOAD%></a>
+                  </li>
+                  <li>
+                    <a href="/docs">@<%FOOTER_DOCS%></a>
+                  </li>
+                  <li>
+                    <a href="/api">@<%FOOTER_API%></a>
+                  </li>
+                  <li>
+                    <a href="/tutorials">@<%FOOTER_TUTORIALS%></a>
+                  </li>
+                  <li>
+                    <a href="/help">@<%FOOTER_HELP%></a>
+                  </li>
+                  <li>
+                    <a href="/faq">@<%FOOTER_FAQ%></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/DiamondMVC/Diamond/blob/master/LICENSE">@<%FOOTER_LICENSE%></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="d-footer-middle" n-resp="md,lg" n-resp-bind="footerCommunity">
+                <ul>
+                  <li>
+                    <b>@<%FOOTER_COMMUNITY_TITLE%></b>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/OfficialDiamondMVC/">@<%FOOTER_FACEBOOK%></a>
+                  </li>
+                  <li>
+                    <a href="https://discord.gg/UTysCSH">@<%FOOTER_DISCORD%></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/DiamondMVC/Diamond">@<%FOOTER_GITHUB%></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/DiamondMVC/Diamond/issues">@<%FOOTER_ISSUE_TRACKER%></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-footer-right" n-resp="md,lg" n-resp-bind="footerAbout">
+              <ul>
+                <li>
+                  <b>@<%FOOTER_ABOUT_TITLE%></b>
+                </li>
+                <li>
+                  <a href="/contact">@<%FOOTER_CONTACT%></a>
+                </li>
+                <li>
+                  <a href="/blog">@<%FOOTER_BLOG%></a>
+                </li>
+                <li>
+                  <a href="/about">@<%FOOTER_ABOUT%></a>
+                </li>
+                <li>
+                  <a href="/team">@<%FOOTER_TEAM%></a>
+                </li>
+                <li>
+                  <a href="/contribute">@<%FOOTER_CONTRIBUTE%></a>
+                </li>
+                <li>
+                  <a href="/donate">@<%FOOTER_DONATE%></a>
+                </li>
+                <li>
+                  <a href="/roadmap">@<%FOOTER_ROADMAP%></a>
+                </li>
+                <li>
+                  <a href="/sitemap.xml">@<%FOOTER_SITEMAP%></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-clear"></div>
+          </div>
+
+          <div class="d-footer-right-box">
+            <div class="d-footer-description-white-space"></div>
+            <span>@<%DIAMOND_FOOTER_DESCRIPTION%></span>
+          </div>
+
+          <div class="d-clear"></div>
+        </div>
+
+        <div class="d-footer-content-small n-visible-xs n-visible-sm">
+          <div class="d-footer-general" n-resp="xs,sm" n-resp-bind="footerGeneral">
+          </div>
+
+          <hr>
+
+          <div class="d-footer-community" n-resp="xs,sm" n-resp-bind="footerCommunity">
+          </div>
+
+          <hr>
+
+          <div class="d-footer-about" n-resp="xs,sm" n-resp-bind="footerAbout">
+          </div>
+        </div>
+
+        <div class="d-footer-copyirght">
+          <br><br>
+          Copyright &copy; 2018 Diamond MVC<br>
+          Powered by Diamond MVC<br>
+          <i>The website is still in development</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

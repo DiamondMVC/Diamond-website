@@ -1,0 +1,22 @@
+@[
+  layout:
+    layout
+---
+  route:
+    about
+---
+  placeholders:
+  [
+    "title": "About"
+  ]
+]
+
+<div class="d-content-box">
+  <div class="d-content-entry d-about">
+    Diamond is a full-stack web-framework written in The D Programming Language.<br>
+    <br>
+    The project was started in 2016 as an alternative template engine to vibe.d's Diet templates, but has evolved into a full-blown framework serving as a layer on-top of vibe.d<br>
+    <br>
+    Diamond provides additional features to what vibe.d provides and aims to be a product for enterprise development.
+  </div>
+</div>

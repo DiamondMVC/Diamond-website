@@ -1,0 +1,9 @@
+.d-faq ul {
+	list-style-type: none;
+	padding: 4px;
+	margin: 4px;
+}
+
+.d-faq li {
+  margin-bottom: 16px;
+}

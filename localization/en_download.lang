@@ -1,0 +1,39 @@
+DOWNLOAD_REQUIREMENTS=Diamond MVC Requirements
+
+DOWNLOAD_REQUIREMENT=Requirement
+DOWNLOAD_VALUE=Value
+
+DOWNLOAD_COMPILER=Compiler
+DOWNLOAD_D_COMPILER=D Compiler
+DOWNLOAD_BUILD_TOOLS=Build-tools
+DOWNLOAD_DUB=DUB
+DOWNLOAD_OPERATING_SYSTEM=Operating System
+DOWNLOAD_WIN=Windows
+DOWNLOAD_LINUX=Linux
+DOWNLOAD_MACOS=macOS
+DOWNLOAD_FILE_SYS=File-system Space (Only Diamond MVC)
+DOWNLOAD_FILE_SYS_SPACE=Approx. 20 MB
+
+DOWNLOAD_PROJECT=Diamond MVC Empty Project
+DOWNLOAD_PROJECT_DESCRIPTION:
+  The following project is an empty skeleton for a Diamond MVC project.<br>
+  <br>
+  Use the project to start building your own Diamond MVC website or web-api.
+;
+DOWNLOAD_PROJECT_END_DESCRIPTION=Simply extract the zip-archive into a folder and you're good to go.
+
+DOWNLOAD_INSTALLATION_TITLE=Installing Diamond MVC
+
+DOWNLOAD_INSTALL_DESCRIPTION=Installing Diamond MVC is simple. Just following these steps.
+
+DOWNLOAD_INSTALL_STEP_1=Download and install a D compiler
+DOWNLOAD_INSTALL_STEP_2=Download and install DUB
+DOWNLOAD_INSTALL_STEP_3=Download the empty Diamond MVC project above
+DOWNLOAD_INSTALL_STEP_4=Open <b>"config/web.json"</b> and modify it to fit your project
+DOWNLOAD_INSTALL_STEP_5:
+  Invoke DUB on the root folder<br>
+  <br>
+  Command-line: <b>"dub build -a=x86_64 --build=debug"</b>
+;
+DOWNLOAD_INSTALL_STEP_6=Run the generated executable file
+DOWNLOAD_INSTALL_STEP_7=Congratulations your first Diamond MVC project is running.
