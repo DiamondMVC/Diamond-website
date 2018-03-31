@@ -82,7 +82,7 @@
           DocEntry("/docs/security/#backups", "Backups"),
           DocEntry("", ""),
 
-          DocEntry("", "Web Advabced"),
+          DocEntry("", "Advanced Web"),
           DocEntry("/docs/web-advanced/", "HTTP Client"),
           DocEntry("/docs/web-advanced/#redirections", "Redirections"),
           DocEntry("/docs/web-advanced/#routing", "Routing"),
