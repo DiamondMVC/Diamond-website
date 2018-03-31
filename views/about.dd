@@ -20,3 +20,44 @@
     Diamond provides additional features to what vibe.d provides and aims to be a product for enterprise development.
   </div>
 </div>
+
+<div class="d-content-box">
+  <div class="d-content-entry d-thank-you">
+    Diamond would never have been possible without the following people:<br>
+    <br><br>
+
+    Every contributer to Diamond, whether it's the framework, website, general input or acknowledgement.<br>
+    <b>Key people:</b><br><br>
+
+    <a href="https://github.com/bausshf">Jacob Jensen (bauss)</a><br>
+    <a href="https://github.com/Sedatb23">Sedat</a><br>
+    <a href="https://github.com/WebFreak001">Jan Jurzitza (WebFreak001)</a><br>
+    <a href="https://github.com/mdparker">Mike Parker</a><br>
+    <a href="https://github.com/0xEAB">Elias Batek (0xEAB)</a><br>
+    <a href="https://github.com/garethwarry">Gareth</a><br>
+    Smaehtin
+
+    <br><br><br>
+    Every contributer to vibe.d.<br>
+    <b>Key people:</b><br><br>
+
+    <a href="https://github.com/s-ludwig">Sönke Ludwig</a>
+
+    <br><br><br>
+    Every contributer to mysql-native.<br>
+    <b>Key people:</b><br><br>
+
+    <a href="https://github.com/Abscissa">Nick Sabalausky (Abscissa)</a>
+
+    <br><br><br>
+    Every contributer to The D Programming Language. Key people such as:<br>
+    <b>Key people:</b><br><br>
+
+    <a href="https://github.com/andralex">Andrei Alexandrescu</a><br>
+    <a href="https://github.com/WalterBright">Walter Bright</a>
+
+    <br><br><br>
+    Also a lot of other people, who has not been mentioned.<br><br>
+    Thank you to everyone who has done something that has lead Diamond to where it is!
+  </div>
+</div>
