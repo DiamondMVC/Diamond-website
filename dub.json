@@ -1,7 +1,7 @@
 {
 	"dependencies": {
 		"vibe-d": "~>0.8.3",
-		"diamond": "~>2.8.5",
+		"diamond": "~>2.8.6",
 		"mysql-native": "~>2.2.1"
 	},
 	"versions": [

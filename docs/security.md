@@ -8,11 +8,11 @@ Diamond provides a lot of security functionality that you can take advantage of 
 
 ACL (Access Control List) can be implemented easily in Diamond with a user-friendly API.
 
-It's recommended to setup your roles and permissions in the *onApplicationStart()* function located in your websetting class.
+It's recommended to setup your roles and permissions in the **onApplicationStart()** function located in your websetting class.
 
-You must import *diamond.authentication* to be able to use the ACL outside of controllers.
+You must import **diamond.authentication** to be able to use the ACL outside of controllers.
 
-To create a role you must use the *addRole()* function.
+To create a role you must use the **addRole()** function.
 
 Example:
 
@@ -33,10 +33,10 @@ auto owner = addRole("owner", administrators);
 auto superUser = addRole("super-user", administrators);
 ```
 
-The role class has a function called *addPermission()* which is used to add permissions for a role.
+The role class has a function called **addPermission()** which is used to add permissions for a role.
 The function returns the role class instance, which means it can be chained.
 
-The arguments of the *addPermission()* are as following: *resource*, *readAccess*, *writeAccess*, *updateAccess*, *deleteAccess*.
+The arguments of the **addPermission()** are as following: **resource**, **readAccess**, **writeAccess**, **updateAccess**, **deleteAccess**.
 
 ```
 auto guest = addRole("guest")
@@ -52,7 +52,7 @@ auto user = addRole("user")
   .addPermission("/logout", false, true, false, false); // Users can logout (POST)
 ```
 
-To use roles you must set a default role by calling the *setDefaultRole()* function.
+To use roles you must set a default role by calling the **setDefaultRole()** function.
 
 ```
 setDefaultRole(guest);
@@ -60,7 +60,7 @@ setDefaultRole(guest);
 
 ## Default Required Permissions
 
-You can change the default permissions for the http methods using *requirePermissionMethod()* and *unrequiredPermissionMethod()*
+You can change the default permissions for the http methods using **requirePermissionMethod()** and **unrequirePermissionMethod()**
 
 The default permissions are as following:
 
@@ -69,7 +69,7 @@ The default permissions are as following:
 * HTTP-PUT: Requires update-access
 * HTTP-DELETE: Requires delete-access
 
-Example: (To create a 100% valid REST API. Since *PUT* should write and update.)
+Example: (To create a 100% valid REST API. Since **PUT** should write and update.)
 
 ```
 requirePermissionMethod(HttpMethod.PUT, PermissionType.writeAccess);
@@ -81,7 +81,7 @@ By default permissions not found in the ACL will allow read, write, update and d
 
 Sometimes you want to limit the default permissions for unmapped resources.
 
-It can be done by changing the property *defaultPermission* which is a boolean.
+It can be done by changing the property **defaultPermission** which is a boolean.
 
 ```
 defaultPermission = false; // Disallow access to resources not mapped with permissions.
@@ -89,7 +89,7 @@ defaultPermission = false; // Disallow access to resources not mapped with permi
 
 ## Authentication
 
-Authentication is generally domne with ACL in Diamond and thus we'll focus on that first.
+Authentication is generally done with ACL in Diamond and thus we'll focus on that first.
 
 There is however two types of authentication and the last type can be combined with the ACL authentication.
 More about that later in this section.
@@ -100,9 +100,9 @@ The functions that must be set are for token validation, token invalidation and 
 
 ### Token-validation
 
-The token validation function can be set with the function *setTokenValidator()*
+The token validation function can be set with the function **setTokenValidator()**
 
-Example: (in *onApplicationStart()*)
+Example: (in **onApplicationStart()**)
 
 ```
 setTokenValidator(&validateToken);
@@ -123,9 +123,9 @@ Role validateToken(string token, HttpClient client)
 
 ### Token-invalidation
 
-The token invalidation function can be set with the function *setTokenInvalidator()*
+The token invalidation function can be set with the function **setTokenInvalidator()**
 
-Example: (in *onApplicationStart()*)
+Example: (in **onApplicationStart()**)
 
 ```
 setTokenInvalidator(&invalidateToken);
@@ -146,9 +146,9 @@ void invalidateToken(string token, HttpClient client)
 
 ### Token-setter
 
-The token setter function can be set with the function *setTokenSetter()*
+The token setter function can be set with the function **setTokenSetter()**
 
-Example: (in *onApplicationStart()*)
+Example: (in **onApplicationStart()**)
 
 ```
 setTokenSetter(&setToken);
@@ -172,9 +172,9 @@ string setToken(HttpClient client)
 }
 ```
 
-To login you simply call the *login()* function and to logout you call the *logout()* function.
+To login you simply call the **login()** function and to logout you call the **logout()** function.
 
-They can be accessed from *HttpClient* or with their raw versions in the *diamond.authentication* package.
+They can be accessed from **HttpClient** or with their raw versions in the **diamond.authentication** package.
 
 Login:
 
@@ -206,11 +206,11 @@ else
 }
 ```
 
-To extend the authentication you have to implement the *IControllerAuth* interface on a class.
+To extend the authentication you have to implement the **IControllerAuth** interface on a class.
 
-The interface is a part of the *diamond.controllers.authentication* module.
+The interface is a part of the **diamond.controllers.authentication** module.
 
-The class that implements the interface must be available from the *controllers* package, so make sure you import the module to it from there (Just like you would with controllers normally.)
+The class that implements the interface must be available from the **controllers** package, so make sure you import the module to it from there (Just like you would with controllers normally.)
 
 ```
 final class TestAuth : IControllerAuth
@@ -232,7 +232,7 @@ final class TestAuth : IControllerAuth
 
 This function is used to validate the authentication of a request.
 
-*AuthStatus* is a class that is used internally to handle the authentication status returned.
+**AuthStatus** is a class that is used internally to handle the authentication status returned.
 
 It takes the following parameters in its constructor:
 
@@ -240,17 +240,17 @@ It takes the following parameters in its constructor:
 this(HttpClient client, bool authenticated, string message = null)
 ```
 
-If there's no instance of *AuthStatus* returned or if *authenticated* is set to false then *authenticationFailed* will be triggered.
+If there's no instance of **AuthStatus** returned or if **authenticated** is set to false then **authenticationFailed** will be triggered.
 
 ### void authenticationFailed(AuthStatus status);
 
 This function is called when authentication has failed for a request.
 
-Note: The status passed to *authenticationFailed* is the status returned by *isAuthenticated*.
+Note: The status passed to **authenticationFailed** is the status returned by **isAuthenticated**.
 
-*authenticationFailed* should be used to handle failed authentications.
+**authenticationFailed** should be used to handle failed authentications.
 
-Example of *IControllerAuth* implementation:
+Example of **IControllerAuth** implementation:
 
 ```
 final class TestAuth : IControllerAuth
@@ -275,9 +275,9 @@ final class TestAuth : IControllerAuth
 }
 ```
 
-To use authentication for a controller, the controller must have the attribute *@HttpAuthentication* which takes a single value as the name of the class that is to be used for authentication.
+To use authentication for a controller, the controller must have the attribute **@HttpAuthentication** which takes a single value as the name of the class that is to be used for authentication.
 
-The class name given must be the one that implements *IControllerAuth*.
+The class name given must be the one that implements **IControllerAuth**.
 
 ```
 @HttpAuthentication(TestAuth.stringof) final class HomeController(TView) : Controller!TView
@@ -288,7 +288,7 @@ The class name given must be the one that implements *IControllerAuth*.
 
 Authentication will be enabled for all mapped actions within the controller, including the default action.
 
-However authentication can easily be disabled for specific actions (Including the default action.) using the attribute *@HttpDisableAuth*
+However authentication can easily be disabled for specific actions (Including the default action.) using the attribute **@HttpDisableAuth**
 
 ```
   /// Can be accessed without authentication
@@ -316,7 +316,7 @@ CSRF Protection is built-in to Diamond and can easily be integrated with forms, 
 
 Before you set the token you must clear the current token.
 
-You can do that by calling the function *clearCSRFToken*
+You can do that by calling the function **clearCSRFToken**
 
 Example:
 
@@ -334,7 +334,7 @@ Then within your form you want to append the token field.
 </form>
 ```
 
-Then within your controller you can call the function *isValidCSRFToken* which validates the token.
+Then within your controller you can call the function **isValidCSRFToken** which validates the token.
 
 Example:
 
@@ -355,7 +355,7 @@ Diamond provides functionality for validating different data such as credit-card
 
 ### Credit-cards
 
-To validate credit-cards simply call the *isValidCreditCard* function.
+To validate credit-cards simply call the **isValidCreditCard** function.
 
 It takes two parameters.
 
@@ -375,7 +375,7 @@ assert(!isValidCreditCard(invalidCreditCardNumber));
 
 ### Email
 
-To validate emails you simply call the *isValidEmail* function.
+To validate emails you simply call the **isValidEmail** function.
 
 It takes 3 parameters.
 
@@ -383,7 +383,7 @@ The first parameter is the email to validate.
 
 The second parameter is a boolean that determines whether the validation should happen through dns.
 
-It's an optional parameter and by default it's set to *false*.
+It's an optional parameter and by default it's set to **false**.
 
 Using dns validation will usually give the best and most correct answer, but it also comes with a performance impact, so for simple email validation it shouldn't be used.
 
@@ -407,11 +407,11 @@ Especially if you have file uploads etc. then you want to make sure that the fil
 
 If you don't validate the data of files uploaded, then someone could potentially upload malicious files.
 
-By default Diamond supports file validation for *jpg/jpeg*, *gif*, *png* and *pdf*.
+By default Diamond supports file validation for **jpg/jpeg**, **gif**, **png** and **pdf**.
 
 However it's possible to implement your own file validations that Diamond will use internally to validate with.
 
-To validate files you simply call the function *isValidFile*, which will validate a buffer as the file data, against the given file extension.
+To validate files you simply call the function **isValidFile**, which will validate a buffer as the file data, against the given file extension.
 
 Example:
 
@@ -423,7 +423,7 @@ assert(isValidFile(".png", validImage));
 assert(!isValidFile(".png", invalidImage));
 ```
 
-To specify a custom file validator you simply call the function *addCustomFileValidator*.
+To specify a custom file validator you simply call the function **addCustomFileValidator**.
 
 It takes two parameters.
 
@@ -480,23 +480,23 @@ Sometimes you want restrict certain areas of your application specific IPs.
 
 Diamond implements an easy way to do so.
 
-Basically you just add a list of ips to your *web.json* file and then in your controller you can restrict certain actions to the restricted ips.
+Basically you just add a list of ips to your **web.json** file and then in your controller you can restrict certain actions to the restricted ips.
 
 If you want to restrict access to a view, simply give the view a controller and then restrict the default action within the controller.
 
-The *web.json* entry looks like this:
+The **web.json** entry looks like this:
 
 ```
 "restrictedIPs": []
 ```
 
-The value is an array of ips ex. *["127.0.0.1"]* will block all connections that aren't from *127.0.0.1*.
+The value is an array of ips ex. **["127.0.0.1"]** will block all connections that aren't from **127.0.0.1**.
 
 Sometimes you may also want to globally restrict IPs.
 
 This allows you to restrict the whole application to a set of IPs.
 
-Just like *restrictedIPs* you just define them in your *web.json* file using the configuration called *globalRestrictedIPs*.
+Just like **restrictedIPs** you just define them in your **web.json** file using the configuration called **globalRestrictedIPs**.
 
 However when using global restricted IPs, Diamond will figure out itself how to restrict the application to them.
 
@@ -510,7 +510,7 @@ Diamond has built-in support for performing backups.
 
 By default there is only support for doing backups of files, but Diamond allows you to implement your own backup services that can backup anything you need to, which can be used to ex. backup sql databases etc.
 
-To start a backup service you simply add your service by calling the function *addBackupService*.
+To start a backup service you simply add your service by calling the function **addBackupService**.
 
 Example:
 

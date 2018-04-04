@@ -12,7 +12,105 @@
 ]
 
 <div class="d-content-box">
-  <div class="d-content-entry d-requirements">
-    <h3>Coming Soon!</h3>
+  <div class="d-content-entry">
+    <div class="d-content-entry d-content-entry-left n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="blogsMenu">
+      @{
+        struct BlogEntry
+        {
+          string path;
+          size_t year;
+          size_t month;
+          size_t date;
+          size_t hour;
+          size_t minute;
+          string title;
+        }
+
+        BlogEntry[] blogEntries;
+        BlogEntry selected;
+
+        import std.file : dirEntries, SpanMode, readText;
+        import std.string : strip;
+        import std.array : split, replace;
+        import std.conv : to;
+        import std.path : baseName;
+
+        foreach (string entryPath; dirEntries("blogs", SpanMode.depth))
+        {
+          auto blogDate = baseName(entryPath).strip().split("__")[0].split("_");
+
+          auto entry = BlogEntry
+                     (
+                       baseName(entryPath).replace("_", "-").split(".")[0],
+                       to!size_t(blogDate[0]), to!size_t(blogDate[1]),
+                       to!size_t(blogDate[2]), to!size_t(blogDate[3]),
+                       to!size_t(blogDate[4]),
+                       readText(entryPath).replace("\r", "").split("\n")[0][1 .. $].strip()
+                     );
+
+          if (client.route.action && entry.path == client.route.action)
+          {
+            selected = entry;
+          }
+
+          blogEntries ~= entry;
+        }
+      }
+
+      <ul>
+        @:if (blogEntries) foreach (blogEntry; blogEntries) {
+          <li>
+            <a href="/blog/@=blogEntry.path;">
+              @=blogEntry.title;
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="d-content-entry d-content-entry-right n-visible-md n-visible-lg" n-resp="md,lg" n-resp-bind="blogsContent">
+      @{
+        import std.file : readText, exists, thisExePath;
+        import std.path : dirName, absolutePath;
+
+        auto rootPath = absolutePath(dirName(thisExePath));
+
+        auto blogsFile = (client.route.action && client.route.action.length ? client.route.action : "_").replace("-", "_") ~ ".md";
+        auto blogsPath = rootPath ~ "/blogs/" ~ blogsFile;
+
+        string content;
+
+        if (exists(blogsPath))
+        {
+          import diamond.markdown : parseToHtml;
+          content = parseToHtml(readText(blogsPath));
+        }
+      }
+
+      @:if (!content || !content.strip().length) {
+        <h3>Coming Soon!</h3>
+      }
+      @:else {
+        <h4>@=selected.year;-@=selected.month;-@=selected.date;&nbsp;&nbsp;@=selected.hour;:@=selected.minute;</h4>
+        <br><br>
+        @=content;
+      }
+    </div>
+
+    <div class="n-visible-xs n-visible-sm">
+      <div class="d-blogs-menu" n-resp="xs,sm" n-resp-bind="blogsMenu">
+      </div>
+      <br><br>
+      <div class="d-blogs-content" n-resp="xs,sm" n-resp-bind="blogsContent">
+      </div>
+    </div>
+
+    <div class="d-clear"></div>
+  </div>
+</div>
+
+<div class="d-content-box">
+  <div class="d-content-entry" style="background-color: #fff;">
+    @:renderModel!"disqus"(client.route.action);
   </div>
 </div>

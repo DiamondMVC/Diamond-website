@@ -1,8 +1,10 @@
 @[
     route:
       robots.txt
+---
+    type:
+      text
 ]
-@:client.rawResponse.headers["Content-Type"] = "text/plain";
 
 Sitemap: http://www.diamondmvc.org/sitemap.xml
 Sitemap: http://diamondmvc.org/sitemap.xml

@@ -61,8 +61,8 @@
 
         if (exists(tutorialsPath))
         {
-          import simplemarkdownparser;
-          content = parseMarkdown(readText(tutorialsPath));
+          import diamond.markdown : parseToHtml;
+          content = parseToHtml(readText(tutorialsPath));
         }
       }
 

@@ -4,7 +4,7 @@ The examples focuses mostly on controllers for websites, however using them for 
 
 ## Setting up a controller
 
-Controllers are simply classes that inherit from the *Controller* class. To create a controller, one must create a new class that inherits from that. For websites you must specify a generic type for views.
+Controllers are simply classes that inherit from the **Controller** class. To create a controller, one must create a new class that inherits from that. For websites you must specify a generic type for views.
 
 ```
 final class MyController(TView) : Controller!TView
@@ -48,19 +48,19 @@ Note: Instead of using params, you can use query strings.
 * void mapDefault(Status delegate() d);
 * void mapDefault(Status function() f);
 
-*mapDefault* maps the default action.
+**mapDefault** maps the default action.
 
 * void mapMandatory(Action fun);
 * void mapMandatory(Status delegate() d);
 * void mapMandatory(Status function() f);
 
-*mapMandatory* maps a mandatory action.
+**mapMandatory** maps a mandatory action.
 
 * void mapAction(HttpMethod method, string action, Action fun);
 * void mapAction(HttpMethod method, string action, Status delegate() d);
 * void mapAction(HttpMethod method, string action, Status function() f);
 
-*mapAction*  will map an action to a method and an action name.
+**mapAction**  will map an action to a method and an action name.
 
 These functions are usually called in the constructor, however it's recommended to just use the attributes available for mapping. The examples below rely on the mapping attributes.
 
@@ -75,7 +75,7 @@ this(TView view)
 
 ## Actions
 
-In this case *defaultAction* will be used to tell the user he needs to specify an action, *getData* will get some json data and *saveData* will save some json data.
+In this case **defaultAction** will be used to tell the user he needs to specify an action, **getData** will get some json data and **saveData** will save some json data.
 
 ### defaultAction
 
@@ -101,7 +101,7 @@ In this case *defaultAction* will be used to tell the user he needs to specify a
 }
 ```
 
-*getData* can be called like */MyView/GetData/10000* where ~MyView~ is the view we call the action from, ~GetData~ is the route to the mapped action and ~10000~ is the first parameter specified.
+**getData** can be called like **/MyView/GetData/10000** where *MyView* is the view we call the action from, *GetData* is the route to the mapped action and *10000* is the first parameter specified.
 
 ### saveData
 
@@ -119,7 +119,7 @@ In this case *defaultAction* will be used to tell the user he needs to specify a
 }
 ```
 
-*saveData* can be called like */MyView/SaveData/10000* where ~MyView~ is the view we call the action from, ~SaveData~ is the route to the mapped action and ~10000~ is the first parameter specified. The body of the request should be json data to save.
+**saveData** can be called like **/MyView/SaveData/10000** where *MyView* is the view we call the action from, *SaveData* is the route to the mapped action and *10000* is the first parameter specified. The body of the request should be json data to save.
 
 For web-apis you don't need to specify view to retrieve params, request, response etc.
 
@@ -146,7 +146,7 @@ Diamond supports version control for controllers, which is useful when developin
 
 This allows you to add new functionality without breaking existing functionality.
 
-To use version-control you must assign a controller with the *@HttpVersion* attribute which takes two values.
+To use version-control you must assign a controller with the **@HttpVersion** attribute which takes two values.
 
 The values of the attribute are as following.
 
@@ -154,9 +154,9 @@ The values of the attribute are as following.
 
 The first value of the attribute is the version identifier. This is the version in which the controller must branch out to the new controller.
 
-Ex. if the identifier is *v2* then the controller will branch out when a request is sent with *v2* as the version.
+Ex. if the identifier is **v2** then the controller will branch out when a request is sent with **v2** as the version.
 
-~Note: You cannot have multiple versions to branch to. A controller may only branch out once.~
+*Note: You cannot have multiple versions to branch to. A controller may only branch out once.*
 
 ### Version Controller
 
@@ -234,7 +234,7 @@ final class NewHomeController(TView) : Controller!TView
 }
 ```
 
-When calling: */home/getValue* you get the following json:
+When calling: **/home/getValue** you get the following json:
 
 ```
 {
@@ -243,7 +243,7 @@ When calling: */home/getValue* you get the following json:
 }
 ```
 
-When calling: */home/v2/getValue* you get the following json:
+When calling: **/home/v2/getValue** you get the following json:
 
 ```
 {

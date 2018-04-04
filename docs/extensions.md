@@ -8,7 +8,7 @@ Which means your extensions and modifications will last beyond upgrades of Diamo
 
 Basically extensions are used to hack the core of Diamond.
 
-To use extensions you must have an *extensions.config* file in your *config* folder.
+To use extensions you must have an **extensions.config** file in your **config** folder.
 
 Within the file you specify the extensions you wish to use.
 
@@ -34,15 +34,15 @@ The module of the extension.
 
 To use an extension its module code must be compiled along with your project.
 
-A simple way to use extensions is by adding them as dependencies in your *dub.json* or *dub.sdl*.
+A simple way to use extensions is by adding them as dependencies in your **dub.json** or **dub.sdl**.
 
-If you're developing an extension make sure that it's compiled with *targetType* -> *sourceLibrary*.
+If you're developing an extension make sure that it's compiled with **targetType** -> **sourceLibrary**.
 
 ## Application Start
 
 An extension that runs during the start-up of a Diamond project. These extensions are not supported by stand-alone.
 
-To implement an extension for *ApplicationStart* the extension module must implement a public function called *onApplicationStart* that takes no parameters.
+To implement an extension for **ApplicationStart** the extension module must implement a public function called **onApplicationStart** that takes no parameters.
 
 The extension must implement the following function:
 
@@ -65,7 +65,7 @@ void onApplicationStart()
 }
 ```
 
-And in *extensions.config*
+And in **extensions.config**
 
 ```
 ApplicationStart|appstarttest|testextensions.appstarttest
@@ -169,7 +169,7 @@ void handleSettings(ref HTTPServerSettings settings)
 
 Http request extensions can be used to handle requests.
 
-Essentially the extension is equivalent to the function used in web settings for *onBeforeRequest*, except for that *onBeforeRequest* will respond with *badRequest* when returning false.
+Essentially the extension is equivalent to the function used in web settings for **onBeforeRequest**, except for that **onBeforeRequest** will respond with **badRequest** when returning false.
 
 The extension must implement the following function:
 
@@ -180,7 +180,7 @@ bool handleRequest(HTTPServerRequest request, HTTPServerResponse response)
 }
 ```
 
-~Note: if the function returns true the request will be handled as normal.~
+*Note: if the function returns true the request will be handled as normal.*
 
 ## Error Handling
 
@@ -195,7 +195,7 @@ bool handleError(HTTPServerRequest request, HTTPServerResponse response, HTTPSer
 }
 ```
 
-~Note: If the function returns true the error will be handled normally.~
+*Note: If the function returns true the error will be handled normally.*
 
 ## Static Files
 
@@ -210,4 +210,4 @@ bool handleStaticFile(HTTPServerRequest request, HTTPServerResponse response)
 }
 ```
 
-~Note: If the function returns true the static file request will be handled normally.~
+*Note: If the function returns true the static file request will be handled normally.*

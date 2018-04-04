@@ -10,9 +10,9 @@ Nginx works with Windows, Linux &amp; macOS.
 
 We suggest to use Nginx with a Linux server, but running it on a Windows server works fine.
 
-After it has been installed go into its installation folder, then into the folder named *conf* and open the file called *nginx.conf*
+After it has been installed go into its installation folder, then into the folder named **conf** and open the file called **nginx.conf**
 
-Now find the *http { }* section and add the following entry:
+Now find the **http { }** section and add the following entry:
 
 ```
 server_names_hash_bucket_size 64;
@@ -32,17 +32,17 @@ http {
 
 Otherwise you may experience trouble when you try to set up a reverse proxy.
 
-After that is done go into the folder within the *conf* called *sites-enabled*.
+After that is done go into the folder within the **conf** called **sites-enabled**.
 
 If the folder doesn't exist then create it.
 
-The *sites-enabled* folder is the folder that contains configurations for all sites you have deployed.
+The **sites-enabled** folder is the folder that contains configurations for all sites you have deployed.
 
-Basically you just place custom *.conf* files within that folder.
+Basically you just place custom **.conf** files within that folder.
 
 It's recommended that the name of the file is the domain of the deployed site.
 
-Ex. *diamondmvc.org* would be *diamondmvc_org.conf*
+Ex. **diamondmvc.org** would be **diamondmvc_org.conf**
 
 Now create a config file for your deployed site.
 
@@ -66,7 +66,7 @@ server {
 }
 ```
 
-Simply change *DOMAIN* to the domain of your site and change *LOCALHOST* to the local url of your application.
+Simply change **DOMAIN** to the domain of your site and change **LOCALHOST** to the local url of your application.
 
 Example:
 
@@ -98,15 +98,15 @@ For more information about Nginx see their documentation <a href="http://nginx.o
 
 To deploy your application, simply build it locally and then create a folder on your server that you can store your application.
 
-Within that folder you just deploy the executable to run, all folders with static files and then your config folder, but it's only necessary to deploy the *web.json* file from your config folder.
+Within that folder you just deploy the executable to run, all folders with static files and then your config folder, but it's only necessary to deploy the **web.json** file from your config folder.
 
-Files such as *views.config* are not necessary to distribute with the compiled application.
+Files such as **views.config** are not necessary to distribute with the compiled application.
 
 On top of that you may also need to deploy libraries that are compiled with your executable.
 
-For Windows that would be *libeay32.dll* and *ssleay32.dll*. They must be in the same folder as the executable.
+For Windows that would be **libeay32.dll** and **ssleay32.dll**. They must be in the same folder as the executable.
 
-Once that is done simply modify *web.json* to run locally. The ip and port specified within *web.json* must match the localhost specified within your application's nginx config file. Generally to host for localhost just add *127.0.0.1* for the ip.
+Once that is done simply modify **web.json** to run locally. The ip and port specified within **web.json** must match the localhost specified within your application's nginx config file. Generally to host for localhost just add **127.0.0.1** for the ip.
 
 After that you can just run the application and you should be able to access it.
 

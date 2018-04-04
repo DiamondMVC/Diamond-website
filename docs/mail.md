@@ -4,7 +4,7 @@ Diamond implements mail functionality, which basically wrap a user-friendly API 
 
 Before you send a mail you must specify smtp settings for the target smtp server.
 
-This can be done using the class *SmtpClientSettings*.
+This can be done using the class **SmtpClientSettings**.
 
 ```
 auto settings = SmtpClientSettings("smtphost", 1919); // host, port

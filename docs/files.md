@@ -20,11 +20,11 @@ Diamond doesn't allow all paths to just be used by default for security reasons,
 
 This is a design decision by Diamond to make sure security is properly, the last thing you want is someone gaining access to files they shouldn't.
 
-Within your *web.json* file you have a section called *staticFileRoutes* in which you can specify which routes (paths) serves static files.
+Within your **web.json** file you have a section called **staticFileRoutes** in which you can specify which routes (paths) serves static files.
 
-By default it's usually *public*.
+By default it's usually **public**.
 
-~Note: The path itself can be excluded ex. if the systme file-path is */public/css/mycss.css* then the linking should be: *www.mydomain.com/css/mycss.css*~
+Note: The path itself can be excluded ex. if the systme file-path is **/public/css/mycss.css** then the linking should be: **www.mydomain.com/css/mycss.css**
 
 There are no special rules on which types of files you can serve, basically any type of file can be served.
 
@@ -32,13 +32,13 @@ How the files are handled is up to the specific browsers, but generally images, 
 
 ## Upload
 
-Handling uploads in Diamond is very easy. You can do it directly by using the property called *files* which *HttpClient* implements or you can use the user-friendly function specified in *diamond.web.file.upload* called *uploaded()*
+Handling uploads in Diamond is very easy. You can do it directly by using the property called **files** which **HttpClient** implements or you can use the user-friendly function specified in **diamond.web.file.upload** called **uploaded()**
 
-It's recommended to use the *uploaded()* function since it already does what you'd usually do with the *files* property.
+It's recommended to use the **uploaded()** function since it already does what you'd usually do with the **files** property.
 
 The function takes takes a parameter as the client to handle files for and then a delegate which is the files to handle.
 
-The delegate takes two parameters of the path to the temporary file provided by the *files* property and the name of the file.
+The delegate takes two parameters of the path to the temporary file provided by the **files** property and the name of the file.
 
 Example:
 
@@ -54,7 +54,7 @@ Sometimes you want to download external resources or files to use within your we
 
 Diamond provides functionality for fetching data or files from remote paths.
 
-Using the functions within *diamond.web.file.download* you can easily manage file downloads.
+Using the functions within **diamond.web.file.download** you can easily manage file downloads.
 
 Example:
 

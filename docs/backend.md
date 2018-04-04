@@ -12,17 +12,17 @@ A request will first access the controller of a view, the controller can then ge
 
 A web-api is a form for web-server application that doesn't provide a frontend (Views) and only provides a backend (Controllers)
 
-To use a web-api you must modify the *dub.json* file to use the version *Diamond_WebApi* instead of *Diamond_WebServer* which tells Diamond to build the application as a web-api and not a website.
+To use a web-api you must modify the **dub.json** file to use the version **Diamond_WebApi** instead of **Diamond_WebServer** which tells Diamond to build the application as a web-api and not a website.
 
 Once that is done all you have to do is just create the controllers you want to associate with the web-api.
 
 Generally controllers for a web-api are the same as they are for a website, but there are some minor differences.
 
-By default the route to access a controller within the web-api is the name of the controller (Without the *Controller* part.)
+By default the route to access a controller within the web-api is the name of the controller (Without the **Controller** part.)
 
-Ex. *HomeController* can be accessed like */home*
+Ex. **HomeController** can be accessed like **/home**
 
-However if you wish to use a different route for the controller then you can use the attribute *HttpRoutes* which allows you to specify custom routes for a controller.
+However if you wish to use a different route for the controller then you can use the attribute **HttpRoutes** which allows you to specify custom routes for a controller.
 
 Example:
 
@@ -56,11 +56,11 @@ Once ACL has been done correctly then using RESTful routes for controller action
 
 That can be achieved using special routes for the controller actions.
 
-If the first entry is ~&lt;&gt;~ then it will use the function name as the action name, otherwise the first entry specified is the action name.
+If the first entry is **&lt;&gt;** then it will use the function name as the action name, otherwise the first entry specified is the action name.
 
-To create an entry with a specific type you must write ~{type}~ and to get the entry a specific name you must write ~{type:name}~.
+To create an entry with a specific type you must write **{type}** and to get the entry a specific name you must write **{type:name}**.
 
-The route also supports wildcards which will accept anything. Wildcards are specified with *
+The route also supports wildcards which will accept anything. Wildcards are specified with \*
 
 ### Example routes:
 
@@ -100,8 +100,8 @@ There are two functions provided by the controller used to retrieve the passed d
 
 ### get(T)(string name);
 
-Will get named values. Ex. in the examples above *productId* would be a named value.
+Will get named values. Ex. in the examples above **productId** would be a named value.
 
 ### get(T)(size_t index);
 
-Will get values based on their index in the route. Ex. *productId* would have be at index *0*.
+Will get values based on their index in the route. Ex. **productId** would have be at index **0**.

@@ -1,34 +1,34 @@
-# Web Advanced
+# Advanced Web
 
 ## HTTP Client
 
-The class *HttpClient* is the most used class throughout Diamond, so it's important to know its complete functionality in order to write a proper application in Diamond.
+The class **HttpClient** is the most used class throughout Diamond, so it's important to know its complete functionality in order to write a proper application in Diamond.
 
 You've already been introduced to some of its functionality, so here we'll focus on the rest of its functionality.
 
-The *HttpClient* is roughly the equivalent to *HttpContext* from ASP.NET.
+The **HttpClient** is roughly the equivalent to **HttpContext** from ASP.NET.
 
-You might want to look at the API documentation for the *HttpClient* class as well, to see how each property actually functions as this is just an overview over the properties.
+You might want to look at the API documentation for the **HttpClient** class as well, to see how each property actually functions as this is just an overview over the properties.
 
 ### .route
 
-The *.route* property returns the current route of the http client, which can be used to check the route name, action, params etc.
+The **.route** property returns the current route of the http client, which can be used to check the route name, action, params etc.
 
 ### .method
 
-The *.method* returns the current http method of the request.
+The **.method** returns the current http method of the request.
 
 ### .session
 
-The *.session* property will return the session context of the client.
+The **.session** property will return the session context of the client.
 
 ### .cookies
 
-The *.cookies* property will return the cookie context of the client.
+The **.cookies** property will return the cookie context of the client.
 
 ### .cookieConsent
 
-The *.cookieConsent* property will return the consent of the user.
+The **.cookieConsent** property will return the consent of the user.
 
 You can also set the cookie-consent of a user through this property.
 
@@ -36,101 +36,101 @@ Should be noticed that cookie-consent is stored as a cookie on the user's comput
 
 ### .ipAddress
 
-The *.ipAddress* property will return the ip address of the client.
+The **.ipAddress** property will return the ip address of the client.
 
 ### .requestStream
 
-The *.requestStream* property will return the vibe.d input-stream for the request.
+The **.requestStream** property will return the vibe.d input-stream for the request.
 
 ### .responseStream
 
-The *.responseStream* property will return the vibe.d output-stream for the response.
+The **.responseStream** property will return the vibe.d output-stream for the response.
 
 ### .connected
 
-The *.connected* property will return a boolean that determines whether the response is connected or not.
+The **.connected** property will return a boolean that determines whether the response is connected or not.
 
 ### .path
 
-The *.path* property will return the current path specified in the url of the request.
+The **.path** property will return the current path specified in the url of the request.
 
 ### .queryString
 
-The *.queryString* property will return the query string of the url.
+The **.queryString** property will return the query string of the url.
 
-~Note: This returns the raw result of the query string. For a mapping use *query*~
+Note: This returns the raw result of the query string. For a mapping use **query**
 
 ### .query
 
-The *.query* property will return the query string of the url as a map.
+The **.query** property will return the query string of the url as a map.
 
 ### .httpParams
 
-The *.httpParams* property will return generic parameters of the request.
+The **.httpParams** property will return generic parameters of the request.
 
 These parameters can be form values, query string values etc.
 
 ### .files
 
-The *.files* property will return the temporary file paths of files uploaded.
+The **.files** property will return the temporary file paths of files uploaded.
 
 ### .form
 
-The *.form* property will return the form data of the request.
+The **.form** property will return the form data of the request.
 
 ### .fullUrl
 
-The *.fullUrl* property will return the full url of the request.
+The **.fullUrl** property will return the full url of the request.
 
 ### .json
 
-The *.json* property will return mapped json of the request.
+The **.json** property will return mapped json of the request.
 
-~Note: If you have a model that is equivalent to the json of the request, then you can use the function *getModelFromJson*.~
+Note: If you have a model that is equivalent to the json of the request, then you can use the function **getModelFromJson**.
 
 ### .contentType
 
-The *.contentType* property will return the content-type of the request.
+The **.contentType** property will return the content-type of the request.
 
 ### .contentTypeParameters
 
-The *.contentTypeParameters* property will return the content-type-parameters of the request.
+The **.contentTypeParameters** property will return the content-type-parameters of the request.
 
 ### .host
 
-The *.host* property will return the host of the request.
+The **.host** property will return the host of the request.
 
 ### .headers
 
-The *.headers* property will return the headers of the request.
+The **.headers** property will return the headers of the request.
 
 ### .tls
 
-The *.tls* property will return a boolean determining whether it's a tls connection or not.
+The **.tls** property will return a boolean determining whether it's a tls connection or not.
 
 ### .clientAddress
 
-The *.clientAddress* property will return the raw client address of the request.
+The **.clientAddress** property will return the raw client address of the request.
 
 ### .clientCertificate
 
-The *.clientCertificate* property will return the certificate of the request.
+The **.clientCertificate** property will return the certificate of the request.
 
 ### .redirected
 
-The *.redirected* property will return a boolean determining whether the client has been redirected.
+The **.redirected** property will return a boolean determining whether the client has been redirected.
 
 ### .role
 
-The *.role* property will return the role of the client.
+The **.role** property will return the role of the client.
 
 ### .statusCode
 
-The *.statusCode* property will return the current status code of the response.
+The **.statusCode** property will return the current status code of the response.
 
 ### .language
 
-The *.language* property will return the current language of the user.
+The **.language** property will return the current language of the user.
 
 It can also be used to set the language of the user.
 
@@ -138,7 +138,7 @@ This requires i18n to be implemented however.
 
 ### .getModelFromJson()
 
-The *.getModelFromJson* function can return a model from json.
+The **.getModelFromJson** function can return a model from json.
 
 It's a simple function that you only give the parameters to the type's constructor.
 
@@ -156,69 +156,69 @@ auto model2 = client.getModelFromJson!MyModel2(100, 200);
 
 ### .addContext()
 
-The *.addContext* function will add context data to the client.
+The **.addContext** function will add context data to the client.
 
 Context data can be used to save data to the current request that you want to use later down in the call-chain.
 
-It's useful to share data from two decoupled areas that only share a *HttpClient*.
+It's useful to share data from two decoupled areas that only share a **HttpClient**.
 
 ### .getContext()
 
-The *.getContext* function will get context data from the client.
+The **.getContext** function will get context data from the client.
 
 You can also specify a default value to the function, which is the data that will be returned if the client doesn't have the context defined.
 
 ### .hasContext()
 
-The *.hasContext* function will return a boolean that determines whether the client has a specific context defined or not.
+The **.hasContext** function will return a boolean that determines whether the client has a specific context defined or not.
 
 ### .redirect()
 
-The *.redirect* function will redirect the client to a given url.
+The **.redirect** function will redirect the client to a given url.
 
 You can also give the redirection a specific status code if needed.
 
 ### .error()
 
-The *.error* function will give an error status code to the client.
+The **.error** function will give an error status code to the client.
 
 It will stop execution from where it currently is at and return the response of the client.
 
 ### .notFound()
 
-The *.notFound* function is a wrapper around *error()* that will throw a 404.
+The **.notFound** function is a wrapper around **error()** that will throw a 404.
 
 ### .unauthorized()
 
-The *.unauthorized* function is a wrapper around *error()* that will throw a 401.
+The **.unauthorized** function is a wrapper around **error()** that will throw a 401.
 
 ### .login()
 
-The *.login* function will login the client.
+The **.login** function will login the client.
 
 ### .logout()
 
-The *.logout* function will logout the client.
+The **.logout** function will logout the client.
 
 ### .write()
 
-The *.write* function will write data directly to the response stream.
+The **.write** function will write data directly to the response stream.
 
 ### .getBody()
 
-The *.getBody* function is only available when logging is enabled, but it will return the current response stream as a buffer.
+The **.getBody** function is only available when logging is enabled, but it will return the current response stream as a buffer.
 
 ## Redirections
 
-We've already covered the basics of redirections as they can be done with the *.redirect* function of the *HttpClient* class.
+We've already covered the basics of redirections as they can be done with the **.redirect** function of the **HttpClient** class.
 
 However there are some more concepts to redirection.
 
-Like if you redirect in a controller you don't need to use the *HttpClient* function for it.
+Like if you redirect in a controller you don't need to use the **HttpClient** function for it.
 
-A controller has a graceful function called *redirectTo* which will redirect the client and return a property status to return in the controller action.
+A controller has a graceful function called **redirectTo** which will redirect the client and return a property status to return in the controller action.
 
-If you do however use *HttpClient* to redirect from a controller, then use the *.redirected* property to return the property status for the controller action, since it can be used to check whether the client has been redirected.
+If you do however use **HttpClient** to redirect from a controller, then use the **.redirected** property to return the property status for the controller action, since it can be used to check whether the client has been redirected.
 
 Generally you don't want to continue execution if a client has been redirected.
 
@@ -244,9 +244,9 @@ It's time to look at one of the more complex ways of routing, which is routing o
 
 These routes can be used as simple route-rewriting for simple internal usage.
 
-To use specialized routes you just specify them in your *web.json* as they're simply configurations.
+To use specialized routes you just specify them in your **web.json** as they're simply configurations.
 
-The configuration property is called *specializedRoutes*.
+The configuration property is called **specializedRoutes**.
 
 ### External
 
@@ -295,7 +295,7 @@ It requires minimum knowledge of websockets (At least server-side) since you don
 
 Basically first you need to implement a websocket service.
 
-You can do that by inheriting the *WebSocketService* class.
+You can do that by inheriting the **WebSocketService** class.
 
 ```
 private final class TestWebSocketService : WebSocketService
@@ -310,7 +310,7 @@ private final class TestWebSocketService : WebSocketService
 
 In order to use the websocket service you need to tell Diamond to use the websocket.
 
-You can do that by adding the service with the function *addWebSocketService*.
+You can do that by adding the service with the function **addWebSocketService**.
 
 ```
 addWebSocketService(new TestWebSocketService);
@@ -318,7 +318,7 @@ addWebSocketService(new TestWebSocketService);
 
 After that you just need to override the functions of the websocket service.
 
-You don't need to worry about how a websocket is implemented as the *WebSocketService* class takes care of that.
+You don't need to worry about how a websocket is implemented as the **WebSocketService** class takes care of that.
 
 You only need to worry about handling the data from the socket.
 

@@ -69,7 +69,8 @@
           DocEntry("", "Data"),
           DocEntry("/docs/data/", "Cookies"),
           DocEntry("/docs/data/#sessions", "Sessions"),
-          DocEntry("/docs/data/#database", "Database"),
+          DocEntry("/docs/data/#database", "Database (Mysql/ORM)"),
+          DocEntry("/docs/data/#mongodb", "Mongodb"),
           DocEntry("/docs/data/#transactions", "Transactions"),
           DocEntry("", ""),
 
@@ -82,7 +83,7 @@
           DocEntry("/docs/security/#backups", "Backups"),
           DocEntry("", ""),
 
-          DocEntry("", "Web Advabced"),
+          DocEntry("", "Advanced Web"),
           DocEntry("/docs/web-advanced/", "HTTP Client"),
           DocEntry("/docs/web-advanced/#redirections", "Redirections"),
           DocEntry("/docs/web-advanced/#routing", "Routing"),
@@ -153,8 +154,8 @@
 
         if (exists(docsPath))
         {
-          import simplemarkdownparser;
-          content = parseMarkdown(readText(docsPath));
+          import diamond.markdown : parseToHtml;
+          content = parseToHtml(readText(docsPath));
         }
       }
 
