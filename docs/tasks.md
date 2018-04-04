@@ -10,9 +10,9 @@ However Diamond implements things such as delayed tasks and schedulers that does
 
 Running an asynchronous task in Diamond is simple.
 
-You just import the *diamond.task* package and all the functionality is available.
+You just import the **diamond.task** package and all the functionality is available.
 
-To run a task and perhaps handle the returned task result you can use *runTask*.
+To run a task and perhaps handle the returned task result you can use **runTask**.
 
 Example:
 
@@ -23,7 +23,7 @@ auto task = runTask(
 });
 ```
 
-However if you just want to execute an asynchronous task, but don't care about the result, then you can use *executeTask* which will just execute the given task and discards the result.
+However if you just want to execute an asynchronous task, but don't care about the result, then you can use **executeTask** which will just execute the given task and discards the result.
 
 Example:
 
@@ -34,7 +34,7 @@ executeTask(
 });
 ```
 
-To pause an asynchronous task you just call the *sleep* function.
+To pause an asynchronous task you just call the **sleep** function.
 
 ```
 executeTask(
@@ -51,7 +51,7 @@ executeTask(
 
 Sometimes you don't want to execute a task right away, but wait a specific amount of time.
 
-You can use the *delayTask* function to do that.
+You can use the **delayTask** function to do that.
 
 ```
 delayTask(25000.msecs,

@@ -179,7 +179,7 @@ Layouts are important for dynamic web pages, because it lets you share a design 
 
 If you're coming from ASP.NET, a layout page would be the equivalent to a master page.
 
-A layout must implement a placeholder called *@&lt;view&gt;* which is where the view will be rendered within the layout page.
+A layout must implement a placeholder called **@&lt;view&gt;** which is where the view will be rendered within the layout page.
 
 Example:
 
@@ -238,7 +238,7 @@ Now it's time to learn how to use them with a view.
 
 We'll not take a look at how to define a model as that was covered previously, but we'll look at how to use the model.
 
-Basically a view comes with a property called *model* which gives you access to the model directly.
+Basically a view comes with a property called **model** which gives you access to the model directly.
 
 You don't need to cast or anything as Diamond has already taken care of given you the right model type.
 
@@ -261,7 +261,7 @@ final class Foo
 }
 ```
 
-Then it's possible to access the members of *Foo* called *bar* and *baz* by just doing:
+Then it's possible to access the members of **Foo** called **bar** and **baz** by just doing:
 
 ```
 model.bar
@@ -288,8 +288,8 @@ To render a partial view you just have to call either of the following functions
 * render()
 * renderModel()
 
-One thing should be noticed. *render()* can render views based on the name being specified at run-time.
-However *renderModel()* must have the name available at compile-time, that is due to retrieving the correct model type at compile-time for maximum efficiency.
+One thing should be noticed. **render()** can render views based on the name being specified at run-time.
+However **renderModel()** must have the name available at compile-time, that is due to retrieving the correct model type at compile-time for maximum efficiency.
 
 ```
 @:render("nameOfPartialView");

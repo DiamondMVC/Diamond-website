@@ -12,7 +12,7 @@ However to use models for views you must specify them in the view's metadata.
 
 There is going to be more information on the metadata when you learn about views.
 
-The model section in a view's metadata is called *model*
+The model section in a view's metadata is called **model**
 
 Example:
 
@@ -25,7 +25,7 @@ Example:
 
 The above is an example on how a model is specified in a view's metadata.
 
-You can replace *Type* with the type your model is.
+You can replace **Type** with the type your model is.
 
 Ex:
 

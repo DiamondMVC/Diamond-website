@@ -8,9 +8,9 @@ However it's common to use this functionality within controllers to render conte
 
 ## Virtual HTML Elements
 
-Diamond allows different types of HTML elements, all available under the module *diamond.web.elements*
+Diamond allows different types of HTML elements, all available under the module **diamond.web.elements**
 
-The elements span from elements such as *div*, *p*, *a* to form elements like *form*, *select*, *input* etc.
+The elements span from elements such as **div**, **p**, **a** to form elements like **form**, **select**, **input** etc.
 
 You can read more about the elements and their specific properties within the API docs.
 

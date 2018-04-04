@@ -69,7 +69,8 @@
           DocEntry("", "Data"),
           DocEntry("/docs/data/", "Cookies"),
           DocEntry("/docs/data/#sessions", "Sessions"),
-          DocEntry("/docs/data/#database", "Database"),
+          DocEntry("/docs/data/#database", "Database (Mysql/ORM)"),
+          DocEntry("/docs/data/#mongodb", "Mongodb"),
           DocEntry("/docs/data/#transactions", "Transactions"),
           DocEntry("", ""),
 
@@ -153,8 +154,8 @@
 
         if (exists(docsPath))
         {
-          import simplemarkdownparser;
-          content = parseMarkdown(readText(docsPath));
+          import diamond.markdown : parseToHtml;
+          content = parseToHtml(readText(docsPath));
         }
       }
 
