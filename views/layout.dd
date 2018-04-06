@@ -24,8 +24,18 @@
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+  @* ------------------------------ Highlight Js ------------------------------ *
+
+  <link href="/public/highlightjs/styles/default.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/d.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
   @* ------------------------------ Js ------------------------------ *
-  @:static const jsVersion = "0.0.5";
+
+  @:static const jsVersion = "0.0.6";
 
   @:auto jsPath = rootPath ~ "/public/public/js";
   @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
@@ -42,7 +52,7 @@
   <link rel="stylesheet" href="/public/font-awesome/css/font-awesome.min.css">
 
   @* ------------------------------ CSS ------------------------------ *
-  @:static const cssVersion = "0.0.5";
+  @:static const cssVersion = "0.0.6";
 
   <link rel="stylesheet" href="/public/css/shared.css?v=@=cssVersion;">
 

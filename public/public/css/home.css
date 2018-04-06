@@ -7,7 +7,7 @@
   padding-top: 16px;
 }
 
-.d-github-button {
+.d-community-button {
   background-color: #4A148C;
   width: 214px;
   height: 60px;
@@ -22,11 +22,20 @@
   margin-right: auto;
 }
 
-.d-github-button:hover {
+.d-community-button:hover {
   background-color: #4527A0;
 }
 
-.d-github-button a {
+.d-facebook-button {
+  background-color: #2980b9;
+  border: 1px solid #1a5276;
+}
+
+.d-facebook-button:hover {
+  background-color: #3498db;
+}
+
+.d-community-button a {
   width: 100%;
   height: 100%;
   display: block;
@@ -35,11 +44,11 @@
 	text-decoration: none;
 }
 
-.d-github-button a:visited {
+.d-community-button a:visited {
   color: #fff;
 }
 
-.d-github-button:hover a:visited {
+.d-community-button:hover a:visited {
   color: #fff;
 }
 
@@ -86,17 +95,31 @@
   color: #fff;
 }
 
-.d-key-features {
+.d-technology-and-standards {
   text-align: center;
   font-size: 14px;
 }
 
-/*
-.d-key-features ul {
-	list-style-type: none;
-	padding: 4px;
-	margin: 4px;
-}*/
+.d-technology-and-standards ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  	list-style-type: none;
+  	padding: 4px;
+  	margin: 4px;
+}
+
+.d-technology-and-standards li {
+    width: calc(33% - 32px);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.d-key-features {
+  text-align: center;
+  font-size: 14px;
+}
 
 .d-key-features ul {
     display: flex;
@@ -109,7 +132,21 @@
 }
 
 .d-key-features li {
-    width: 33%;
+    width: calc(33% - 32px);
     padding: 16px;
     box-sizing: border-box;
+}
+
+.d-diamond-vs-diet table {
+  border-spacing: 8px;
+  border-collapse: collapse;
+}
+
+.d-diamond-vs-diet td,th {
+  padding: 8px;
+  border: 1px solid #888;
+}
+
+.d-diamond-vs-diet tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

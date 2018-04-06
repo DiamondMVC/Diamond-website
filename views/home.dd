@@ -70,30 +70,241 @@
 </div>
 
 <div class="d-content-box">
-  <div class="d-content-entry d-key-description">
-    <div style="text-align: center">
-      <div class="d-github-button">
-        <a href="https://github.com/DiamondMVC/Diamond"><i class="fa fa-github"></i> @<%VIEW_ON_GITHUB%></a>
+
+  @:auto height = 102;
+  @:auto width = 102;
+
+  @:void createContentEntry(string headline, string content, string image) {
+    <div class="d-content-entry">
+      <div class="n-visible-md n-visible-lg" style="width: 100%;">
+        <div style="width: @=width;px;float: left;min-height: @=height;px;">
+          <img src="/public/media/@=image;" alt="@=headline;">
+        </div>
+
+        <div style="width: calc(100% - @=width;px);float: right; min-height: @=height;px;" n-resp="md,lg" n-resp-bind="@=headline;">
+          <h3>@=i18n.getMessage(client, headline);</h3>
+          <br>
+          <div class="n-visible-xs n-visible-sm">
+            <img src="/public/media/@=image;" alt="@=headline;"><br>
+            <br>
+          </div>
+          <p>
+            @=i18n.getMessage(client, content);
+          </p>
+        </div>
+
+        <div class="d-clear"></div>
+      </div>
+
+      <div class="n-visible-xs n-visible-sm" n-resp="xs,sm" n-resp-bind="@=headline;" style="min-height: @=height;px;">
       </div>
     </div>
+  }
 
-    @<%DIAMOND_KEY_DESCRIPTION%>
-    <br><br><br>
-    <h3>@<%DIAMOND_COMMUNITY_TITLE%></h3>
+  @:createContentEntry("HOME_WHAT_IS_DIAMOND_TITLE", "HOME_WHAT_IS_DIAMOND_CONTENT", "home-what-is-diamond.png");
+  @:createContentEntry("HOME_DIAMOND_COMMUNITY_TITLE", "HOME_DIAMOND_COMMUNITY_CONTENT", "home-diamond-community.png");
+
+  <div class="d-content-entry d-why-diamond" style="min-height: 32px; margin-top: 48px; background-color: #ccc;">
+    <h3>Why Diamond?</h3>
+  </div>
+
+  @:createContentEntry("HOME_HIGH_PERFORMANCE_TITLE", "HOME_HIGH_PERFORMANCE_CONTENT", "home-high-performance.png");
+  @:createContentEntry("HOME_CONTROL_TITLE", "HOME_CONTROL_CONTENT", "home-youre-in-control.png");
+  @:createContentEntry("HOME_FAST_DEV_TITLE", "HOME_FAST_DEV_CONTENT", "home-fast-dev.png");
+  @:createContentEntry("HOME_SCALABLE_TITLE", "HOME_SCALABLE_CONTENT", "home-scalable.png");
+  @:createContentEntry("HOME_SECURE_TITLE", "HOME_SECURE_CONTENT", "home-secure.png");
+  @:createContentEntry("HOME_CROSS_PLATFORM_TITLE", "HOME_CROSS_PLATFORM_CONTENT", "home-cross-platform.png");
+  @:createContentEntry("HOME_I18N_TITLE", "HOME_I18N_CONTENT", "home-i18n.png");
+  @:createContentEntry("HOME_EU_COOKIE_TITLE", "HOME_EU_COOKIE_CONTENT", "home-eu-cookie.png");
+  @:createContentEntry("HOME_TEST_DRIVEN_DEV_TITLE", "HOME_TEST_DRIVEN_DEV_CONTENT", "home-test-driven-dev.png");
+
+  <div class="d-content-entry d-technology-and-standards">
+    <h3>Diamond uses/relies on the following technologies, web-standards and publications</h3>
     <br>
-    <p>
-      We're always open to contributions within our Github repositories.<br>
-      Feel free to use all our code as well.
-    </p>
-    <a href="https://github.com/DiamondMVC/">@<%DIAMOND_COMMUNITY_LINK_GITHUB%></a><br>
-    <br><br>
-    You may also want to join our Discord for a more social experience.<br>
-    <a href="https://discord.gg/UTysCSH">@<%DIAMOND_COMMUNITY_LINK_DISCORD%></a><br>
-    <br><br>
-    <h3>@<%DIAMOND_ANNOUNCEMENTS%></h3>
+
+    @{
+      struct TechReliability
+      {
+        string name;
+        string url;
+        string logo;
+        string color;
+
+        this(string name, string url, string logo, string color = null)
+        {
+          this.name = name;
+          this.url = url;
+          this.logo = logo;
+          this.color = color;
+        }
+
+        @disable this();
+      }
+
+      static const techReliabilities = [
+        TechReliability("The D Programming Language", "https://dlang.org/", "https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg"),
+        TechReliability("DUB", "https://code.dlang.org/", "https://raw.githubusercontent.com/dlang/dub-registry/master/public/images/logo-small.png"),
+        TechReliability("vibe.d", "http://vibed.org/", "https://vibed.org/images/title-new.png"),
+        TechReliability("Microsoft Azure", "http://azure.microsoft.com/", "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg"),
+        TechReliability("Heroku", "https://www.heroku.com/", "https://www-assets3.herokucdn.com/assets/logo-purple-08fb38cebb99e3aac5202df018eb337c5be74d5214768c90a8198c97420e4201.svg"),
+        TechReliability("Nginx", "http://nginx.org/", "http://nginx.org/nginx.png"),
+        TechReliability("MySQL", "https://www.mysql.com/", "https://www.mysql.com/common/logos/mysql-logo.svg?v2"),
+        TechReliability("MariaDB", "https://mariadb.org/", "https://mariadb.org/wp-content/uploads/2015/05/MariaDB-Foundation-horizontal-x52.png"),
+        TechReliability("MongoDB", "https://www.mongodb.com/", "https://webassets.mongodb.com/_com_assets/global/mongodb-logo-white.png", "#aaa"),
+        TechReliability("redis", "https://redis.io/", "https://redis.io/images/redis-white.png"),
+        TechReliability("EU", "http://europa.eu/", "http://europa.eu/wel/eu_portal/2014/images/header/europa-flag.gif"),
+        TechReliability("OWASP", "https://www.owasp.org/", "https://www.owasp.org/resources/assets/owasplogo.png?6963c")
+      ];
+    }
+
+    <ul>
+      @:foreach (techReliability; techReliabilities) {
+        <li>
+          <a href="@=techReliability.url;">
+            <img src="@=techReliability.logo;" alt="@=techReliability.name;" style="max-width: 100%; max-height: 258px;@=(techReliability.color ? "background-color: " ~ techReliability.color : "");">
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="d-content-entry d-diamond-vs-diet">
+    <h3>Diet Templates VS Diamond Views</h3>
     <br>
-    The official d programming language blog wrote about Diamond here:<br>
-    <a href="https://dlang.org/blog/2017/11/20/project-highlight-diamond-mvc-framework/">@<%DIAMOND_COMMUNITY_LINK_DBLOG%></a>
+
+    <table>
+      <tr>
+        <th>Functionality</th>
+        <th>Diet</th>
+        <th>Diamond</th>
+      </tr>
+      <tr>
+        <td>Compile-time parsing</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Linear Expressions</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>D Code</td>
+        <td>
+          Yes (Partially)<br>
+          <br>
+          Does not use fully D syntax.
+        </td>
+        <td>
+          Yes<br>
+          <br>
+          Full D expressions with D syntax.
+        </td>
+      </tr>
+      <tr>
+        <td>Layouts / Extendable Views</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Partial Views</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Non-layout View Limitations</td>
+        <td>
+          Yes<br>
+          <br>
+          You can only use <b>-block</b>
+        </td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Metadata Configurations</td>
+        <td>Yes (Limited)</td>
+        <td>Yes (Very Functional)</td>
+      </tr>
+      <tr>
+        <td>Expressive Grammar</td>
+        <td>
+          No<br>
+          <br>
+          Uses keywords for identifying view parts.
+        </td>
+        <td>
+          Yes<br>
+          <br>
+          Lots of syntactic sugar that helps creating expressive views.
+        </td>
+      </tr>
+      <tr>
+        <td>Custom Grammar</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Caching</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Dynamic HTML Generation</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Standard HTML</td>
+        <td>
+          No<br>
+          <br>
+          You must use the Diet syntax.
+        </td>
+        <td>
+          Yes<br>
+          <br>
+          Allows mixture between Diamond expressions and standard HTML.
+        </td>
+      </tr>
+      <tr>
+        <td>Placeholders</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>MVC</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>HMVC</td>
+        <td>No</td>
+        <td>Ye</td>
+      </tr>
+      <tr>
+        <td>View Inheritance</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Static Templates</td>
+        <td>Yes</td>
+        <td>
+          No<br>
+          <br>
+          Upcoming Feature
+        </td>
+      </tr>
+      <tr>
+        <td>Sections</td>
+        <td>No</td>
+        <td>
+          Yes<br>
+          <br>
+          You can render specific sections of partial views.
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="d-content-entry d-key-features">
