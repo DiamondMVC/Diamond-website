@@ -45,7 +45,7 @@ model:
 
 The above could ex. be a class named Foo defined as below.
 
-```
+```d
 final class Foo
 {
   immutable(int) bar;

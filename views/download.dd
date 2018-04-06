@@ -54,6 +54,37 @@
     </table>
 
     <br>
+
+    <h3>Release Cycle</h3>
+    <br>
+
+    Diamond uses semantic versioning such as <b>MAJOR.MINOR.BUILD</b> <em>(Ex. 2.9.0)</em><br>
+    <br>
+    
+    <table>
+      <tr>
+        <th>Version</th>
+        <th>Release</th>
+      </tr>
+      <tr>
+        <td>Major</td>
+        <td>Unknown</td>
+      </tr>
+      <tr>
+        <td>Minor</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>Build</td>
+        <td>Monday &amp; Friday</td>
+      </tr>
+      <tr>
+        <td>Next Minor Release</td>
+        <td>May 1st 2018</td>
+      </tr>
+    </table>
+    <br>
+
   </div>
 
   <div class="d-content-entry d-project">

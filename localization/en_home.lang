@@ -30,6 +30,119 @@ DIAMOND_COMMUNITY_LINK_DBLOG=Project Highlight: Diamond MVC Framework
 
 DIAMOND_KEY_FEATURES_TITLE=Key Features Of Diamond MVC
 
+
+
+HOME_WHAT_IS_DIAMOND_TITLE=What is Diamond?
+HOME_WHAT_IS_DIAMOND_CONTENT:
+Diamond is a <b>FREE open-source</b> full-stack web-framework written in <b>The D Programming Language</b>.
+<br><br>
+It's inspired by <b>ASP.NET</b> and uses <b>vibe.d</b> for its backend, making Diamond a very powerful framework.
+;
+
+HOME_DIAMOND_COMMUNITY_TITLE=The Diamond Community
+HOME_DIAMOND_COMMUNITY_CONTENT:
+We're always open to contributions within our Github repositories.<br>
+Feel free to use all our code as well.<br>
+
+<div class="d-community-button">
+  <a href="https://github.com/DiamondMVC/Diamond"><i class="fa fa-github"></i> View On Github</a>
+</div>
+
+<br><br>
+You may also want to join our Discord for a more social experience.<br>
+
+<div class="d-community-button">
+  <a href="https://discord.gg/UTysCSH"><i class="fa fa-commenting-o"></i> Discord</a>
+</div>
+
+<br><br>
+
+Follow Us on Facebook for the latest news and community engagement.<br>
+
+<div class="d-community-button d-facebook-button">
+  <a href="https://www.facebook.com/OfficialDiamondMVC/"><i class="fa fa-facebook"></i> Follow Us</a>
+</div>
+
+<br><br>
+
+You can read our official blog here:<br>
+
+<div class="d-community-button d-facebook-button">
+  <a href="/blog"><i class="fa fa-newspaper-o"></i> The Diamond Blog</a>
+</div>
+;
+
+HOME_HIGH_PERFORMANCE_TITLE=High Performance
+HOME_HIGH_PERFORMANCE_CONTENT:
+Diamond builds on-top of vibe.d, which makes Diamond a very powerful framework as vibe.d is specifically built to be a high-performance framework.<br>
+<br>
+Diamond aims to be used for enterprise work and can be used for both small and big projects and in such case performance is a priority.
+;
+
+HOME_CONTROL_TITLE=You're in control
+HOME_CONTROL_CONTENT:
+You control the whole application and how things work.<br>
+<br>
+You have complete control over requests/responses and how Diamond should handle them, with minimal and easy configuration, without complexity.<br>
+<br>
+You can deliver data and content as you wish, without work-arounds.<br>
+<br>
+Diamond can also be extended easily, which allows for flexibility that isn't easily provided in other frameworks.
+;
+
+HOME_FAST_DEV_TITLE=Fast Development Pace
+HOME_FAST_DEV_CONTENT:
+Diamond is light-weight and easy-to-use, but provides a lot of built-in functionality that helps the development of a project to be done fast and with quality.<br>
+<br>
+On top of that it utilizes a lot of D idiomatics which allows you to write flexible D code, which in general is production friendly.<br>
+<br>
+You can write high-performance, quality application in Diamond, faster than most other frameworks and still with higher and better quality.
+;
+
+HOME_SCALABLE_TITLE=Scalable
+HOME_SCALABLE_CONTENT:
+Diamond is built to be scalable with both big and small projects.<br>
+<br>
+Scalability and performance is a priority within the core of Diamond.
+;
+
+HOME_SECURE_TITLE=Secure
+HOME_SECURE_CONTENT:
+Diamond has a lot of built-in security functionality and generally aims to fight error-prone code with a rich API that builds on safety-first.<br>
+<br>
+Diamond is also <a href="https://www.owasp.org/index.php/Code_Reviews_and_Compliance">OWASP compliant</a> when used properly.
+;
+
+HOME_CROSS_PLATFORM_TITLE=Cross Platform
+HOME_CROSS_PLATFORM_CONTENT:
+Diamond runs on multiple platforms such as, but not limited to, Windows (Includes Windows Server also.), Linux & macOS.<br>
+<br>
+Diamond has no platform specific functionality.<br>
+<br>
+All functionality of Diamond is available on all supported platforms.
+;
+
+HOME_I18N_TITLE=Localization &amp; Internationalization
+HOME_I18N_CONTENT:
+Diamond has localization and internationalization built-in and can easily be extended and customized if necessary.
+;
+
+HOME_EU_COOKIE_TITLE=EU Cookie Law Compliant
+HOME_EU_COOKIE_CONTENT:
+Since Diamond targets enterprise development, then following the EU cookie law, as well being OWASP compliant is necessary.<br>
+<br>
+The functionality for supporting the EU Cookie is built-in to Diamond's cookie API, which allows you to specify cookie types as well bind a user's cookie-consent to the functionality, limiting cookies to the functionality they choose.<br>
+<br>
+In most frameworks this is something you have to build yourself or use a third-party library, but by having it built-in Diamond allows for one less dependency, allowing Diamond to work much better independent.<br>
+<br>
+It also allows Diamond to combine such functionality with other features of Diamond, without any complexity.
+;
+
+HOME_TEST_DRIVEN_DEV_TITLE=Test-Driven Development
+HOME_TEST_DRIVEN_DEV_CONTENT:
+Diamond has built-in unittesting which can be used to write test-driven development.
+;
+
 KEYF_FEATURE_RICH=Feature-rich, but light-weight
 
 KEYF_HIGH_PERFORMANCE=High-performance

@@ -6,7 +6,7 @@
 <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://diamondmvc.org/';
+      this.page.url = 'http://diamondmvc.org/blog/@=model;';
       this.page.identifier = '@=model;';
     };
 
