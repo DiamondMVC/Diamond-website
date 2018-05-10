@@ -9,6 +9,9 @@
   [
     "title": "Team"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
@@ -17,5 +20,10 @@
     <br><br>
     Stackoverflow: <a href="https://stackoverflow.com/users/2026276/bauss">https://stackoverflow.com/users/2026276/bauss</a><br>
     Github: <a href="https://github.com/bausshf/">https://github.com/bausshf/</a><br>
+  </div>
+  <div class="d-content-entry d-team">
+    <h3>Sedatb23 (Sedat Bilen)</h3>
+    <br><br>
+    Github: <a href="https://github.com/Sedatb23">https://github.com/Sedatb23</a><br>
   </div>
 </div>

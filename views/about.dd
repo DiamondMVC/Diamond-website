@@ -9,6 +9,9 @@
   [
     "title": "About"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
@@ -30,12 +33,13 @@
     <b>Key people:</b><br><br>
 
     <a href="https://github.com/bausshf">Jacob Jensen (bauss)</a><br>
-    <a href="https://github.com/Sedatb23">Sedat</a><br>
+    <a href="https://github.com/Sedatb23">Sedat Bilen</a><br>
     <a href="https://github.com/WebFreak001">Jan Jurzitza (WebFreak001)</a><br>
     <a href="https://github.com/mdparker">Mike Parker</a><br>
     <a href="https://github.com/0xEAB">Elias Batek (0xEAB)</a><br>
     <a href="https://github.com/garethwarry">Gareth</a><br>
-    Smaehtin
+    Smaehtin<br>
+    Paul Jaworski
 
     <br><br><br>
     Every contributer to vibe.d.<br>

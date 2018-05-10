@@ -1,0 +1,138 @@
+.ur-slider-content-wrapper {
+  width: 100%;
+}
+
+.ur-slider {
+  color: #fff;
+}
+
+.ur-slider:hover {
+  opacity: 0.8;
+}
+
+.ur-slider a {
+  color: #fff;
+  display: blocK;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.ur-slider a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ur-slider a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ur-slider a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ur-slider-content-headline {
+  background-color: #000;
+  opacity: 0.8;
+  margin: 8px;
+  padding: 8px;
+}
+
+.ur-slider-content-text {
+  background-color: #000;
+  opacity: 0.5;
+  margin: 8px;
+  padding: 8px;
+}
+
+@media (max-width: 600px) {
+  .ur-slider {
+    height: 200px;
+  }
+
+  .ur-slider-content-headline {
+    width: 90%;
+    font-size: 22px;
+  }
+
+  .ur-slider-content-text {
+    width: 70%;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 600px) {
+  .ur-slider {
+    height: 256px;
+  }
+
+  .ur-slider-content-headline {
+    width: 70%;
+    font-size: 26px;
+  }
+
+  .ur-slider-content-text {
+    width: 50%;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 900px) {
+  .ur-slider {
+    height: 300px;
+  }
+
+  .ur-slider-content-headline {
+    width: 60%;
+    font-size: 30px;
+  }
+
+  .ur-slider-content-text {
+    width: 40%;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ur-slider {
+    height: 400px;
+  }
+
+  .ur-slider-content-headline {
+    width: 40%;
+    font-size: 34px;
+  }
+
+  .ur-slider-content-text {
+    width: 33%;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 600px) {
+  .ur-slider-current {
+    background-size: cover;
+    min-height: 100%;
+  }
+
+  .ur-slider-next {
+    background-size: cover;
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ur-slider-current {
+    background-size: 100% 200px;
+    min-height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .ur-slider-next {
+    background-size: 100% 200px;
+    min-height: 100%;
+    background-repeat: no-repeat;
+  }
+}

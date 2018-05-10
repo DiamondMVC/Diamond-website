@@ -9,19 +9,23 @@
   [
     "title": "Contribute"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
   <div class="d-content-entry d-contribute">
     <p>
-      Thank you for your interest in Diamond.<br><br>
+      Thank you for your interest in Diamond.<br>
+      <br>
       We always appreciate contributes to the project, as it's mostly a volunteer project.<br>
       We have no dedicated full-time programmers sitting on the project and this contributes are a great help to the project.<br>
       <br>
       If you're interested in contributing to Diamond, then follow these steps.<br>
       <br>
       <ol>
-        <li>Fork Diamond MVC</li>
+        <li>Fork <a href="https://github.com/DiamondMVC/Diamond">Diamond MVC</a></li>
         <li>Make your changes</li>
         <li>Create a pull-request</li>
       </ol>

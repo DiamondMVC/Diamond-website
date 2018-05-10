@@ -10,7 +10,7 @@ However Diamond implements things such as delayed tasks and schedulers that does
 
 Running an asynchronous task in Diamond is simple.
 
-You just import the **diamond.task** package and all the functionality is available.
+You just import the **diamond.tasks** package and all the functionality is available.
 
 To run a task and perhaps handle the returned task result you can use **runTask**.
 

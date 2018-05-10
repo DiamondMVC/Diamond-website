@@ -9,12 +9,20 @@
   [
     "title": "Help"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
   <div class="d-content-entry d-help">
+    We're always open to help you with Diamond. Whether it's getting started or implementing certain functionality.<br>
+    <br>
     If you have questions or need help feel free to create an issue <a href="https://github.com/DiamondMVC/Diamond/issues">here</a>.
     <br><br>
     You may also join our discord <a href="https://discord.gg/UTysCSH">here</a>.
+    <br><br>
+    We also have other contact forms that you can use for assistance such as mail.<br>
+    You can find contact information <a href="/contact">here</a>.
   </div>
 </div>

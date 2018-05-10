@@ -9,6 +9,9 @@
   [
     "title": "FAQ"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">

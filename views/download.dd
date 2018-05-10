@@ -9,6 +9,9 @@
   [
     "title": "Download"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
@@ -58,9 +61,9 @@
     <h3>Release Cycle</h3>
     <br>
 
-    Diamond uses semantic versioning such as <b>MAJOR.MINOR.BUILD</b> <em>(Ex. 2.9.0)</em><br>
+    Diamond uses semantic versioning such as <b>MAJOR.MINOR.BUILD</b> <em>(Ex. 2.9.3)</em><br>
     <br>
-    
+
     <table>
       <tr>
         <th>Version</th>
@@ -76,11 +79,11 @@
       </tr>
       <tr>
         <td>Build</td>
-        <td>Monday &amp; Friday</td>
+        <td>Usually Friday</td>
       </tr>
       <tr>
         <td>Next Minor Release</td>
-        <td>May 1st 2018</td>
+        <td>June 1st 2018</td>
       </tr>
     </table>
     <br>
@@ -120,7 +123,7 @@
   </div>
 
   <div class="d-content-entry d-alternative-downloads">
-    <b>Source-code (Stable):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/v2.8.6.zip">Download</a><br><br>
+    <b>Source-code (Stable):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/v2.9.3.zip">Download</a><br><br>
     <b>Source-code (Development):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/master.zip">Download</a><br><br>
   </div>
 </div>

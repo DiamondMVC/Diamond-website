@@ -17,6 +17,36 @@ nyan.app = nyan.define('app', {
 
   onLoad: function() {
     nyan.setView();
+
+    $(document).ready(function() {
+      app.loadKonami();
+    });
+  },
+
+  loadKonami: function() {
+    var first = true;
+
+    new Konami(function() {
+      window.scrollTo(0, 0);
+
+      if (first) {
+        first = false;
+
+        $(document.body).html('<div class="konami" style="display: none"></div>' + $(document.body).html());
+      }
+
+      var konami = $('.konami');
+
+      if (konami) {
+        konami.css('background-image', 'url(/public/media/konami.jpg)');
+
+        konami.fadeIn(1000, function() {
+          setTimeout(function() {
+            konami.fadeOut(1000);
+          }, 3000);
+        });
+      }
+    });
   },
 
   onResponsiveChange: function() {
