@@ -87,7 +87,7 @@
   }
 
   .n-hidden-lg {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -101,7 +101,7 @@
   }
 
   .n-hidden-md {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -115,7 +115,7 @@
   }
 
   .n-hidden-sm {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -129,6 +129,6 @@
   }
 
   .n-hidden-xs {
-    display: none;
+    display: none !important;
   }
 }

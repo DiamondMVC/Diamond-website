@@ -4,7 +4,7 @@ HOME_FOCUS_TEXT:
 
 HOME_FOCUS_TEXT_BOTTOM=Innovation, performance and elegance are Diamond's key features
 
-GET_DIAMOND=Get Diamond 2.8.6
+GET_DIAMOND=Get Diamond 2.9.3
 SUPPORT_US=Support Us
 
 DIAMOND_FOOTER_DESCRIPTION=Diamond is a powerful full-stack web-framework&nbsp;&nbsp;
@@ -32,14 +32,18 @@ DIAMOND_KEY_FEATURES_TITLE=Key Features Of Diamond MVC
 
 
 
-HOME_WHAT_IS_DIAMOND_TITLE=What is Diamond?
+HOME_WHAT_IS_DIAMOND_TITLE=What is Diamond?|Is it really the future of the web?
 HOME_WHAT_IS_DIAMOND_CONTENT:
 Diamond is a <b>FREE open-source</b> full-stack web-framework written in <b>The D Programming Language</b>.
 <br><br>
 It's inspired by <b>ASP.NET</b> and uses <b>vibe.d</b> for its backend, making Diamond a very powerful framework.
+<br><br>
+It builds on modern practices for both web-frontend and web-backends and it's not limited to a single environment.
+<br><br>
+Diamond is able to run on the most popular operating systems, platforms and under popular environments.
 ;
 
-HOME_DIAMOND_COMMUNITY_TITLE=The Diamond Community
+HOME_DIAMOND_COMMUNITY_TITLE=The Diamond Community|A friendly community of developers
 HOME_DIAMOND_COMMUNITY_CONTENT:
 We're always open to contributions within our Github repositories.<br>
 Feel free to use all our code as well.<br>
@@ -70,77 +74,170 @@ You can read our official blog here:<br>
 <div class="d-community-button d-facebook-button">
   <a href="/blog"><i class="fa fa-newspaper-o"></i> The Diamond Blog</a>
 </div>
+
+<br><br>
+
+Support Diamond by reviewing it on Stackshare.<br>
+
+<div class="d-community-button d-stackshare-button">
+  <a href="https://stackshare.io/diamond"><i class="fa fa-code-fork"></i> Stackshare</a>
+</div>
 ;
 
-HOME_HIGH_PERFORMANCE_TITLE=High Performance
+HOME_HIGH_PERFORMANCE_TITLE=High Performance|Experience speed and low memory-usage
 HOME_HIGH_PERFORMANCE_CONTENT:
-Diamond builds on-top of vibe.d, which makes Diamond a very powerful framework as vibe.d is specifically built to be a high-performance framework.<br>
+Diamond is built to handle many connections, fast and with absolute excellent performance.<br>
 <br>
-Diamond aims to be used for enterprise work and can be used for both small and big projects and in such case performance is a priority.
+It's also a priority for Diamond to be able to deliver content and data fast!<br>
+<br>
+Diamond's performance is also combined with low memory-usage compared to many other frameworks.
 ;
 
-HOME_CONTROL_TITLE=You're in control
+HOME_CONTROL_TITLE=You're in control|Configurations, development and deployment...
 HOME_CONTROL_CONTENT:
-You control the whole application and how things work.<br>
+Everything in Diamond can be controlled by you.<br>
 <br>
-You have complete control over requests/responses and how Diamond should handle them, with minimal and easy configuration, without complexity.<br>
+You can configure Diamond to operate exactly how you want it.<br>
 <br>
-You can deliver data and content as you wish, without work-arounds.<br>
-<br>
-Diamond can also be extended easily, which allows for flexibility that isn't easily provided in other frameworks.
+This allows Diamond to be integrated into existing solutions and work with any kind of data and content.
 ;
 
-HOME_FAST_DEV_TITLE=Fast Development Pace
+HOME_FAST_DEV_TITLE=Fast Development Pace|Experience rapid development like never before
 HOME_FAST_DEV_CONTENT:
-Diamond is light-weight and easy-to-use, but provides a lot of built-in functionality that helps the development of a project to be done fast and with quality.<br>
+The infrastructure of Diamond was made to support rapid development, even for enterprise solutions.<br>
 <br>
-On top of that it utilizes a lot of D idiomatics which allows you to write flexible D code, which in general is production friendly.<br>
+Diamond's API is user-friendly and feature-rich, making sure you only have to write absolute minimum functionality.<br>
 <br>
-You can write high-performance, quality application in Diamond, faster than most other frameworks and still with higher and better quality.
+It supports all modern functionality and lots of functionality that other frameworks don't or requires third-party libraries.<br>
+<br>
+With Diamond you can keep your dependencies as low as possible, keeping your environment and workspace safe from breakage.
 ;
 
-HOME_SCALABLE_TITLE=Scalable
+HOME_SCALABLE_TITLE=Scalable|Scalability like never before
 HOME_SCALABLE_CONTENT:
-Diamond is built to be scalable with both big and small projects.<br>
+Being able to scale environments and applications is an essential functionality for enterprise solutions.<br>
 <br>
-Scalability and performance is a priority within the core of Diamond.
+Diamond was developed in a way to support scalability without a complex environment.<br>
+<br>
+You can scale it as much or as little as you need.
 ;
 
-HOME_SECURE_TITLE=Secure
+HOME_SECURE_TITLE=Secure|Security is a priority and Diamond builds on that!
 HOME_SECURE_CONTENT:
-Diamond has a lot of built-in security functionality and generally aims to fight error-prone code with a rich API that builds on safety-first.<br>
+Today security is an absolute priority for professional solutions.<br>
 <br>
-Diamond is also <a href="https://www.owasp.org/index.php/Code_Reviews_and_Compliance">OWASP compliant</a> when used properly.
+Security is not only protecting your data, server and platform from attacks, but also being secure from coding errors and bugs.<br>
+<br>
+Diamond supports all modern security practices and one of its goals is to be <a href="https://www.owasp.org/index.php/Code_Reviews_and_Compliance">OWASP compliant</a>.
 ;
 
-HOME_CROSS_PLATFORM_TITLE=Cross Platform
+HOME_CROSS_PLATFORM_TITLE=Cross Platform|Run Diamond on multiple platforms and within multiple environments
 HOME_CROSS_PLATFORM_CONTENT:
-Diamond runs on multiple platforms such as, but not limited to, Windows (Includes Windows Server also.), Linux & macOS.<br>
+Unlike other web-frameworks, then Diamond is not limited to one platform and environment.<br>
 <br>
-Diamond has no platform specific functionality.<br>
+Diamond supports multiple operating systems and environments.<br>
 <br>
-All functionality of Diamond is available on all supported platforms.
+Below is a list of common operating systems and enviroments that Diamond supports.<br>
+<br>
+It is however not limited to those only.<br>
+<br>
+
+<table style="width: 90%; margin-left: auto; margin-right: auto;">
+  <tr>
+    <th>Operating Systems</th>
+    <th>Environments</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows</a></td>
+    <td><a href="http://azure.microsoft.com/">Microsoft Azure</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://www.ubuntu.com/server">Linux</a></td>
+    <td><a href="https://www.heroku.com/">Heroku</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://www.apple.com/lae/macos/server/">macOS</a></td>
+    <td><a href="http://nginx.org/">Nginx</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="https://httpd.apache.org/">Apache</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="https://aws.amazon.com/">Amazon Web Services</a></td>
+  </tr>
+</table>
 ;
 
-HOME_I18N_TITLE=Localization &amp; Internationalization
+HOME_I18N_TITLE=Localization &amp; Internationalization|Without complexity or code duplication
 HOME_I18N_CONTENT:
-Diamond has localization and internationalization built-in and can easily be extended and customized if necessary.
+The internet is a place where people from all over the world meet, but sometimes it's great to support the locales from specific contries, cultures etc.<br>
+<br>
+Diamond has an easy-to-use localization and internationalization API built-in, which you can combine with specialized view-syntaxes to rapidly develop multi-language solutions.
 ;
 
-HOME_EU_COOKIE_TITLE=EU Cookie Law Compliant
+HOME_EU_COOKIE_TITLE=Law &amp; Standard Compliant|Follows standards by ex. EU for cookies, GDPR etc.
 HOME_EU_COOKIE_CONTENT:
-Since Diamond targets enterprise development, then following the EU cookie law, as well being OWASP compliant is necessary.<br>
+It's important for professional business to be compliant with laws and regulations.<br>
 <br>
-The functionality for supporting the EU Cookie is built-in to Diamond's cookie API, which allows you to specify cookie types as well bind a user's cookie-consent to the functionality, limiting cookies to the functionality they choose.<br>
+By using Diamond you get a lot of helpful functionality and tools that can help you comply with these.<br>
 <br>
-In most frameworks this is something you have to build yourself or use a third-party library, but by having it built-in Diamond allows for one less dependency, allowing Diamond to work much better independent.<br>
+Diamond has support for cookie-consent and various GDPR helper functionality.<br>
 <br>
-It also allows Diamond to combine such functionality with other features of Diamond, without any complexity.
+All implementations can be bend and configured to match your exact needs.
 ;
 
-HOME_TEST_DRIVEN_DEV_TITLE=Test-Driven Development
+HOME_TEST_DRIVEN_DEV_TITLE=Test-Driven Development|Testing is essential for professional solutions
 HOME_TEST_DRIVEN_DEV_CONTENT:
-Diamond has built-in unittesting which can be used to write test-driven development.
+Diamond has support for D's built-in unittesting, but also has a more advanced unittesting API.<br>
+<br>
+Diamond's own unittesting API can be shaped to test certain requests and target specific areas of the application.<br>
+<br>
+This is useful, because you can do real HTTP tests without a browser or third-party tools.
+;
+
+HOME_DATABASE_TITLE=Database Support|Sql &amp; No-sql
+HOME_DATABASE_CONTENT:
+Software often use more than one type of database and thus it was a priority for Diamond to support that.<br>
+<br>
+Diamond supports both no-sql and sql databases.<br>
+<br>
+
+<table style="width: 90%; margin-left: auto; margin-right: auto;">
+  <tr>
+    <th>Database</th>
+    <th>Supported</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.mysql.com/">MySQL</a></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="https://mariadb.org/">MariaDB</a></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.postgresql.org/">PostgreSQL</a></td>
+    <td>Support From 2.10.0</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/sql-server‎">Microsoft SQL Server</a></td>
+    <td>Support From 2.10.0</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.sqlite.org/index.html">SQLite</a></td>
+    <td>Support From 2.10.0</td>
+  </tr>
+  <tr>
+    <td><a href="http://mongodb.com/">MongoDB</a></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="https://redis.io/">Redis</a></td>
+    <td>Yes</td>
+  </tr>
+</table>
 ;
 
 KEYF_FEATURE_RICH=Feature-rich, but light-weight
@@ -204,6 +301,8 @@ KEYF_UPLOAD_DOWNLOAD=File upload/download management
 KEYF_CUSTOMIZABLE_EXTENSIONS=Customizable & Extensions
 
 KEYF_AJAX_JSON=Great AJAX & JSON Support
+
+KEYF_SEO=SEO (Search Engine Optimization)
 
 KEYF_UNITTESTING=Unittesting
 

@@ -9,6 +9,9 @@
   [
     "title": "Contact"
   ]
+---
+  staticCache:
+    true
 ]
 
 <div class="d-content-box">
@@ -17,6 +20,6 @@
     <br>
     You can also contact us through our Facebook page <a href="https://www.facebook.com/OfficialDiamondMVC/">here</a>.<br>
     <br>
-    If you prefer mails, then you can send an email to <a href="mailto:baussprojects@gmail.com">baussprojects@gmail.com</a>
+    If you prefer mails, then you can send an email to <a href="mailto:contact@diamondmvc.org">contact@diamondmvc.org</a>
   </div>
 </div>

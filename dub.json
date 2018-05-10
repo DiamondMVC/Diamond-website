@@ -1,12 +1,13 @@
 {
 	"dependencies": {
 		"vibe-d": "~>0.8.3",
-		"diamond": "~>2.8.6",
+		"diamond": "~>2.9.3",
 		"mysql-native": "~>2.2.1"
 	},
 	"versions": [
 		"Diamond_Debug",
-		"Diamond_WebServer"
+		"Diamond_WebServer",
+		"Diamond_Logging"
 	],
 	"sourcePaths": [
 		"core",

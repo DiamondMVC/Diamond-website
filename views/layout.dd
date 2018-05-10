@@ -20,9 +20,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Diamond MVC is a powerful full-stack web-framework written in The D Programming Language using vibe.d. It's perfect fit for high-performance enterprise web-solutions.">
 
-  @* ------------------------------ Open Sans ------------------------------ *
+  @* ------------------------------ Ubuntu ------------------------------ *
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   @* ------------------------------ Highlight Js ------------------------------ *
 
@@ -35,9 +35,15 @@
 
   @* ------------------------------ Js ------------------------------ *
 
-  @:static const jsVersion = "0.0.6";
+  @:static const jsVersion = "0.0.9";
+  @:static const cssVersion = "0.0.9";
 
-  @:auto jsPath = rootPath ~ "/public/public/js";
+  @:auto jsPath = rootPath ~ "/public/public/sysjs";
+  @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
+    <script src="/public/sysjs/@=baseName(file.name);?v=@=jsVersion;"></script>
+  }
+
+  @:jsPath = rootPath ~ "/public/public/js";
   @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
     <script src="/public/js/@=baseName(file.name);?v=@=jsVersion;"></script>
   }
@@ -45,14 +51,13 @@
   @* ------------------------------ Nyanjs ------------------------------ *
 
   <script src="/nyanjs/nyanjs.js?v=@=jsVersion;"></script>
-  <link href="/nyanjs/nyanjs.css" rel="stylesheet">
+  <link href="/nyanjs/nyanjs.css?v=@=cssVersion;" rel="stylesheet">
 
   @* ------------------------------ Font-awesome ------------------------------ *
 
   <link rel="stylesheet" href="/public/font-awesome/css/font-awesome.min.css">
 
   @* ------------------------------ CSS ------------------------------ *
-  @:static const cssVersion = "0.0.6";
 
   <link rel="stylesheet" href="/public/css/shared.css?v=@=cssVersion;">
 
@@ -61,6 +66,8 @@
   @:if (exists(cssPath)) {
     <link href="/public/css/@=super.name;.css?v=@=cssVersion;" rel="stylesheet">
   }
+
+  <link rel="stylesheet" href="/public/css/slider.css?v=@=cssVersion;">
 
   @* ------------------------------ Fav icon ------------------------------ *
 

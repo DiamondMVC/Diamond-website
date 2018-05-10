@@ -5,14 +5,53 @@
   route:
     home
 ---
-  placeholders:
-  [
-    "title": "Home"
-  ]
+  title:
+    Home
+---
+  staticCache:
+    true
 ]
 
-<div class="d-home-focus">
+<script type="text/javascript">
+  var slider = new URSlider({
+        element: '.myslider',
+        width: '100%',
+        height: '400px',
+        delay: 5500
+      }),
+      sliderObject = {};
 
+  @{
+    struct SliderEntry
+    {
+      string image;
+      string headline;
+      string text;
+      string position;
+      string link;
+    }
+
+    static const sliders = [
+      SliderEntry("/public/media/home/banner/3.jpg", "The 11 Hottest New Developer Tools in April 2018", "by stackshare", "center", "https://stackshare.io/posts/dev-tools-roundup-april-2018"),
+      SliderEntry("/public/media/home/banner/1.jpg", "Shape the web of tomorrow", "Diamond builds on-top of modern technology and concepts", "left", "#why-diamond"),
+      SliderEntry("/public/media/home/banner/2.jpg", "Donate and support us!", "Donations goes towards Diamond\\'s development and stacks we support", "right", "/donate")
+    ];
+  }
+
+  @:foreach (slider; sliders) {
+    sliderObject.image = '@=slider.image;';
+    sliderObject.headline = '@=slider.headline;';
+    sliderObject.text = '@=slider.text;';
+    sliderObject.contentPosition = '@=slider.position;';
+    sliderObject.link = '@=slider.link;';
+    slider.add(sliderObject);
+  }
+</script>
+
+<div class="myslider ur-slider">
+</div>
+
+<div class="d-home-focus">
   <div style="text-align: center">
     <h3>@<%GET_STARTED%></h3>
   </div>
@@ -71,32 +110,29 @@
 
 <div class="d-content-box">
 
-  @:auto height = 102;
-  @:auto width = 102;
+  @:auto height = 64;
+  @:auto width = 64;
 
   @:void createContentEntry(string headline, string content, string image) {
+    @:auto headlines = i18n.getMessage(client, headline).split("|");
+
     <div class="d-content-entry">
-      <div class="n-visible-md n-visible-lg" style="width: 100%;">
-        <div style="width: @=width;px;float: left;min-height: @=height;px;">
-          <img src="/public/media/@=image;" alt="@=headline;">
+      <div class="ac-head" style="width: 100%;min-height: @=height;px;">
+        <div class="ac-head-left" style="width: @=width;px;float: left;min-height: @=height;px;">
+          <img src="/public/media/@=image;" alt="@=headlines[0];" style="width: @=width;px; height: @=height;px;">
         </div>
-
-        <div style="width: calc(100% - @=width;px);float: right; min-height: @=height;px;" n-resp="md,lg" n-resp-bind="@=headline;">
-          <h3>@=i18n.getMessage(client, headline);</h3>
-          <br>
-          <div class="n-visible-xs n-visible-sm">
-            <img src="/public/media/@=image;" alt="@=headline;"><br>
-            <br>
-          </div>
-          <p>
-            @=i18n.getMessage(client, content);
-          </p>
+        <div class="ac-head-right" style="width: calc(100% - @=(width + 12);px);min-height: @=height;px;float: right; padding: 6px;">
+          <h2>@=headlines[0];</h2>
+          @:if (headlines.length == 2) {
+            <h4 style="color: #1f618d">@=headlines[1];</h4>
+          }
         </div>
-
-        <div class="d-clear"></div>
       </div>
-
-      <div class="n-visible-xs n-visible-sm" n-resp="xs,sm" n-resp-bind="@=headline;" style="min-height: @=height;px;">
+      <div class="ac-content" style="padding: 8px;">
+        <br>
+        <p>
+          @=i18n.getMessage(client, content);
+        </p>
       </div>
     </div>
   }
@@ -104,7 +140,7 @@
   @:createContentEntry("HOME_WHAT_IS_DIAMOND_TITLE", "HOME_WHAT_IS_DIAMOND_CONTENT", "home-what-is-diamond.png");
   @:createContentEntry("HOME_DIAMOND_COMMUNITY_TITLE", "HOME_DIAMOND_COMMUNITY_CONTENT", "home-diamond-community.png");
 
-  <div class="d-content-entry d-why-diamond" style="min-height: 32px; margin-top: 48px; background-color: #ccc;">
+  <div id="why-diamond" class="d-content-entry d-why-diamond" style="min-height: 32px; margin-top: 16px; background-color: #ccc;">
     <h3>Why Diamond?</h3>
   </div>
 
@@ -117,9 +153,10 @@
   @:createContentEntry("HOME_I18N_TITLE", "HOME_I18N_CONTENT", "home-i18n.png");
   @:createContentEntry("HOME_EU_COOKIE_TITLE", "HOME_EU_COOKIE_CONTENT", "home-eu-cookie.png");
   @:createContentEntry("HOME_TEST_DRIVEN_DEV_TITLE", "HOME_TEST_DRIVEN_DEV_CONTENT", "home-test-driven-dev.png");
+  @:createContentEntry("HOME_DATABASE_TITLE", "HOME_DATABASE_CONTENT", "home-database.png");
 
   <div class="d-content-entry d-technology-and-standards">
-    <h3>Diamond uses/relies on the following technologies, web-standards and publications</h3>
+    <h3>Partners &amp; Stacks We Support!</h3>
     <br>
 
     @{
@@ -142,18 +179,7 @@
       }
 
       static const techReliabilities = [
-        TechReliability("The D Programming Language", "https://dlang.org/", "https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg"),
-        TechReliability("DUB", "https://code.dlang.org/", "https://raw.githubusercontent.com/dlang/dub-registry/master/public/images/logo-small.png"),
-        TechReliability("vibe.d", "http://vibed.org/", "https://vibed.org/images/title-new.png"),
-        TechReliability("Microsoft Azure", "http://azure.microsoft.com/", "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg"),
-        TechReliability("Heroku", "https://www.heroku.com/", "https://www-assets3.herokucdn.com/assets/logo-purple-08fb38cebb99e3aac5202df018eb337c5be74d5214768c90a8198c97420e4201.svg"),
-        TechReliability("Nginx", "http://nginx.org/", "http://nginx.org/nginx.png"),
-        TechReliability("MySQL", "https://www.mysql.com/", "https://www.mysql.com/common/logos/mysql-logo.svg?v2"),
-        TechReliability("MariaDB", "https://mariadb.org/", "https://mariadb.org/wp-content/uploads/2015/05/MariaDB-Foundation-horizontal-x52.png"),
-        TechReliability("MongoDB", "https://www.mongodb.com/", "https://webassets.mongodb.com/_com_assets/global/mongodb-logo-white.png", "#aaa"),
-        TechReliability("redis", "https://redis.io/", "https://redis.io/images/redis-white.png"),
-        TechReliability("EU", "http://europa.eu/", "http://europa.eu/wel/eu_portal/2014/images/header/europa-flag.gif"),
-        TechReliability("OWASP", "https://www.owasp.org/", "https://www.owasp.org/resources/assets/owasplogo.png?6963c")
+        TechReliability("The D Programming Language", "https://dlang.org/", "https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg")
       ];
     }
 
@@ -279,7 +305,7 @@
       <tr>
         <td>HMVC</td>
         <td>No</td>
-        <td>Ye</td>
+        <td>Yes</td>
       </tr>
       <tr>
         <td>View Inheritance</td>
@@ -290,9 +316,9 @@
         <td>Static Templates</td>
         <td>Yes</td>
         <td>
-          No<br>
+          Yes<br>
           <br>
-          Upcoming Feature
+          Supports dynamic content and statically-timed caching.
         </td>
       </tr>
       <tr>
@@ -303,6 +329,11 @@
           <br>
           You can render specific sections of partial views.
         </td>
+      </tr>
+      <tr>
+        <td><b>Total</b></td>
+        <td><b>9/18</b></td>
+        <td><b>18/18</b></td>
       </tr>
     </table>
   </div>
@@ -349,7 +380,7 @@
         // KeyFeature("fa-tags", "KEYF_VIRTUAL_HTML_ELEMENTS"),
         KeyFeature("fa-download", "KEYF_UPLOAD_DOWNLOAD"),
         KeyFeature("fa-pencil-square-o", "KEYF_CUSTOMIZABLE_EXTENSIONS"),
-        KeyFeature("fa-clone", "KEYF_AJAX_JSON"),
+        KeyFeature("fa-search", "KEYF_SEO"),
         KeyFeature("fa-calendar-check-o", "KEYF_UNITTESTING")
       ];
     }

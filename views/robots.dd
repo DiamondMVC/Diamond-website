@@ -4,6 +4,9 @@
 ---
     type:
       text
+---
+  staticCache:
+    true
 ]
 Sitemap: http://www.diamondmvc.org/sitemap.xml
 Sitemap: http://diamondmvc.org/sitemap.xml

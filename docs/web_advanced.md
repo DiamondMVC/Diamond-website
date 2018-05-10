@@ -399,3 +399,81 @@ socket.onclose = function(event) {
   console.info("Closed ...");
 };
 ```
+
+## SEO
+
+SEO (Search Engine Optimization) is one of the most important things when developing professional websites.
+
+If your site doesn't implement SEO functionality, chances are it'll never be recognized properly by search engines and it could damage your traffic.
+
+If you however have SEO implemented properly your site could not only have its traffic boosted, but when it's shown in search result specific content is shown, which helps target your search audience and might boost your chance of increasing traffic from searches.
+
+In the end SEO is both a help to search engines to present your website properly, but also a help to you boosting your traffic.
+
+Diamond implements basic SEO functionality that you can take advantage of, but it also implements structured data.
+
+Structured data are general data models presented by the companies behind the biggest search engines such as Google, Microsoft, Yandex and Yahoo.
+
+These data structures help presenting content from your website properly.
+
+Diamond implements all the most commonly used data structures, but it's possible to implement structures yourself.
+
+However they do not currently implement all relevant properties and fields, but it's possible to manually add them to each data structure using the call `addField(key,value)` which can add a field to a data structure.
+
+The field can either be another data structure, a D data-type (string, integer, arrays etc.) or an array of data structures.
+
+The following calls within a view can be used for SEO:
+
+#### void meta(string nameField = "name")(string name, string content);
+
+This function can be used to add a generic meta tag.
+
+Do not use this function to implement meta tags with keywords as they're not really recommended for SEO and none of the big search engines uses the meta tags for SEO.
+
+These should however be used to present relevant content for your pages that search engines, social media websites etc. can use to present your website properly when linked.
+
+Diamond has built-in functions that builds on-top of the regular meta-tag function.
+
+#### void googleMeta(string name, string description, string image);
+
+This function can be used to generate meta tags relevant for google.
+
+This can be used in combination with structured data.
+
+#### void twitterMeta(string card, string title, string description, string site, string image);
+
+This function can be used to tell Twitter how to represent your page when linked.
+
+#### void openGraphGeneralMeta(string title, string description, string image, string url, string siteName, string type);
+
+This function can be used to tell any websites using open graph how to represent your page when linked.
+
+Such sites include Facebook, Pinterest and Google+.
+
+### Structured Data
+
+It's recommended that you look at <a href="http://schema.org/">http://schema.org/</a>.
+
+For the data structures Diamond implement look under the module **diamond.seo.schema**.
+
+Example:
+
+```
+import diamond.seo;
+
+auto localBusiness = new LocalBusiness;
+localBusiness.name = "My business";
+localBusiness.address = new PostalAddress;
+localBusiness.address.streetAdress = "Some address";
+localBusiness.address.postalCode = "65471";
+```
+
+Calling **toString()** on a schema object will give you its ld+json representation.
+
+To present it in a view simply call the function **schema()** and pass the schema object to it.
+
+Diamond will then render a proper script tag with the representation of the structured data represented by the schema object.
+
+```
+@:schema(localBusiness);
+```
