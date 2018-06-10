@@ -35,8 +35,8 @@
 
   @* ------------------------------ Js ------------------------------ *
 
-  @:static const jsVersion = "0.0.9";
-  @:static const cssVersion = "0.0.9";
+  @:static const jsVersion = "0.0.10";
+  @:static const cssVersion = "0.0.10";
 
   @:auto jsPath = rootPath ~ "/public/public/sysjs";
   @:foreach (file; dirEntries(jsPath, SpanMode.depth).filter!(f => f.name.endsWith(".js"))) {
@@ -74,7 +74,7 @@
   @:auto faviconPath = rootPath ~ "/public/public/media/favicon.png";
 
   @:if (exists(faviconPath)) {
-    <link rel="shortcut icon" type="image/png" href="/public/media/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="/public/media/favicon.png?v=@=cssVersion;"/>
   }
 
   @* ------------------------------ Disable Translate ------------------------------ *

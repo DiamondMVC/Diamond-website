@@ -41,7 +41,9 @@ private class WebdWebSettings : WebSettings
   override void onHttpError(Throwable thrownError, HTTPServerRequest request,
     HTTPServerResponse response, HTTPServerErrorInfo error)
   {
-    response.bodyWriter.write(thrownError.toString());
+    import std.string : format;
+
+    response.bodyWriter.write(format("An error happened. Host: '%s' Path: '%s'", request.host, request.path));
   }
 
   override void onNotFound(HTTPServerRequest request, HTTPServerResponse response)

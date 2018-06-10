@@ -33,7 +33,7 @@ DOWNLOAD_INSTALL_STEP_4=Open <b>"config/web.json"</b> and modify it to fit your 
 DOWNLOAD_INSTALL_STEP_5:
   Invoke DUB on the root folder<br>
   <br>
-  Command-line: <b>"dub build -a=x86_64 --build=debug"</b>
+  Command-line: <b>"dub build"</b>
 ;
 DOWNLOAD_INSTALL_STEP_6=Run the generated executable file
 DOWNLOAD_INSTALL_STEP_7=Congratulations your first Diamond MVC project is running.
