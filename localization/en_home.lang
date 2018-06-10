@@ -4,7 +4,7 @@ HOME_FOCUS_TEXT:
 
 HOME_FOCUS_TEXT_BOTTOM=Innovation, performance and elegance are Diamond's key features
 
-GET_DIAMOND=Get Diamond 2.9.3
+GET_DIAMOND=Get Diamond 2.10.1
 SUPPORT_US=Support Us
 
 DIAMOND_FOOTER_DESCRIPTION=Diamond is a powerful full-stack web-framework&nbsp;&nbsp;
@@ -219,15 +219,15 @@ Diamond supports both no-sql and sql databases.<br>
   </tr>
   <tr>
     <td><a href="https://www.postgresql.org/">PostgreSQL</a></td>
-    <td>Support From 2.10.0</td>
+    <td>Support From 2.11.0</td>
   </tr>
   <tr>
     <td><a href="https://www.microsoft.com/sql-server‎">Microsoft SQL Server</a></td>
-    <td>Support From 2.10.0</td>
+    <td>Support From 2.11.0</td>
   </tr>
   <tr>
     <td><a href="https://www.sqlite.org/index.html">SQLite</a></td>
-    <td>Support From 2.10.0</td>
+    <td>Support From 2.11.0</td>
   </tr>
   <tr>
     <td><a href="http://mongodb.com/">MongoDB</a></td>
@@ -260,7 +260,7 @@ KEYF_SECURITY=Security (CSRF Protection, Validation, Cryptography, SSL, Network 
 
 KEYF_COOKIES_SESSION=Cookies / Session
 
-KEYF_COOKIE_CONSENT=Cookie Consent built-in (Easy integration with EU's cookie law.)
+KEYF_COOKIE_CONSENT=Cookie Consent &amp; GDPR Compatibility
 
 KEYF_TRANSACTIONS=Transactions
 

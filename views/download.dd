@@ -61,7 +61,7 @@
     <h3>Release Cycle</h3>
     <br>
 
-    Diamond uses semantic versioning such as <b>MAJOR.MINOR.BUILD</b> <em>(Ex. 2.9.3)</em><br>
+    Diamond uses semantic versioning such as <b>MAJOR.MINOR.BUILD</b> <em>(Ex. @=diamondVersion;)</em><br>
     <br>
 
     <table>
@@ -123,7 +123,7 @@
   </div>
 
   <div class="d-content-entry d-alternative-downloads">
-    <b>Source-code (Stable):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/v2.9.3.zip">Download</a><br><br>
+    <b>Source-code (Stable):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/v@=diamondVersion;.zip">Download</a><br><br>
     <b>Source-code (Development):</b> <a href="https://github.com/DiamondMVC/Diamond/archive/master.zip">Download</a><br><br>
   </div>
 </div>
